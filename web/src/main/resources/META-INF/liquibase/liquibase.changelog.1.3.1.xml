@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet author="vaka" id="2013-09-04_15:41" runAlways="true" runOnChange="true">
+        <sqlFile path="../documentation/initTenant.sql" encoding="UTF-8" splitStatements="false"/>
+    </changeSet>
+
+    <changeSet author="vaka" id="2014-06-04_15:30">
+        <sqlFile path="../documentation/migrations/2014_06_04.sql" encoding="UTF-8" splitStatements="false"/>
+    </changeSet>
+
+    <changeSet author="vomel" id="2014_06_04_16:54">
+        <sql>UPDATE logins.hotel SET lcode=NULL WHERE lcode ='';</sql>
+        <sql>ALTER TABLE logins.hotel ADD CONSTRAINT uk_cd3yn9ustwkyg5vsjers3e0ne UNIQUE(lcode);</sql>
+    </changeSet>
+
+    <changeSet author="etypalchuk" id="2014-06-05_12:19">
+        <sqlFile path="../documentation/migrations/2014_06_05.sql" encoding="UTF-8" splitStatements="false"/>
+    </changeSet>
+
+    <changeSet author="vomel" id="2014_06_05_16:17">
+        <sqlFile path="../documentation/migrations/2014_06_05_1.sql" encoding="UTF-8" splitStatements="false"/>
+    </changeSet>
+
+    <changeSet author="vaka" id="2014_06_06_13:18">
+        <sql>UPDATE logins.hotelinfo SET currency=upper(currency);</sql>
+    </changeSet>
+
+    <changeSet author="vaka" id="2014_06_06_14:18">
+        <sqlFile path="../documentation/migrations/2014_06_06.sql" encoding="UTF-8" splitStatements="false"/>
+    </changeSet>
+
+    <changeSet author="vomel" id="2014_06_11_12:23">
+        <sql>ALTER TABLE logins.authentication ADD COLUMN lastloggedin TIMESTAMP;</sql>
+    </changeSet>
+
+</databaseChangeLog>

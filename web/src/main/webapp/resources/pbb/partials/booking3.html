@@ -1,0 +1,414 @@
+<style>
+
+#booking {
+    width: 626px;
+    margin: 0 auto;
+    font-family: Arial, san-serif;
+    font-size: 14px;
+    color: #747474;
+}
+
+#booking_button a {
+    color: #747474;
+}
+
+#booking_button a:hover {
+    text-decoration: none
+}
+
+#booking .top, #booking .bottom, .total_value, #booking .purple {
+    background: #7f62a4;
+    background: -moz-linear-gradient(top, #7f62a4 0%, #724c98 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7f62a4), color-stop(100%, #724c98));
+    background: -webkit-linear-gradient(top, #7f62a4 0%, #724c98 100%);
+    background: -o-linear-gradient(top, #7f62a4 0%, #724c98 100%);
+    background: -ms-linear-gradient(top, #7f62a4 0%, #724c98 100%);
+    background: linear-gradient(to bottom, #7f62a4 0%, #724c98 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7f62a4', endColorstr='#724c98', GradientType=0);
+    overflow: hidden;
+}
+
+#booking .top {
+    border-radius: 9px 9px 0px 0px;
+    margin-top: 25px;
+    padding: 10px 22px;
+}
+
+#booking .head {
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #f5f6f8 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #f5f6f8)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%, #f5f6f8 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%, #f5f6f8 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%, #f5f6f8 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #ffffff 0%, #f5f6f8 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f5f6f8', GradientType=0); /* IE6-9 */
+    color: #747474;
+    font-size: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #fff;
+}
+
+.wrapper {
+    border-left: 1px solid #c6c6c6;
+    border-right: 1px solid #c6c6c6;
+}
+
+#booking .head .number {
+    display: inline-block;
+    padding-left: 44px;
+}
+
+#booking .head .number span, #booking .stay_time span {
+    color: #7762a0;
+    font-weight: bold;
+}
+
+#booking .bottom {
+    border-radius: 0 0 9px 9px;
+    height: 75px;
+}
+
+#booking .top .title {
+    font-size: 32px;
+    color: #fff;
+    float: left;
+    padding-top: 6px;
+}
+
+#booking .hotel, .confirmation {
+    padding: 34px 30px 0 34px;
+    box-shadow: 0 4px 7px #ededed inset;
+}
+
+.title, .cost {
+    color: #424242;
+    font-size: 22px;
+    font-weight: bold;
+    padding-bottom: 16px;
+    clear: both;
+}
+
+#booking .hotel .title.big {
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+#booking .hotel .img {
+    float: left;
+}
+
+#booking .hotel .right {
+    float: right;
+    width: 233px;
+}
+
+.hotel .img img, .room .gallery .big_image img {
+    padding: 6px;
+    border: 1px solid #cccccc;
+    max-width: 273px;
+}
+
+#booking .right .small {
+    color: #848484;
+    font-size: 12px;
+}
+
+.stay_time {
+    margin-top: 17px;
+    line-height: 1.4em;
+}
+
+#booking .right .cost {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#booking .purple {
+    padding: 40px 60px;
+}
+
+.total_value {
+    color: #fff;
+    border: 1px solid #644784;
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+div.lable {
+    float: left !important;
+    width: 150px !important;
+    clear: left !important;
+    color: #fff !important;
+    padding-top: 13px !important;
+    height: 43px !important;
+}
+
+.input {
+    float: right;
+}
+
+.input textarea {
+    width: 300px;
+    border: 1px solid #5c4179;
+    padding: 11px 8px;
+    border-radius: 5px;
+}
+
+input[type="text"], input[type="email"], #booking select {
+    border: 1px solid #5c4179;
+    padding: 11px 8px;
+    border-radius: 5px;
+}
+
+input[type="text"], input[type="email"] {
+    width: 300px;
+}
+
+#booking select {
+    outline: 0;
+    -webkit-appearance: inherit;
+    background: url(pbb/img/design/arrow.png) no-repeat 285px 17px #fff;
+    font-size: 12px;
+    width: 300px;
+}
+
+#booking select:focus {
+    background-position: 285px -12px;
+    border-color: #744c9a;
+}
+
+input.error {
+    border-color: #ff3e3e;
+}
+
+.error {
+    background: url(pbb/img/error.png) no-repeat 275px center #fff;
+    /*margin-left: -22px;*/
+}
+
+.room {
+    padding: 34px 30px;
+    background-color: #f8f9fb;
+}
+
+.gallery {
+    float: left;
+}
+
+.gallery .small_image img {
+    margin-left: 4px;
+}
+
+.gallery .small_image img:hover {
+    outline-offset: -3px;
+    outline: 3px solid #ecb22a;
+}
+
+.room .right {
+    float: right;
+    width: 224px;
+}
+
+.room .right textarea {
+    box-shadow: 0 4px 7px #ededed inset;
+    width: 424px;
+    max-width: 100%;
+    height: 155px;
+    border-radius: 5px;
+    border: 1px solid #cbcbcb;
+    margin: 8px 0 2px;
+}
+
+#booking .confirmation {
+    padding-bottom: 45px;
+}
+
+.confirmation .text {
+    color: #424242;
+    font-size: 18px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.button {
+    background: #ffa800;
+    background: -moz-linear-gradient(top, #ffa800 0%, #ed6400 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffa800), color-stop(100%, #ed6400));
+    background: -webkit-linear-gradient(top, #ffa800 0%, #ed6400 100%);
+    background: -o-linear-gradient(top, #ffa800 0%, #ed6400 100%);
+    background: -ms-linear-gradient(top, #ffa800 0%, #ed6400 100%);
+    background: linear-gradient(to bottom, #ffa800 0%, #ed6400 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c0c0c0', endColorstr='#7b7b7b', GradientType=0); /* IE6-9 */
+    border: 1px solid #FFFFFF;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    color: #FFFFFF;
+    display: block;
+    font-size: 18px;
+    padding: 10px 22px;
+    text-decoration: none;
+    margin: 0 auto;
+    width: 460px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button:hover {
+    background: #c0c0c0; /* Old browsers */
+    background: -moz-linear-gradient(top, #c0c0c0 0%, #7b7b7b 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c0c0c0), color-stop(100%, #7b7b7b)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #c0c0c0 0%, #7b7b7b 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #c0c0c0 0%, #7b7b7b 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #c0c0c0 0%, #7b7b7b 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #c0c0c0 0%, #7b7b7b 100%); /* W3C */
+}
+
+.small_image {
+    margin-top: 10px;
+}
+</style>
+<form name="customer" ng-submit="makeBooking()" class="orderForm">
+    <div id="booking">
+        <div class="top">
+            <div class="title">Бронирование</div>
+        </div>
+        <div class="wrapper">
+            <div class="head">
+                <div class="number">1. Выберите номер</div>
+                <div class="number"><span>2. Отправить ваши даные</span></div>
+                <div class="number">3. Готово</div>
+            </div>
+            <div class="hotel">
+                <div class="title">Ваше бронирование</div>
+                <!--<div class="img"><img src="button/img/hotel-image.jpg"></div>-->
+
+                <div ng-if="model.hotelInfo.logo" class="img">
+                    <img src="" ng-src="http://pmsphotos/test1/{{model.hotelInfo.logo}}" alt=""/>
+                </div>
+
+                <div class="right">
+                    <div class="title big">{{model.hotelInfo.name}}</div>
+                    <div class="text">
+                        <div class="small">
+                            <!--<br>-->
+                            {{model.hotelInfo.officialAddress}}
+                        </div>
+                        <div class="stay_time">
+                            <!--<span>Заезд:</span> Суббота 23 апреля 2014-->
+                            <span>Заезд:</span> {{model.dateStart}}<br>
+                            <span>Отьезд:</span> {{model.dateEnd}}
+                            <!--<span>Отьезд:</span> Вторник 26 апреля 2014-->
+                        </div>
+                    </div>
+                    <div class="total_value">
+                        Общая стоимость<br>
+                        за {{model.daysDifference}} ночи
+                    </div>
+                    <div class="cost">UAH {{model.sum}}</div>
+                </div>
+                <div class="title">Ваши даные</div>
+                <div class="clearfix"></div>
+            </div>
+
+        </div>
+        <div class="booking">
+            <div class="purple">
+                <div class="lable"><label>Имя</label></div>
+                <div class="input">
+                    <input type="text" ng-class="{error: customer.firstName.$dirty && customer.firstName.$invalid}" placeholder="" name="firstName"
+                           ng-minlength="3" ng-maxlength="30" required ng-model="model.customer.firstName">
+                </div>
+                <div class="lable"><label>Фамилия</label></div>
+                <div class="input">
+                    <input type="text" placeholder="" ng-class="{error: customer.lastName.$dirty && customer.lastName.$invalid}" name="lastName"
+                           ng-minlength="3" ng-maxlength="30" required ng-model="model.customer.lastName">
+                </div>
+                <div class="lable"><label>Email</label></div>
+                <div class="input">
+                    <input type="email" ng-class="{error: customer.email.$dirty && customer.email.$invalid}" name="email" placeholder=""
+                           ng-model="model.customer.email" required>
+                </div>
+                <div class="lable">
+                    <label style="padding-top: 5px;">Email повторно</label>
+                </div>
+                <div class="input">
+                    <input type="email" name="emailConfirm" placeholder="" ng-class="{error: customer.emailConfirm.$error.mismatch}"
+                           ng-model="model.customer.emailConfirm" match="model.customer.email" required>
+                </div>
+                <div class="lable"><label>Адрес</label></div>
+                <div class="input">
+                    <input type="text" ng-class="{error: customer.address.$dirty && customer.address.$invalid}" required placeholder="" name="address"
+                           ng-model="model.customer.address">
+                </div>
+                <div class="lable">
+                    <label>Город</label>
+                </div>
+                <div class="input">
+                    <input type="text" placeholder="" name="city" ng-model="model.customer.city">
+                </div>
+                <div class="lable">
+                    <label>Страна</label>
+                </div>
+                <div class="input">
+                    <select required class="" name="country" ng-model="model.customer.country">
+                        <option value="">-----</option>
+                        <option ng-repeat="(key, value) in countries|orderBy:'value'"
+                                value="{{key}}">
+                            {{value}}
+                        </option>
+                    </select>
+                </div>
+                <div class="lable">
+                    <label for="">Телефон</label>
+                </div>
+                <div class="input">
+                    <input type="text" ng-class="{error: customer.phone.$dirty && customer.phone.$invalid}" required placeholder="" name="phone"
+                           ng-model="model.customer.phone">
+                </div>
+                <div class="lable">
+                    <label for="">Особые пожелания</label>
+                </div>
+                <div class="input">
+                    <textarea name="description" ng-model="model.customer.description" rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+
+            <!--<div class="room">-->
+            <!--<div class="title">Двухемстный номер Делюкс</div>-->
+            <!--<div class="gallery">-->
+            <!--<div class="big_image">-->
+            <!--<img src="button/img/hotel-image.jpg">-->
+            <!--</div>-->
+            <!--<div class="small_image">-->
+            <!--<img src="button/img/small-1.png">-->
+            <!--<img src="button/img/small-2.png">-->
+            <!--<img src="button/img/small-1.png">-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--&lt;!&ndash;<div class="right">&ndash;&gt;-->
+            <!--&lt;!&ndash;Особые пожелания&ndash;&gt;-->
+            <!--&lt;!&ndash;<textarea></textarea>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--<div style="clear: both;"></div>-->
+            <!--</div>-->
+            <div class="confirmation">
+                <div class="text">
+                    Подтверждения бронирования<br>
+                    Бронируя этот номер, я принимаю условия<br>
+                    бронирования и общие условия
+                </div>
+                <!--<input class="button" type="submit" value="Забронировать номер по цене UAH 12000,00">-->
+                <input type="submit" class="button" value="Забронировать номер по цене {{model.sum}} UAH" ng-disabled="customer.$invalid"
+                       ng-click="">
+            </div>
+        </div>
+        <div class="bottom"></div>
+    </div>
+</form>

@@ -1,0 +1,559 @@
+html, body {
+    background: #3d71b8 url(../images/gray/sandbox/wallpapers/desktop.jpg) 50% 50%;
+    background-size: cover;
+    font: normal 12px tahoma, arial, verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    overflow: hidden;
+    height: 100%;
+}
+
+#x-desktop {
+    width: 100%;
+    height: 100%;
+    border: 0 none;
+    position: relative;
+    overflow: hidden;
+    zoom: 1;
+}
+
+#ux-taskbar {
+    background: transparent none;
+    height: 25px;
+    width: 100%;
+    bottom: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 999999999;
+    box-shadow: 0px -0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.menuSeparator {
+    color: rgb(172, 172, 172);
+    margin: -1px 0 5px 0 !important;
+}
+
+.winToTop {
+    z-index: 999999 !important;
+}
+
+.activeTab {
+    box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.5);
+    -o-box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
+    -ms-box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
+    color: #fff !important;
+
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.3)), color-stop(100%, rgba(0, 0, 0, 0)));
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d000000', endColorstr='#00000000', GradientType=0);
+}
+
+.activeTab span {
+    color: #000 !important;
+}
+
+#startArea {
+    position: absolute;
+    bottom: 25px;
+    xopacity: 0.9;
+    left: 10px;
+    z-index: 999999999;
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    -o-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    -ms-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+#ux-taskbar-start {
+    width: 120px;
+    height: 100%;
+    left: 0px;
+    padding: 0;
+    position: absolute;
+    z-index: 3;
+}
+
+#ux-taskbuttons-panel {
+    width: 100%;
+    height: 100%;
+    padding: 0 0 0 118px;
+    position: relative;
+    z-index: 2;
+
+    opacity: 0.9;
+    border-color: #d0d0d0;
+    border-width: 1px;
+    border-style: solid;
+    background-image: none;
+    background-color: #b3b3b3;
+    background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(100%, #e3e3e3), color-stop(0%, #b3b3b3));
+    background-image: -webkit-linear-gradient(top, #e3e3e3, #b3b3b3);
+    background-image: -moz-linear-gradient(top, #e3e3e3, #b3b3b3);
+    background-image: -o-linear-gradient(top, #e3e3e3, #b3b3b3);
+    background-image: -ms-linear-gradient(top, #e3e3e3, #b3b3b3);
+    background-image: linear-gradient(top, #f0f0f0, #d7d7d7);
+    -moz-box-shadow: #efeded 0 1px 0 0 inset;
+    -webkit-box-shadow: #efeded 0 1px 0 0 inset;
+    -o-box-shadow: #efeded 0 1px 0 0 inset;
+    box-shadow: #efeded 0 1px 0 0 inset;
+}
+
+#windowsPanel-body {
+    background: none;
+}
+
+/*
+ * Begin Start button
+ */
+
+.ux-startbutton-left, .ux-startbutton-right {
+    width: 10px;
+    height: 28px;
+    float: left;
+}
+
+.ux-startbutton-center {
+    width: 100px;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0;
+    cursor: pointer;
+    white-space: nowrap;
+    float: left;
+    line-height: 26px;
+}
+
+.startNormal {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    -o-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    -ms-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    background: #4192f0; /* Old browsers */
+    background: -moz-linear-gradient(top, #4192f0 0%, #0667d6 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4192f0), color-stop(100%, #0667d6)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #4192f0 0%, #0667d6 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #4192f0 0%, #0667d6 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #4192f0 0%, #0667d6 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #4192f0 0%, #0667d6 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4192f0', endColorstr='#0667d6', GradientType=0); /* IE6-9 */
+}
+
+.startPressed {
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+    -o-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+    -ms-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    background: #0667d6; /* Old browsers */
+    background: -moz-linear-gradient(top, #0667d6 0%, #4192f0 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0667d6), color-stop(100%, #4192f0)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #0667d6 0%, #4192f0 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #0667d6 0%, #4192f0 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #0667d6 0%, #4192f0 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #0667d6 0%, #4192f0 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0667d6', endColorstr='#4192f0', GradientType=0); /* IE6-9 */
+}
+
+/*
+ * End Start button
+ */
+
+/* Desktop Shortcuts */
+
+.right {
+    float: right;
+}
+
+#x-shortcuts dt {
+    float: left;
+    margin: 15px 15px 0 15px;
+    clear: left;
+    width: 64px;
+    font: normal 10px tahoma, arial, verdana, sans-serif;
+    text-align: center;
+    zoom: 1;
+    display: block;
+}
+
+#x-shortcuts dt a {
+    width: 64px;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+#x-shortcuts dt div {
+    width: 100%;
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+.ext-ie #x-shortcuts dt img {
+    background: transparent !important;
+}
+
+#x-shortcuts dt a:hover {
+    text-decoration: underline;
+}
+
+/* shortcuts */
+#grid-win-shortcut img {
+    width: 48px;
+    height: 48px;
+    background-image: url(../images/gray/sandbox/grid48x48.png);
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/gray/sandbox/grid48x48.png', sizingMethod='scale');
+}
+
+#acc-win-shortcut img {
+    width: 48px;
+    height: 48px;
+    background-image: url(../images/gray/sandbox/im48x48.png);
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/gray/sandbox/im48x48.png', sizingMethod='scale');
+}
+
+#company-win-shortcut img {
+    width: 48px;
+    height: 48px;
+    background-image: url(../images/gray/sandbox/company.png);
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/gray/sandbox/company.png', sizingMethod='scale');
+}
+
+#daylyReport-win-shortcut img {
+    width: 48px;
+    height: 48px;
+    background-image: url(../images/gray/sandbox/reports.png);
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/gray/sandbox/reports.png', sizingMethod='scale');
+}
+
+#exit-win-shortcut img {
+    width: 48px;
+    height: 48px;
+    background-image: url(../images/gray/sandbox/exit.png);
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/gray/sandbox/exit.png', sizingMethod='scale');
+}
+
+#bookingFind-win-shortcut img {
+    width: 48px;
+    height: 48px;
+    background-image: url(../images/gray/sandbox/booking-find.png);
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/gray/sandbox/booking-find.png', sizingMethod='scale');
+}
+
+#living-win-shortcut img {
+    width: 48px;
+    height: 48px;
+    background-image: url(../images/gray/sandbox/living.png);
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/gray/sandbox/living.png', sizingMethod='scale');
+}
+
+.icon-calendar-min {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/gray/sandbox/grid_min.png);
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/gray/sandbox/grid_min.png', sizingMethod='scale');
+}
+
+.icon-addrBook-min {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/gray/sandbox/addr_book_min.png);
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/gray/sandbox/addr_book_min.png', sizingMethod='scale');
+}
+
+.icon-company-min {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/gray/sandbox/company_min.png);
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/gray/sandbox/company_min.png', sizingMethod='scale');
+}
+
+.icon-reports-min {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/gray/sandbox/reports_min.png);
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/gray/sandbox/reports_min.png', sizingMethod='scale');
+}
+
+.icon-booking-find-min {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/gray/sandbox/booking-find_min.png);
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/gray/sandbox/booking-find_min.png', sizingMethod='scale');
+}
+
+.icon-living-min {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/gray/sandbox/living_min.png);
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/gray/sandbox/living_min.png', sizingMethod='scale');
+}
+
+.icon-configurations-min {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/gray/sandbox/configurations-min.png);
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/gray/sandbox/configurations-min.png', sizingMethod='scale');
+}
+
+.icon-add {
+    background-image: url(../images/gray/icons/add.png) !important;
+}
+
+.icon-edit {
+    background-image: url(../images/gray/icons/edit.png) !important;
+}
+
+.icon-remove {
+    background-image: url(../images/gray/icons/remove.png) !important;
+}
+
+.icon-clear {
+    background-image: url(../images/gray/icons/clear.png) !important;
+}
+
+.icon-filter {
+    background-image: url(../images/gray/icons/filter.png) !important;
+}
+
+.icon-filter-col {
+    background: url(../images/gray/icons/filter.png) no-repeat 0 0 !important;
+}
+
+.icon-ok {
+    background: url(../images/gray/icons/ok.png) no-repeat 0 0 !important;
+}
+
+.icon-print {
+    background: url(../images/gray/icons/print.png) no-repeat 0 0 !important;
+}
+
+.icon-rotate {
+    background: url(../images/gray/icons/rotate.png) no-repeat 0 0 !important;
+}
+
+.icon-scan {
+    background: url(../images/gray/icons/scan.png) no-repeat 0 0 !important;
+}
+
+.icon-config {
+    background: url(../images/gray/icons/config.png) no-repeat 0 0 !important;
+}
+
+.icon-room-type {
+    background: url(../images/gray/icons/room-type.png) no-repeat 0 0 !important;
+}
+
+.icon-tariff {
+    background: url(../images/gray/icons/tariff.png) no-repeat 0 0 !important;
+}
+
+.icon-priceing {
+    background: url(../images/gray/icons/priceing.png) no-repeat 0 0 !important;
+}
+
+.icon-limit {
+    background: url(../images/gray/icons/limit.png) no-repeat 0 0 !important;
+}
+
+.icon-chanel {
+    background: url(../images/gray/icons/chanel.png) no-repeat 0 0 !important;
+}
+
+.icon-services {
+    background: url(../images/gray/icons/services.png) no-repeat 0 0 !important;
+}
+
+.icon-support {
+    background: url(../images/gray/icons/support.png) no-repeat 0 0 !important;
+}
+
+.icon-manual {
+    background: url(../images/gray/icons/manual.png) no-repeat 0 0 !important;
+}
+
+.icon-exit-min {
+    background: url(../images/gray/icons/exit-min.png) no-repeat 0 0 !important;
+}
+
+.icon-edit-room-desc {
+    background: url(../images/gray/icons/edit-room-desc.png) no-repeat 0 0 !important;
+}
+
+.icon-edit-room-servises {
+    background: url(../images/gray/icons/edit-room-servises.png) no-repeat 0 0 !important;
+}
+
+.icon-view {
+    background: url(../images/gray/icons/view.png) no-repeat 0 0 !important;
+}
+
+.icon-photos {
+    background: url(../images/gray/icons/photos.png) no-repeat 0 0 !important;
+}
+
+.icon-info {
+    background: url(../images/gray/icons/info.png) no-repeat 0 0 !important;
+}
+
+.icon-costume-data {
+    background: url(../images/gray/icons/costume-data.png) no-repeat 0 0 !important;
+}
+
+.icon-desc {
+    background: url(../images/gray/icons/desc.png) no-repeat 0 0 !important;
+}
+
+.icon-hotel-desc {
+    background: url(../images/gray/icons/hotel-desc.png) no-repeat 0 0 !important;
+}
+
+.icon-upload {
+    background: url(../images/gray/icons/upload.png) no-repeat 0 0 !important;
+}
+
+.to-left {
+    float: left;
+}
+
+.to-right {
+    float: right;
+}
+
+.all-room-link {
+    color: #333;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.all-room-link:hover {
+    text-decoration: underline;
+}
+
+.view-comf {
+    font-weight: bold;
+}
+
+.view-comf span {
+    display: block;
+    width: 120px;
+    font-weight: normal;
+    float: left;
+}
+
+#room_desc-innerCt {
+    min-height: 150px !important;
+}
+
+.room-image {
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    border: solid 5px #eee;
+}
+
+#place-room-image, #menu-room-image {
+    position: relative;
+    height: 30px;
+    display: none;
+}
+
+#place-room-image {
+    margin-top: -30px;
+    background: #000;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+#place-room-image2 {
+    margin-top: -30px;
+    position: relative;
+    height: 30px;
+    display: none;
+    background: #000;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+#menu-room-image {
+    margin-top: 80px;
+    z-index: 2;
+}
+
+#del-room-image, #upd-room-image, #setTop-room-image {
+    position: relative;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    color: #FFF;
+    width: 70px;
+    z-index: 3;
+}
+
+#setTop-room-image {
+    display: none;
+    width: auto !important;
+}
+
+#del-room-image:hover, #upd-room-image:hover, #setTop-room-image:hover {
+    background: #000;
+    opacity: 0.9;
+}
+
+#del-room-image, #upd-room-image {
+    float: left;
+}
+
+.room-image:hover #menu-room-image, .room-image:hover #place-room-image, .room-image:hover #place-room-image2, .room-image:hover #setTop-room-image {
+    display: block !important;
+}
+
+.x-tab-bar {
+    background: #E0E0E0 !important;
+}
+
+.x-window-body {
+    background: #FFF !important;
+}
+
+.x-panel-body-default {
+    border-width: 0px !important;
+}
+
+.x-tab-bar-body {
+    border-bottom: 1px solid #B5B8C8 !important;
+}
+
+#add_room_type {
+    position: relative;
+    left: 15px;
+    cursor: pointer;
+    background: url(../images/gray/icons/add.png) 0 0 no-repeat;
+    padding: 0 15px 0 20px;
+}
+
+#add_room_type:hover {
+    text-decoration: underline;
+}
+
+#table_button_input, #table_button_output {
+    cursor: pointer;
+}
+
+
+
+

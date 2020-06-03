@@ -1,0 +1,36 @@
+Ext.define("Pms.modules.person.model.GroupMember", {
+    extend: "Ext.data.Model",
+    fields: [
+        {name: 'id', type: 'int', useNull: true/*, mapping: "person.id"*/},
+        {name: 'firstName', mapping: "person.firstName"},
+        {name: 'lastName', mapping: "person.lastName"},
+        {name: 'patronymic', mapping: 'person.patronymic'},
+        {name: 'country', mapping: 'person.country'},
+        {name: 'city', mapping: 'person.city'},
+        {name: 'address', mapping: 'person.address'},
+        {name: 'phone', mapping: 'person.phone'},
+        {name: 'email', mapping: 'person.email'},
+        {name: 'discount', type: 'int', mapping: 'person.discount', mapping: 'person.discount'},
+        {name: 'active', type: 'boolean', mapping: 'person.active'},
+        {name: 'language', mapping: 'person.language'},
+        {name: 'dob', type: 'UTCDate', serialize: Pms.serializeUTC, mapping: 'person.dob'},
+        {name: 'passportNumber', mapping: 'person.passportNumber'},
+        {name: 'passportIssued', mapping: 'person.passportIssued'},
+        {name: 'passportValidTill', type: 'UTCDate', serialize: Pms.serializeUTC, mapping: 'person.passportValidTill'},
+        {name: 'cio', mapping: 'person.cio'},
+        {name: 'entryType', serialize: function (value) { if (value == "") return null }, mapping: 'person.entryType'},
+        {name: 'entryValidFrom', type: 'UTCDate', serialize: Pms.serializeUTC, mapping: 'person.entryValidFrom'},
+        {name: 'entryValidTill', type: 'UTCDate', serialize: Pms.serializeUTC,  mapping: 'person.entryValidTill'},
+        {name: 'entryNumber', mapping: 'person.entryNumber'},
+        {name: 'visaType', serialize: function (value) { if (value == "") return null }, mapping: 'person.visaType'},
+        {name: 'carBrand', mapping: 'person.carBrand'},
+        {name: 'carNumber', mapping: 'person.carNumber'},
+        {name: 'listMembership', mapping: 'person.listMembership'},
+        {name: 'membershipReason', mapping: 'person.membershipReason'},
+        {name: 'type', defaultValue: 'adult', mapping: 'person.type'},
+        {name: 'identity', type: 'auto', mapping: 'person.identity'},
+        {name: 'person', type: 'auto', persist: false /*mapping: 'person.person'*/},
+        {name: 'roomUse', type: 'auto', persist: false /*mapping: 'person.roomUse'*/}
+    ]
+});
+

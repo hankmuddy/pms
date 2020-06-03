@@ -1,0 +1,191 @@
+body {
+    font-family: Arial, serif;
+    background-color: #f9f9f9;
+    /*background: url(../themes/default/images/desktop.jpg) no-repeat top center #8c839f;*/
+    margin: 0;
+    padding: 0;
+}
+
+.error {
+    border: 1px solid #ccc;
+    text-align: center;
+    background-color: #9c8aa7;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.hotel {
+    margin-bottom: 10px;
+    background: url(../themes/default/images/hotel-icon.png) no-repeat 5px center transparent;
+}
+
+.login {
+    margin-bottom: 10px;
+    background: url(../themes/default/images/login-icon.png) no-repeat 5px center transparent;
+}
+
+.password {
+    background: url(../themes/default/images/password-icon.png) no-repeat 5px center transparent;
+}
+
+.login, .hotel, .password {
+    width: 240px;
+    padding-right: 5px;
+    padding-left: 35px;
+    height: 42px;
+    color: #000;
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+.login:focus {
+    background: url(../themes/default/images/user-icon-blue.png) no-repeat 5px center transparent;
+}
+
+.hotel:focus {
+    background: url(../themes/default/images/hotel-icon-blue.png) no-repeat 5px center transparent;
+}
+
+.password:focus {
+    background: url(../themes/default/images/password-icon-blue.png) no-repeat 5px center transparent;
+}
+
+input::-webkit-input-placeholder {
+    color: #5cadf9;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: #5cadf9;
+}
+
+/* Firefox < 19 */
+input:-moz-placeholder {
+    color: #5cadf9;
+}
+
+input:focus:-moz-placeholder {
+    color: #5cadf9;
+}
+
+/* Firefox > 19 */
+input::-moz-placeholder {
+    color: #5cadf9;
+}
+
+input:focus::-moz-placeholder {
+    color: #5cadf9;
+}
+
+/* Internet Explorer 10 */
+input:-ms-input-placeholder {
+    color: #5cadf9;
+}
+
+input:focus:-ms-input-placeholder {
+    color: #5cadf9;
+}
+
+input:focus {
+    border: 1px solid #5cadf9;
+}
+
+input::-webkit-input-placeholder {
+    color: #c0c5c9;
+}
+
+input::-moz-placeholder {
+    color: #c0c5c9;
+}
+
+input, textarea {
+    outline: none;
+    border: 1px solid #c0c5c9;
+
+    /*-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);*/
+    /*-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);*/
+    /*box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);*/
+    /*-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;*/
+    /*-moz-transition: border linear 0.2s, box-shadow linear 0.2s;*/
+    /*-ms-transition: border linear 0.2s, box-shadow linear 0.2s;*/
+    /*-o-transition: border linear 0.2s, box-shadow linear 0.2s;*/
+    /*transition: border linear 0.2s, box-shadow linear 0.2s;*/
+}
+
+input, textarea, select, .uneditable-input {
+    /*display: inline-block;*/
+    /*height: 18px;*/
+    /*margin-bottom: 9px;*/
+    /*font-size: 13px;*/
+    /*line-height: 18px;*/
+    /*color: #555;*/
+    /*border: 1px solid #ccc;*/
+    /*-webkit-border-radius: 0;*/
+    /*-moz-border-radius: 0;*/
+    /*border-radius: 0;*/
+}
+
+label, input, button, select, textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 18px;
+}
+
+#login label {
+    margin-top: 5px;
+    width: 60px;
+}
+
+label {
+    float: left;
+}
+
+/*.idg-btn:hover {*/
+/*background: url(../themes/default/images/loginbtn-hover.jpg) repeat;*/
+/*}*/
+
+.idg-btn {
+    background: url(../themes/default/images/login-btn.png);
+    width: 158px;
+    height: 47px;
+    border: 0;
+    color: #fff;
+    font-size: 14px;
+    /*margin-top:10px;*/
+    /*margin-left: 170px;*/
+}
+
+.idg-btn:hover {
+    background: url(../themes/default/images/login-btn-hover.png);
+}
+
+.idg-btn:active {
+    background: url(../themes/default/images/login-btn-active.png);
+}
+
+.login-form-bg {
+    background: url(../themes/default/images/form-bg.png) no-repeat scroll -11px 0 rgba(0, 0, 0, 0);
+    width: 572px;
+    padding-top: 100px;
+    /*border: 1px solid red;*/
+    margin: 120px auto 0 auto;
+}
+
+.login-form {
+    /*display: table;*/
+    vertical-align: middle;
+    /*box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);*/
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(50, 50, 50, 0.4);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(50, 50, 50, 0.4);
+    box-shadow: 0px 0px 8px 0px rgba(50, 50, 50, 0.4);
+    margin: 0 auto 0 auto;
+    height: 286px;
+    width: 372px;
+    padding: 4px 4px 0 4px;
+    border: 1px solid #c0c5c9;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #fafafa;
+}

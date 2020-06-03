@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="HotelBill" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="14cbf7cb-7562-4122-84aa-0b5c9c2686f7">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Sans_Bold" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="9" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<paragraph leftIndent="2" rightIndent="2"/>
+	</style>
+	<style name="Sans_Italic" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="9" isBold="false" isItalic="true" isUnderline="false" isStrikeThrough="false">
+		<paragraph leftIndent="2" rightIndent="2"/>
+	</style>
+	<style name="Sans_Small" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="7" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<paragraph leftIndent="2" rightIndent="2"/>
+	</style>
+	<style name="Sans_Small_Under" hAlign="Center" vAlign="Top" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="7" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<paragraph leftIndent="2" rightIndent="2"/>
+	</style>
+	<style name="Sans_Bold_Underlined" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="9" isBold="true" isItalic="false" isUnderline="true" isStrikeThrough="false">
+		<paragraph leftIndent="2" rightIndent="2"/>
+	</style>
+	<style name="Sans_Normal_Frame" isDefault="true" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<pen lineWidth="0.5" lineColor="#000000"/>
+		<box>
+			<pen lineWidth="0.5"/>
+			<topPen lineWidth="0.5"/>
+			<leftPen lineWidth="0.5"/>
+			<bottomPen lineWidth="0.5"/>
+			<rightPen lineWidth="0.5"/>
+		</box>
+		<paragraph leftIndent="2" rightIndent="2"/>
+	</style>
+	<style name="Sans_Normal_Line" isDefault="true" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<pen lineWidth="0.5" lineColor="#000000"/>
+		<box>
+			<pen lineWidth="0.5"/>
+			<topPen lineWidth="0.0"/>
+			<leftPen lineWidth="0.0"/>
+			<bottomPen lineWidth="0.5"/>
+			<rightPen lineWidth="0.0"/>
+		</box>
+		<paragraph leftIndent="2" rightIndent="2"/>
+	</style>
+	<style name="Sans_Normal" isDefault="true" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<paragraph leftIndent="2" rightIndent="2"/>
+	</style>
+	<style name="table">
+		<box>
+			<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.0" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.0" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.0" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Transparent" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD_Blank" mode="Transparent" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.0" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.0" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.0" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<parameter name="hotelName" class="java.lang.String"/>
+	<parameter name="hotelCity" class="java.lang.String"/>
+	<parameter name="hotelEdrpou" class="java.lang.String"/>
+	<parameter name="room" class="java.lang.String"/>
+	<parameter name="startDate" class="java.lang.String"/>
+	<parameter name="endDate" class="java.lang.String"/>
+	<parameter name="firstName" class="java.lang.String"/>
+	<parameter name="lastName" class="java.lang.String"/>
+	<parameter name="patronymic" class="java.lang.String"/>
+	<parameter name="dob" class="java.lang.String"/>
+	<parameter name="passport" class="java.lang.String"/>
+	<parameter name="address" class="java.lang.String"/>
+	<parameter name="visaNumber" class="java.lang.String"/>
+	<parameter name="visaValidUntil" class="java.lang.String"/>
+	<parameter name="durationOfStay" class="java.lang.String"/>
+	<parameter name="pov" class="java.lang.String"/>
+	<parameter name="registrationNumber" class="java.lang.String"/>
+	<parameter name="country" class="java.lang.String"/>
+    <parameter name="city" class="java.lang.String"/>
+	<parameter name="imgPath" class="java.lang.String"/>
+	<parameter name="bookingId" class="java.lang.String"/>
+	<parameter name="checkInTime" class="java.lang.String"/>
+	<parameter name="checkOutTime" class="java.lang.String"/>
+	<background>
+		<band height="800">
+			<image>
+				<reportElement x="455" y="773" width="100" height="27" forecolor="#FFFFFF" uuid="795ff253-9f91-4ca0-b863-5109d78b16d9"/>
+				<imageExpression><![CDATA[$P{imgPath}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<detail>
+		<band height="802">
+			<staticText>
+				<reportElement style="Sans_Normal" x="0" y="0" width="555" height="20" uuid="a33d9f43-83ca-4c96-ba97-b7e89ee7f066"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[АНКЕТА]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="32" width="110" height="16" uuid="44c3ea4e-d837-4589-b239-928fd6a96553"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[1. Фамилия]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="48" width="110" height="16" uuid="e33e4f4d-55ef-4374-b936-6b11fb507f58"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[2. Имя]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="64" width="110" height="16" uuid="d9e4dbad-d9c4-4b0b-aa1c-b6caf69ee20c"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[3. Отчество]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="64" width="110" height="16" uuid="9ae8a759-fe54-4d9c-943f-e06089a8f036"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Прибыл]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="32" width="110" height="16" uuid="53a7006a-76e6-482a-bef8-0087f95e5f03"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Комната №]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="48" width="110" height="16" uuid="9815e504-a37f-4f0b-9b49-67d7f3576b36"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Индекс поселения]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="90" width="110" height="16" uuid="5dfb4a45-bd45-4425-8715-bdf456b2634a"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Выбыл]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="116" width="110" height="16" uuid="91b7bffa-b5a6-4dac-b65b-170135a05f6f"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[4. Дата рождения]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="132" width="110" height="16" uuid="36d5a522-4f83-43f5-beaa-0a802942cd6a"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[5. Место рождения]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="132" width="154" height="16" uuid="9fed8fac-5215-4532-8332-a2f95b8113e0"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Область, край, республика]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="164" width="44" height="16" uuid="851ac1ae-a955-4bf2-9e0b-9ec6375f26cd"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[район]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="180" width="91" height="16" uuid="94995c36-122c-44f6-aff4-7b818f2c92af"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[город (селение)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="212" width="110" height="16" uuid="494964be-6141-4bf1-94c9-4cb082338393"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[6. Паспорт серии]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="212" width="44" height="16" uuid="852f29f1-892e-4869-b17c-fba66d363ab5"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[выдан]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Small" x="392" y="80" width="163" height="10" uuid="e95970c6-3812-4a56-807f-3b26c4b4870e"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[(дата, часы)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Small" x="392" y="106" width="163" height="10" uuid="4cd41397-fce8-4517-9b85-6f8721f2e81a"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[(дата, часы)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Small" x="282" y="228" width="273" height="10" uuid="aca6d640-8c03-4b26-81a3-422195e825c3"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[(когда)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Small" x="0" y="254" width="555" height="10" uuid="53ee105e-48ba-4373-9903-1a4784f6c3ad"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[(наименование органа внутренних дел, выдавшего документ)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="264" width="221" height="16" uuid="96102200-9296-462c-ae98-2177f2e3a9e8"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[7. Адрес постоянного места жительства]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="296" width="110" height="16" uuid="f345b549-1bed-46a9-bd6a-325e366d3cb6"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[8. Цель приезда]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Small" x="110" y="312" width="445" height="10" uuid="191afa2a-5cae-4020-9eb2-480c53d859a3"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[(если в командировку, указать № удостоверения, кем выдано, когда)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="322" width="122" height="16" uuid="6ad42a91-fa80-4752-9ad2-df25a3e2ce18"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[9. Срок проживани до]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="338" width="158" height="16" uuid="e077987b-cf44-4ee3-b352-c634704b83d9"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[10. Продление проживания]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="354" width="350" height="16" uuid="93621650-ca87-48d2-a1cb-ee82862ac21b"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[11. С памяткой о правилах пожарной безопасности ознакомлен.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="296" y="385" width="54" height="16" uuid="072077da-abf2-46ff-84df-9015722a5f62"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Подпись]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Small" x="350" y="401" width="205" height="10" uuid="e8fa2d56-9651-4244-bb39-60a91fdf055e"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[(лица, прибывшего в гостиницу)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Normal_Line" x="350" y="385" width="205" height="16" uuid="8607aabb-a6d4-4a13-aa4e-de4810df1b30"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Normal_Line" x="0" y="280" width="555" height="16" uuid="2e902162-a446-4b8a-ba47-8e78a15cc148"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Normal_Line" x="0" y="196" width="555" height="16" uuid="0d485b4f-6838-4dc4-a3c7-2c5b8a56f43e"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Normal_Line" x="392" y="132" width="163" height="16" uuid="0fa8252f-c4ec-4f6e-af4c-6183dcea0288"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Normal_Line" x="0" y="238" width="555" height="16" uuid="c4bd4feb-65d4-416c-8b9d-49005d549944"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="Sans_Normal_Line" x="392" y="32" width="163" height="16" uuid="832b924d-66cb-44a9-9454-7951bc941a96"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{room}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Sans_Normal_Line" x="392" y="48" width="163" height="16" uuid="a379e582-2c98-437e-bfcb-23abbaf74313"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{bookingId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Sans_Normal_Line" x="392" y="64" width="163" height="16" uuid="ac755bc4-4713-449f-9a9b-b1e1a48b0cb4"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{checkInTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Sans_Normal_Line" x="392" y="90" width="163" height="16" uuid="63246849-cb6e-4d46-8194-cb5ae1e9c296"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{checkOutTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Sans_Normal_Line" x="110" y="48" width="111" height="16" uuid="462fcd26-a1d3-44c5-94d9-8b5f67a0b341"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{firstName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Sans_Normal_Line" x="110" y="32" width="111" height="16" uuid="7146dd1c-38c7-4833-97b9-9672f9a0a72a"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{lastName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Sans_Normal_Line" x="110" y="64" width="111" height="16" uuid="53ca5e59-b2bd-4d94-b487-47efd5cc04f8"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{patronymic}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Sans_Normal_Line" x="110" y="116" width="111" height="16" uuid="50dfc3b1-46c6-4aba-896e-288522a0eaa8"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dob}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Sans_Normal_Line" x="238" y="148" width="317" height="16" uuid="eefb58a9-acc1-40b8-8dca-4d4db0a62c8c"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Normal_Line" x="282" y="164" width="273" height="16" uuid="fe307d42-1997-4673-9871-22e6b5affa5c"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Normal_Line" x="329" y="180" width="226" height="16" uuid="84bd25a8-1200-43c2-9a93-4838135e8e8f"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="Sans_Normal_Line" x="110" y="212" width="111" height="16" uuid="3854d328-11ac-4bcd-a722-c2f914dc4468"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{passport}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Sans_Normal_Line" x="221" y="264" width="334" height="16" uuid="7f0f5e67-93f6-451f-ab26-899f7c190394"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Sans_Normal_Line" x="110" y="296" width="445" height="16" uuid="4457eddc-3bc6-494e-b351-545f3898ea63"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{pov}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Sans_Normal_Line" x="122" y="322" width="433" height="16" uuid="aac3f7a7-452c-44bf-ad44-fe86b284963d"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{endDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Sans_Normal_Line" x="158" y="338" width="397" height="16" uuid="57021638-ed30-4bdf-aa92-38ca97ab5d19"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Normal_Line" x="282" y="212" width="273" height="16" uuid="8e37503c-18a7-4da8-8adf-d641ce30d14b"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+		<band height="802">
+			<staticText>
+				<reportElement x="0" y="0" width="54" height="16" uuid="85061329-346c-451d-b2dc-b73aa8a53a09"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Поселен(а)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="16" width="91" height="16" uuid="ec88e04d-034f-4eee-a2b7-ae8a67efaa19"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[город (селение)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="32" width="91" height="16" uuid="82683b0f-abac-4e5f-acb7-55c875c4326a"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[гостиница]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="48" width="266" height="16" uuid="8d0cd891-4d2c-4cd6-a05a-9c3d529b41b0"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[На дополнительное место в номере согласен(на)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Small" x="320" y="64" width="235" height="10" uuid="a6b50566-31bf-4cae-bdc5-d34f7eaf379e"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[(подпись лица, прибывшего в гостиницу)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Small" x="320" y="101" width="235" height="10" uuid="25c6e5a7-f778-4754-9a70-470dfac22d00"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[(подпись лица, прибывшего в гостиницу)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="85" width="320" height="16" uuid="a63b7e84-9ad7-4f9c-8e34-58d799424f9b"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Согласен(на) на проживание в номере с оплатой всех мест]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="148" y="121" width="172" height="16" uuid="de97f550-e24d-4a7d-a84b-aefa6c8d7fa8"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Подпись ответственного лица]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Normal_Line" x="320" y="48" width="235" height="16" uuid="82aba494-76dc-4fe8-931f-59937c063718"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Normal_Line" x="320" y="85" width="235" height="16" uuid="46a32819-b61f-4086-a821-15cc62ad525c"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Normal_Line" x="320" y="121" width="235" height="16" uuid="fa313334-4787-4864-86c6-2d282597dec3"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="Sans_Normal_Line" x="91" y="32" width="175" height="16" uuid="605a6efe-798b-4618-af66-861af56cb080"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{hotelName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Sans_Normal_Line" x="91" y="16" width="175" height="16" uuid="1501f7fc-076c-427b-8a68-a05d40b02d21"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{hotelCity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Sans_Normal_Line" x="91" y="0" width="175" height="16" uuid="710057d7-29dc-497f-b15e-fce3da9fe802"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{startDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet author="vaka" id="2013-09-04_15:41" runAlways="true" runOnChange="true">
+        <sqlFile path="../documentation/initTenant.sql" encoding="UTF-8" splitStatements="false"/>
+    </changeSet>
+
+    <changeSet author="vaka" id="2014_06_18_14:14">
+        <sqlFile path="../documentation/migrations/2014_06_18.sql" encoding="UTF-8" splitStatements="false"/>
+    </changeSet>
+
+    <changeSet author="vaka" id="2014_07_08_12:23">
+        <sqlFile path="../documentation/migrations/2014_07_08.sql" encoding="UTF-8" splitStatements="false"/>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,211 @@
+<form name="customer" ng-submit="makeBooking()" class="orderForm">
+<div style="border-top-left-radius: 10px;border-top-right-radius: 10px;">
+<div class="header">
+
+</div>
+<div class="formContainer">
+    <div style="height: 200px;padding: 10px 10px 0 10px">
+        <h2 style="font-size: 20px; margin:0 0 10px 0;">Ваше бронирование</h2>
+        <table border="0" width="100%">
+            <tr>
+                <td width="20%">
+                    <div ng-if="model.hotelInfo.logo" class="" style="border: 0 solid red;margin-right:10px;">
+                        <img src="" ng-src="http://pmsphotos/test1/{{model.hotelInfo.logo}}" alt="" style="width: 150px;" class="img-thumbnail"/>
+                    </div>
+                </td>
+                <td style="padding: 0;vertical-align: top;" width="80%">
+                    <div class="">
+                        <p style="margin: 0;font-weight: bold;font-size: 15px;">{{model.hotelInfo.name}}</p>
+
+                        <p style="margin: 0;">{{model.hotelInfo.officialAddress}}</p>
+
+                        <p style="color:#8960a6;margin: 0;">Заезд: {{model.dateStart}}</p>
+
+                        <p style="color:#8960a6;margin: 0;">Отъезд: {{model.dateEnd}}</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: right;">
+                    <div class="" style="font-weight: bold;">
+                        Общая стоимость за {{model.daysDifference}} ночи: <span>{{model.booking.sum}} UAH</span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <h2 style="font-size: 20px; margin:0 0 10px 10px;">Ваши данные</h2>
+    <table class="formTable">
+        <tr>
+            <td width="20%" style="padding: 10px 10px 0px 15px;vertical-align: middle;">
+                <label>Имя</label>
+            </td>
+            <td width="30%" style="padding: 10px 10px 0 10px;">
+                <div class="form-group">
+
+                    <input type="text" placeholder="" name="firstName" class="form-control" ng-minlength="3" ng-maxlength="30" required
+                           ng-model="model.customer.firstName">
+
+                    <div ng-if="customer.firstName.$dirty && customer.firstName.$invalid">Ошибка:
+                        <span ng-show="customer.firstName.$error.required">Необходимо указать имя.</span>
+                        <span ng-show="customer.firstName.$error.minlength">Слишком короткое имя</span>
+                        <span ng-show="customer.firstName.$error.maxlength">Слишком длинное имя</span>
+                    </div>
+                </div>
+            </td>
+            <td width="20%" style="padding: 10px 10px 0px 15px;vertical-align: middle;">
+                <label>Адрес</label>
+            </td>
+            <td width="30%" style="padding: 10px 10px 0 10px;">
+                <div class="form-group">
+
+                    <input type="text" class="form-control" required placeholder="" name="address" ng-model="model.customer.address">
+
+                    <div ng-if="customer.address.$dirty && customer.address.$invalid">Ошибка:
+                        <span ng-show="customer.address.$error.required">Необходимо указать Ваш email.</span>
+                        <span ng-show="customer.address.$error.email">Не корректный email.</span>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td width="20%" style="padding: 0 10px 0px 15px;vertical-align: middle;">
+                <label>Фамилия</label>
+            </td>
+            <td width="30%" style="padding: 0 10px 0 10px;">
+                <div class="form-group">
+
+                    <input type="text" placeholder="" class="form-control" name="lastName" ng-minlength="3" ng-maxlength="30" required
+                           ng-model="model.customer.lastName">
+
+                    <div ng-if="customer.lastName.$dirty && customer.lastName.$invalid">Ошибка:
+                        <span ng-show="customer.lastName.$error.required">Tell us your email.</span>
+                        <span ng-show="customer.lastName.$error.minlength">Слишком короткая фамилия</span>
+                        <span ng-show="customer.lastName.$error.maxlength">Слишком длинная фамилия</span>
+                    </div>
+                </div>
+            </td>
+            <td width="20%" style="padding: 0 10px 0px 15px;vertical-align: middle;">
+                <label>Город</label>
+            </td>
+            <td width="30%" style="padding: 0 10px 0 10px;">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="" name="city" ng-model="model.customer.city">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td width="20%" style="padding: 0 10px 0px 15px;vertical-align: middle;">
+                <label>Email</label>
+            </td>
+            <td width="30%" style="padding: 0 10px 0 10px;">
+                <div class="form-group">
+                    <input type="email" class="form-control" name="email" placeholder="" ng-model="model.customer.email" required>
+
+                    <div ng-if="customer.email.$dirty && customer.email.$invalid">Ошибка:
+                        <span ng-show="customer.email.$error.required">Необходимо указать Ваш email.</span>
+                        <span ng-show="customer.email.$error.email">Не корректный email.</span>
+                    </div>
+                </div>
+            </td>
+            <td width="20%" style="padding: 0 10px 0px 15px;vertical-align: middle;">
+                <label>Страна</label>
+            </td>
+            <td width="30%" style="padding: 0 10px 0 10px;">
+                <div class="form-group">
+                    <select required class="form-control" name="country" ng-model="model.customer.country">
+                        <option value="">-----</option>
+                        <option ng-repeat="(key, value) in countries|orderBy:'value'"
+                                value="{{key}}">
+                            {{value}}
+                        </option>
+                    </select>
+
+                    <div ng-if="customer.country.$dirty && customer.country.$invalid">Ошибка:
+                        <span ng-show="customer.country.$error.required">Необходимо указать Ваш email.</span>
+                        <span ng-show="customer.country.$error.email">Не корректный email.</span>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td width="20%" style="padding: 0 10px 0px 15px;vertical-align: middle;">
+                <label style="">Email потворно</label>
+            </td>
+            <td width="30%" style="padding: 0 10px 0px 10px;">
+                <div class="form-group">
+                    <input type="email" class="form-control" name="emailConfirm" placeholder="" ng-model="model.customer.emailConfirm"
+                           match="model.customer.email" required>
+                    <!--<div ng-if="customer.email.$dirty && customer.emailConfirm.$invalid">Ошибка:-->
+                    <div ng-show="customer.emailConfirm.$error.mismatch">
+                        <span class="msg-error">Email and Confirm Email must match.</span>
+                    </div>
+                    <!--<span ng-show="customer.emailConfirm.$error.required">Необходимо указать Ваш email.</span>-->
+                    <!--<span ng-show="customer.emailConfirm.$error.email">Не корректный email.</span>-->
+                    <!--</div>-->
+                </div>
+            </td>
+            <td width="20%" style="padding: 0 10px 0px 15px;vertical-align: middle;">
+                <label style="">Телефон</label>
+            </td>
+            <td width="30%" style="padding: 0 10px 0px 10px;">
+                <div class="form-group">
+                    <input type="text" class="form-control" required placeholder="" name="phone" ng-model="model.customer.phone">
+
+                    <div ng-if="customer.phone.$dirty && customer.phone.$invalid">Ошибка:
+                        <span ng-show="customer.phone.$error.required">Необходимо указать Ваш email.</span>
+                        <span ng-show="customer.phone.$error.email">Не корректный email.</span>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <!--<tr>-->
+        <!--<td>-->
+
+        <!--</td>-->
+        <!--<td>-->
+        <!--<div class="form-group">-->
+        <!--<label>-->
+        <!--ПРИМЕЧАНИЯ ИЛИ ДОП. ЗАПРОСЫ-->
+        <!--<textarea class="form-control" name="description" ng-model="model.customer.description" rows="3"></textarea>-->
+        <!--</label>-->
+        <!--</div>-->
+
+        <!--<hr>-->
+        <!--<label class="checkbox">-->
+        <!--<input type="checkbox" name="personalData" ng-model="model.customer.personalData" required>-->
+        <!--Я ДАЮ РАЗРЕШЕНИЕ НА ОБРАБОТКУ СВОИХ ПЕРСОНАЛЬНЫХ ДАННЫХ-->
+        <!--</label>-->
+        <!--<label class="checkbox">-->
+        <!--<input type="checkbox" name="termsAndConditions" ng-model="model.customer.termsAndConditions" required>-->
+        <!--ПРИНИМАЮ ВЫШЕУКАЗАННЫЕ УСЛОВИЯ АННУЛЯЦИИ ДАННОГО БРОНИРОВАНИЯ-->
+        <!--</label>-->
+        <!--<label class="checkbox">-->
+        <!--<input type="checkbox" name="emailIsCorrect" ng-model="model.customer.emailIsCorrect" required>-->
+        <!--МОЙ АДРЕС ЭЛЕКТРОННОЙ ПОЧТЫ "{{model.customer.email}}" УКАЗАН ВЕРНО-->
+        <!--</label>-->
+        <!--<button type="submit" ng-disabled="customer.$invalid" class="btn btn-block btn-success" ng-click="">Подтвердить бронирование-->
+        <!--</button>-->
+        <!--</td>-->
+        <!--</tr>-->
+    </table>
+    <div style="height: 200px;background-color: #f8f9fb;">
+        <div style="padding-top:10px;text-align: center;">
+            Подтверждения бронирования<br>
+            Бронируя этот номер, я принимаю условия бронирования и общии условия
+        </div>
+        <!--<div class="pull-right" style="margin-top: 10px;">-->
+        <input type="submit" class="booking-button-big" value="Забронировать номер по цене {{model.booking.sum}} UAH" ng-disabled="customer.$invalid"
+               ng-click="">
+        <!--</div>-->
+    </div>
+</div>
+<div class="footer">
+    <!--<h3 class="pull-left" style="color: #fff;margin-top: 15px;" ng-if="getAmount() > 0">Сумма: {{getAmount()}} UAH</h3>-->
+
+    <!--<div class="pull-right" style="margin-top: 10px;">-->
+    <!--<input type="submit" class="booking-button" value="Забронировать" ng-click="addBooking()">-->
+    <!--</div>-->
+</div>
+</div>
+</form>

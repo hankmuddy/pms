@@ -1,0 +1,72 @@
+
+html {
+    font: 100% Arial, Verdana, Tahoma;
+}
+
+body {
+    margin:0;
+    font-size: 0.9rem;
+}
+
+
+.wrapper-invoice {
+    padding: 2%;
+    min-width: 620px;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.hotel-logo {
+    float: left;
+}
+
+.hotel-logo img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.header-invoice {
+    overflow: hidden;
+}
+
+.hotel-payment-info {
+    float: right;
+    text-align: right;
+    font-size: 0.8rem;
+}
+
+.hotel-payment-info strong, .unvoice-number {
+    font-size: 1rem;
+    font-weight:bold;
+}
+
+.invoice-info {
+    clear: both;
+}
+
+.client-billing {
+    text-align: center;
+    margin: 2rem 0;
+    line-height: 1.5rem;
+}
+
+
+.client-payment {
+    text-align: center;
+    border: solid 1px #ccc;
+    border-collapse: collapse;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.service-use-refund {
+    background-color: #ddd;
+    text-decoration: line-through !important;
+}
+
+.signature {
+    float: right;
+    margin-top: 30px;
+    margin-right: 40px;
+    width: 200px;
+}

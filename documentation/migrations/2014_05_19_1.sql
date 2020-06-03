@@ -1,0 +1,1 @@
+ALTER TABLE logins.hotel ADD COLUMN paiduntil DATE;

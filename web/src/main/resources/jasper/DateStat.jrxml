@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="HotelBill"
+              pageWidth="595" pageHeight="842" columnWidth="500" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20"
+              whenResourceMissingType="Empty" uuid="14cbf7cb-7562-4122-84aa-0b5c9c2686f7">
+    <property name="ireport.zoom" value="2.0"/>
+    <property name="ireport.x" value="172"/>
+    <property name="ireport.y" value="0"/>
+    <style name="Sans_Bold" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="9" isBold="true" isItalic="false" isUnderline="false"
+           isStrikeThrough="false">
+        <paragraph leftIndent="2" rightIndent="2"/>
+    </style>
+    <style name="Sans_Italic" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="9" isBold="false" isItalic="true" isUnderline="false"
+           isStrikeThrough="false">
+        <paragraph leftIndent="2" rightIndent="2"/>
+    </style>
+    <style name="Sans_Small" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="7" isBold="false" isItalic="false" isUnderline="false"
+           isStrikeThrough="false">
+        <paragraph leftIndent="2" rightIndent="2"/>
+    </style>
+    <style name="Sans_Small_Under" hAlign="Center" vAlign="Top" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="7" isBold="false" isItalic="false"
+           isUnderline="false" isStrikeThrough="false">
+        <paragraph leftIndent="2" rightIndent="2"/>
+    </style>
+    <style name="Sans_Bold_Underlined" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="9" isBold="true" isItalic="false"
+           isUnderline="true" isStrikeThrough="false">
+        <paragraph leftIndent="2" rightIndent="2"/>
+    </style>
+    <style name="Sans_Normal_Frame" isDefault="true" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="9" isBold="false" isItalic="false"
+           isUnderline="false" isStrikeThrough="false">
+        <pen lineWidth="0.5" lineColor="#000000"/>
+        <box>
+            <pen lineWidth="0.5"/>
+            <topPen lineWidth="0.5"/>
+            <leftPen lineWidth="0.5"/>
+            <bottomPen lineWidth="0.5"/>
+            <rightPen lineWidth="0.5"/>
+        </box>
+        <paragraph leftIndent="2" rightIndent="2"/>
+    </style>
+    <style name="Sans_Normal_Line" isDefault="true" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="9" isBold="false" isItalic="false"
+           isUnderline="false" isStrikeThrough="false">
+        <pen lineWidth="0.5" lineColor="#000000"/>
+        <box>
+            <pen lineWidth="0.5"/>
+            <topPen lineWidth="0.0"/>
+            <leftPen lineWidth="0.0"/>
+            <bottomPen lineWidth="0.5"/>
+            <rightPen lineWidth="0.0"/>
+        </box>
+        <paragraph leftIndent="2" rightIndent="2"/>
+    </style>
+    <style name="Sans_Normal" isDefault="true" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="9" isBold="false" isItalic="false"
+           isUnderline="false" isStrikeThrough="false">
+        <paragraph leftIndent="2" rightIndent="2"/>
+    </style>
+    <style name="table">
+        <box>
+            <pen lineWidth="0.0" lineColor="#FFFFFF"/>
+            <topPen lineWidth="0.0" lineColor="#FFFFFF"/>
+            <leftPen lineWidth="0.0" lineColor="#FFFFFF"/>
+            <bottomPen lineWidth="0.0" lineColor="#FFFFFF"/>
+            <rightPen lineWidth="0.0" lineColor="#FFFFFF"/>
+        </box>
+    </style>
+    <style name="table_TD" mode="Transparent" backcolor="#FFFFFF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="table_TD_Blank" mode="Transparent" backcolor="#FFFFFF">
+        <box>
+            <pen lineWidth="0.0" lineColor="#FFFFFF"/>
+            <topPen lineWidth="0.0" lineColor="#FFFFFF"/>
+            <leftPen lineWidth="0.0" lineColor="#FFFFFF"/>
+            <bottomPen lineWidth="0.0" lineColor="#FFFFFF"/>
+            <rightPen lineWidth="0.0" lineColor="#FFFFFF"/>
+        </box>
+    </style>
+    <style name="table 1">
+        <box>
+            <pen lineWidth="1.0" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <subDataset name="Table Dataset 1" uuid="54b61058-b3b9-4947-9c91-5f9c6cbfbb99">
+        <parameter name="totalRoomsToSell" class="java.lang.String"/>
+        <parameter name="totalBooked" class="java.lang.String"/>
+        <parameter name="totalLiving" class="java.lang.String"/>
+        <parameter name="totalLivingPersons" class="java.lang.String"/>
+        <parameter name="totalProfit" class="java.lang.String"/>
+        <field name="date" class="java.lang.String"/>
+        <field name="roomsToSell" class="java.lang.String"/>
+        <field name="booked" class="java.lang.String"/>
+        <field name="living" class="java.lang.String"/>
+        <field name="livingPersons" class="java.lang.String"/>
+        <field name="profit" class="java.lang.String"/>
+        <field name="sot" class="java.lang.String"/>
+        <field name="load" class="java.lang.String"/>
+    </subDataset>
+    <parameter name="startDate" class="java.lang.String"/>
+    <parameter name="endDate" class="java.lang.String"/>
+    <parameter name="dataCollection" class="java.util.Collection"/>
+    <parameter name="totalRoomsToSell" class="java.lang.String"/>
+    <parameter name="totalBooked" class="java.lang.String"/>
+    <parameter name="totalLiving" class="java.lang.String"/>
+    <parameter name="totalLivingPersons" class="java.lang.String"/>
+    <parameter name="totalProfit" class="java.lang.String"/>
+    <parameter name="imgPath" class="java.lang.String"/>
+    <background>
+        <band height="800">
+            <image>
+                <reportElement x="455" y="773" width="100" height="27" forecolor="#FFFFFF" uuid="795ff253-9f91-4ca0-b863-5109d78b16d9"/>
+                <imageExpression><![CDATA[$P{imgPath}]]></imageExpression>
+            </image>
+        </band>
+    </background>
+    <title>
+        <band height="29">
+            <textField>
+                <reportElement style="Sans_Normal" x="160" y="12" width="235" height="12" uuid="e187edcc-e32d-430f-ad60-9ca67059f53f"/>
+                <textElement textAlignment="Center"/>
+                <textFieldExpression><![CDATA["с " + $P{startDate} + " по " + $P{endDate}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="Sans_Normal" x="160" y="0" width="235" height="12" uuid="8db3a926-4840-43fe-9ba6-0a0e8dab9d02"/>
+                <textElement textAlignment="Center"/>
+                <text><![CDATA[Статистика по датам]]></text>
+            </staticText>
+        </band>
+    </title>
+    <detail>
+        <band height="50">
+            <componentElement>
+                <reportElement key="table 1" style="table" x="0" y="0" width="555" height="50" uuid="affeee0a-fbc7-4d35-a9f7-447139547599"/>
+                <jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components"
+                          xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+                    <datasetRun subDataset="Table Dataset 1" uuid="7211d89b-f54c-4925-8a19-bb1d24b94ced">
+                        <datasetParameter name="totalRoomsToSell">
+                            <datasetParameterExpression><![CDATA[$P{totalRoomsToSell}]]></datasetParameterExpression>
+                        </datasetParameter>
+                        <datasetParameter name="totalBooked">
+                            <datasetParameterExpression><![CDATA[$P{totalBooked}]]></datasetParameterExpression>
+                        </datasetParameter>
+                        <datasetParameter name="totalLiving">
+                            <datasetParameterExpression><![CDATA[$P{totalLiving}]]></datasetParameterExpression>
+                        </datasetParameter>
+                        <datasetParameter name="totalLivingPersons">
+                            <datasetParameterExpression><![CDATA[$P{totalLivingPersons}]]></datasetParameterExpression>
+                        </datasetParameter>
+                        <datasetParameter name="totalProfit">
+                            <datasetParameterExpression><![CDATA[$P{totalProfit}]]></datasetParameterExpression>
+                        </datasetParameter>
+                        <dataSourceExpression>
+                            <![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{dataCollection})]]></dataSourceExpression>
+                    </datasetRun>
+                    <jr:column width="72" uuid="c2a95364-f42e-41ce-b74d-8d688745e1f8">
+                        <jr:tableFooter style="table_TD" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="72" height="30" uuid="3f341615-db79-4ea6-834f-5fd006afaa8c"/>
+                                <textElement textAlignment="Center"/>
+                                <text><![CDATA[Итого:]]></text>
+                            </staticText>
+                        </jr:tableFooter>
+                        <jr:columnHeader style="table_TD" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="72" height="30" uuid="3173ea81-66fd-40bc-b739-ba9353eec5f1"/>
+                                <textElement textAlignment="Center"/>
+                                <text><![CDATA[Дата]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="table_TD" height="20" rowSpan="1">
+                            <textField>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="72" height="20" uuid="cd84d295-145f-44d1-98ed-1fefd290141e"/>
+                                <textElement textAlignment="Center"/>
+                                <textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="90" uuid="29abc227-e724-4894-98c3-a6b3c717468e">
+                        <jr:tableFooter style="table_TD" height="30" rowSpan="1">
+                            <textField>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="90" height="30" uuid="e38c0730-a7dd-4d4a-b63a-3e947123b89c"/>
+                                <textElement textAlignment="Center"/>
+                                <textFieldExpression><![CDATA[$P{totalRoomsToSell}]]></textFieldExpression>
+                            </textField>
+                        </jr:tableFooter>
+                        <jr:columnHeader style="table_TD" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="90" height="30" uuid="2d3744c4-55f3-4cae-9e6e-2cf08a454dda"/>
+                                <textElement textAlignment="Center"/>
+                                <text><![CDATA[Номеров к
+продаже]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="table_TD" height="20" rowSpan="1">
+                            <textField>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="90" height="20" uuid="0a5ae555-0aba-4901-b83a-30c2a0b2fe54"/>
+                                <textElement textAlignment="Center"/>
+                                <textFieldExpression><![CDATA[$F{roomsToSell}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="90" uuid="5482b1d1-d478-422e-8abe-5f866718003a">
+                        <jr:tableFooter style="table_TD" height="30" rowSpan="1">
+                            <textField>
+                                <reportElement x="0" y="0" width="90" height="30" uuid="448dd532-1790-423f-b7ce-e26ac512bd96"/>
+                                <textElement textAlignment="Center"/>
+                                <textFieldExpression><![CDATA[$P{totalBooked}]]></textFieldExpression>
+                            </textField>
+                        </jr:tableFooter>
+                        <jr:columnHeader style="table_TD" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="90" height="30" uuid="8462cb4d-570f-44fb-ad6f-d67d0f069ae2"/>
+                                <textElement textAlignment="Center"/>
+                                <text><![CDATA[Забронировано]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="table_TD" height="20" rowSpan="1">
+                            <textField>
+                                <reportElement x="0" y="0" width="90" height="20" uuid="9742fe61-5be0-4756-afe4-14d0477ef591"/>
+                                <textElement textAlignment="Center"/>
+                                <textFieldExpression><![CDATA[$F{booked}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="90" uuid="60022401-9222-460f-a4bc-c55e8a568a69">
+                        <jr:tableFooter style="table_TD" height="30" rowSpan="1">
+                            <textField>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="90" height="30" uuid="a388b36d-7703-4fda-a955-2ce9281570a3"/>
+                                <textElement textAlignment="Center"/>
+                                <textFieldExpression><![CDATA[$P{totalLiving} + " / " + $P{totalLivingPersons}]]></textFieldExpression>
+                            </textField>
+                        </jr:tableFooter>
+                        <jr:columnHeader style="table_TD" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="90" height="15" uuid="75157a4e-c9fd-4ba3-829f-78ed048b88d6"/>
+                                <textElement textAlignment="Center"/>
+                                <text><![CDATA[Проживает]]></text>
+                            </staticText>
+                            <staticText>
+                                <reportElement style="Sans_Normal" x="0" y="15" width="90" height="15" uuid="df50af59-f176-44b0-aa21-356248f4c2e2"/>
+                                <textElement>
+                                    <font size="8"/>
+                                </textElement>
+                                <text><![CDATA[(номеров / людей)]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="table_TD" height="20" rowSpan="1">
+                            <textField>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="90" height="20" uuid="2e929a0c-eeea-4a3c-bc13-9449a2e7d329"/>
+                                <textElement textAlignment="Center"/>
+                                <textFieldExpression><![CDATA[$F{living} + " / " + $F{livingPersons}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="90" uuid="0920cc99-910c-4d0f-8ad8-b359e0d0bab5">
+                        <jr:tableFooter style="table_TD" height="30" rowSpan="1">
+                            <textField>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="90" height="30" uuid="a4850d91-955a-45e2-9bf2-3f8bf82bd6d0"/>
+                                <textElement textAlignment="Right"/>
+                                <textFieldExpression><![CDATA[$P{totalProfit}]]></textFieldExpression>
+                            </textField>
+                        </jr:tableFooter>
+                        <jr:columnHeader style="table_TD" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="90" height="30" uuid="4558c6d8-73ad-41f2-9976-0ca190a49a2a"/>
+                                <textElement textAlignment="Center"/>
+                                <text><![CDATA[Ожидаемый
+доход]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="table_TD" height="20" rowSpan="1">
+                            <textField>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="90" height="20" uuid="a48ee4f4-4231-4b5c-998b-770e7a7b12c9"/>
+                                <textElement textAlignment="Right"/>
+                                <textFieldExpression><![CDATA[$F{profit}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="72" uuid="00b3ffc9-3df2-43ca-ae5f-89920911bbc5">
+                        <jr:tableFooter style="table_TD" height="30" rowSpan="1"/>
+                        <jr:columnHeader style="table_TD" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="72" height="30" uuid="d9795544-53c8-41d3-80ad-7673f646f1f4"/>
+                                <textElement textAlignment="Center"/>
+                                <text><![CDATA[СОТ]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="table_TD" height="20" rowSpan="1">
+                            <textField>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="72" height="20" uuid="8c548acd-1354-445f-9907-9f779cea593b"/>
+                                <textElement textAlignment="Right"/>
+                                <textFieldExpression><![CDATA[$F{sot}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="51" uuid="984df710-326b-43a0-819d-88a578eee3a5">
+                        <jr:tableFooter style="table_TD" height="30" rowSpan="1"/>
+                        <jr:columnHeader style="table_TD" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="51" height="30" uuid="aa35f916-0351-4904-b9d8-a610008d9d30"/>
+                                <textElement textAlignment="Center"/>
+                                <text><![CDATA[%
+загрузки]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="table_TD" height="20" rowSpan="1">
+                            <textField>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="51" height="20" uuid="3c0fec7e-905d-41e3-967d-eb01cf3e1515"/>
+                                <textElement textAlignment="Right"/>
+                                <textFieldExpression><![CDATA[$F{load}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                </jr:table>
+            </componentElement>
+        </band>
+    </detail>
+</jasperReport>

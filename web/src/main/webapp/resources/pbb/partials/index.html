@@ -1,0 +1,1015 @@
+<style>
+body {
+    margin: 0;
+    border-top: 5px solid #d4ae69;
+    border-bottom: 5px solid #d4ae69;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 14px;
+}
+
+#booking_button {
+    width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 0 9px rgba(204, 204, 204, 0.93);
+}
+
+#booking_button a {
+    color: #747474;
+}
+
+#booking_button a:hover {
+    text-decoration: none
+}
+
+.head input.field {
+    background: url(pbb/img/design/field.png) no-repeat 180px 10px #fff;
+    width: 211px !important;
+    margin-right: 15px;
+    height: 41px !important;
+    border: 1px solid #476fc0;
+    font-size: 14px;
+    padding-left: 12px;
+    cursor: pointer;
+}
+
+.head input.field::-webkit-input-placeholder {
+    color: #333;
+    font-size: 14px;
+}
+
+.head input.field::-moz-placeholder {
+    color: #333;
+    font-size: 14px;
+}
+
+#booking_button .book, .modal-footer .book {
+    border-radius: 2px;
+    color: #5c4211;
+    display: block;
+    font-size: 14px;
+    padding: 10px 30px;
+    text-indent: -5px !important;
+    text-decoration: none;
+    display: inline;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+b {
+    font-weight: 600;
+}
+
+#booking_button table .book, .modal-footer .book {
+    /*background: #e2bf7e; *//* Old browsers */
+    /*background: -moz-linear-gradient(top, #e2bf7e 0%, #b29052 100%); *//* FF3.6+ */
+    /*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e2bf7e), color-stop(100%, #b29052)); *//* Chrome,Safari4+ */
+    /*background: -webkit-linear-gradient(top, #e2bf7e 0%, #b29052 100%); *//* Chrome10+,Safari5.1+ */
+    /*background: -o-linear-gradient(top, #e2bf7e 0%, #b29052 100%); *//* Opera 11.10+ */
+    /*background: -ms-linear-gradient(top, #e2bf7e 0%, #b29052 100%); *//* IE10+ */
+    /*background: linear-gradient(to bottom, #e2bf7e 0%, #b29052 100%); *//* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e2bf7e', endColorstr='#b29052', GradientType=0); /* IE6-9 */
+    border: 1px solid #b29052;
+    float: right;
+}
+
+#booking_button table .book:hover, .modal-footer .book:hover {
+    /*background: #b29052; *//* Old browsers *//*
+    background: -moz-linear-gradient(top, #b29052 0%, #e2bf7e 100%); *//* FF3.6+ *//*
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b29052), color-stop(100%, #e2bf7e)); *//* Chrome,Safari4+ *//*
+    background: -webkit-linear-gradient(top, #b29052 0%, #e2bf7e 100%); *//* Chrome10+,Safari5.1+ *//*
+    background: -o-linear-gradient(top, #b29052 0%, #e2bf7e 100%); *//* Opera 11.10+ *//*
+    background: -ms-linear-gradient(top, #b29052 0%, #e2bf7e 100%); *//* IE10+ *//*
+    background: linear-gradient(to bottom, #b29052 0%, #e2bf7e 100%); *//* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b29052', endColorstr='#e2bf7e', GradientType=0); /* IE6-9 */
+}
+
+/*.modal-footer .book {*/
+/*background: #e9e9e9; *//* Old browsers */
+/*background: -moz-linear-gradient(top, #e9e9e9 0%, #bfbfbf 100%); *//* FF3.6+ */
+/*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e9e9e9), color-stop(100%, #bfbfbf)); *//* Chrome,Safari4+ */
+/*background: -webkit-linear-gradient(top, #e9e9e9 0%, #bfbfbf 100%); *//* Chrome10+,Safari5.1+ */
+/*background: -o-linear-gradient(top, #e9e9e9 0%, #bfbfbf 100%); *//* Opera 11.10+ */
+/*background: -ms-linear-gradient(top, #e9e9e9 0%, #bfbfbf 100%); *//* IE10+ */
+/*background: linear-gradient(to bottom, #e9e9e9 0%, #bfbfbf 100%); *//* W3C */
+/*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#bfbfbf', GradientType=0); *//* IE6-9 */
+/*border: 1px solid #bfbfbf;*/
+/*}*/
+
+/*.modal-footer .book:hover {*/
+/*background: #bfbfbf; *//* Old browsers */
+/*background: -moz-linear-gradient(top, #bfbfbf 0%, #e9e9e9 100%); *//* FF3.6+ */
+/*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #bfbfbf), color-stop(100%, #e9e9e9)); *//* Chrome,Safari4+ */
+/*background: -webkit-linear-gradient(top, #bfbfbf 0%, #e9e9e9 100%); *//* Chrome10+,Safari5.1+ */
+/*background: -o-linear-gradient(top, #bfbfbf 0%, #e9e9e9 100%); *//* Opera 11.10+ */
+/*background: -ms-linear-gradient(top, #bfbfbf 0%, #e9e9e9 100%); *//* IE10+ */
+/*background: linear-gradient(to bottom, #bfbfbf 0%, #e9e9e9 100%); *//* W3C */
+/*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bfbfbf', endColorstr='#e9e9e9', GradientType=0); *//* IE6-9 */
+/*}*/
+
+#booking_button .head .book {
+    background: #e9e9e9; /* Old browsers */
+    background: -moz-linear-gradient(top, #e9e9e9 0%, #bfbfbf 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e9e9e9), color-stop(100%, #bfbfbf)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #e9e9e9 0%, #bfbfbf 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #e9e9e9 0%, #bfbfbf 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #e9e9e9 0%, #bfbfbf 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #e9e9e9 0%, #bfbfbf 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#bfbfbf', GradientType=0); /* IE6-9 */
+    border: 1px solid #bfbfbf;
+}
+
+#booking_button .head .book:hover {
+    background: #bfbfbf; /* Old browsers */
+    background: -moz-linear-gradient(top, #bfbfbf 0%, #e9e9e9 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #bfbfbf), color-stop(100%, #e9e9e9)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #bfbfbf 0%, #e9e9e9 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #bfbfbf 0%, #e9e9e9 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #bfbfbf 0%, #e9e9e9 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #bfbfbf 0%, #e9e9e9 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bfbfbf', endColorstr='#e9e9e9', GradientType=0); /* IE6-9 */
+}
+
+#booking_button .top {
+    color: #747474;
+    padding: 25px 20px 0 20px;
+}
+
+#booking_button .top .logo {
+    float: left;
+    border: 1px solid #e6e6e6;
+    margin-right: 25px;
+}
+
+#booking_button .top .title {
+    /*font-size: 26px;*/
+    /*color: #d4ae69;*/
+    /*font-weight: bold;*/
+    /*padding-top: 30px;*/
+    font-size: 26px;
+    color: #d4ae69;
+    /*font-family: Arial, sans-serif;*/
+    font-weight: 600;
+    padding-top: 30px;
+}
+
+#booking_button .top span {
+    color: #6f4c95;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#booking_button .middle .text {
+    color: #424242;
+    padding: 25px 20px 0 20px;
+    font-weight: 600;
+    clear: both;
+    padding-top: 30px;
+}
+
+#booking_button .middle .text a {
+    color: #d4ae69;
+}
+
+#booking_button .head {
+    background-color: #5481db;
+    /*margin-top: 30px;*/
+    padding: 18px 22px;
+    overflow: hidden;
+    border: 1px solid #426aba;
+    text-align: center;
+}
+
+#booking_button .bottom {
+    border-radius: 0px 0px 9px 9px;
+}
+
+#booking_button .bottom .text {
+    font-size: 18px;
+    color: #fff;
+    max-width: 300px;
+    float: left;
+}
+
+#booking_button .head .title {
+    font-size: 32px;
+    color: #fff;
+    float: left;
+    padding-top: 6px;
+}
+
+#booking_button table tr:first-child {
+    text-align: center;
+    color: #848484;
+}
+
+#booking_button table table tr:first-child {
+    text-align: inherit;
+}
+
+#booking_button table tr:first-child td {
+    background-color: #fafafa;
+    border-bottom: 1px solid #cccccc;
+    /*padding: 10px 0;*/
+    font-style: normal;
+}
+
+#booking_button table table tr:first-child td {
+    padding: 28px 0 45px 0;
+    border-bottom: 0px solid #e7e7e7;
+    background-color: transparent;
+    color: #3e3e3e;
+}
+
+#booking_button table tr:first-child span {
+    display: block;
+    padding: 5px;
+}
+
+table {
+    border-spacing: 0;
+}
+
+#booking_button table {
+    width: 100%;
+}
+
+#booking_button select {
+    border: 1px solid #cccccc;
+    outline: 0;
+    -webkit-appearance: inherit;
+    padding: 7px 29px 7px 9px;
+    /*background-image: url(pbb/img/design/arrow.png);*/
+    background: url(pbb/img/design/arrov.png) no-repeat 95px 13px;
+    font-size: 12px;
+    border-radius: 2px;
+}
+
+#booking_button select:focus {
+    /*background-position: 95px -16px;*/
+    border-color: #d5b06a;
+}
+
+#booking_button .gallery {
+    width: 246px;
+    border-bottom: 1px solid #e7e7e7;
+    vertical-align: top;
+}
+
+#booking_button .gallery, #booking_button table table td {
+    padding: 28px 0 45px 0;
+}
+
+#booking_button .gallery div {
+    width: 188px;
+    margin: 0 auto;
+}
+
+#booking_button .gallery .title {
+    color: #333333;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.terms {
+    width: 169px;
+    font-style: italic;
+}
+
+.term {
+    vertical-align: top;
+    margin-left: 20px;
+}
+
+a.term {
+    display: block;
+    margin-top: 20px;
+}
+
+.numbers {
+    text-align: center;
+    width: 100px;
+}
+
+.cost {
+    width: 115px;
+}
+
+table table .cost {
+    font-weight: 600;
+}
+
+#booking_button table table {
+    width: 96.5%;
+}
+
+.quantity {
+    width: 145px;
+    padding-right: 7px;
+    text-align: center;
+}
+
+td {
+    border-bottom: 1px solid #e7e7e7;
+}
+
+#booking_button tr:last-child td {
+    border-bottom: 0;
+}
+
+#booking_button .description {
+    text-align: center;
+    padding-top: 10px;
+}
+
+#booking_button .description a {
+    color: #d5b06a;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.window_wrapper {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#window {
+    background-color: #fff;
+    width: 940px;
+    height: 550px;
+    position: absolute;
+    top: 50%;
+    margin-top: -280px;
+    left: 50%;
+    margin-left: -600px;
+    padding: 50px 30px 0 30px;
+}
+
+.close {
+    width: 30px;
+    height: 30px;
+    /*position: absolute;*/
+    background: url(pbb/img/design/close.png) -30px 0;
+    top: -45px;
+    right: 0;
+    opacity: 1 !important;
+    display: block;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 10px 0;
+}
+
+.close:hover {
+    background-position: 0 0;
+}
+
+#window .title {
+    font-size: 26px;
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 25px;
+    padding-bottom: 5px;
+}
+
+.modal-body .gallery {
+    width: 450px;
+}
+
+.modal-body .gallery .big {
+    border: 1px solid #e6e6e6;
+    padding: 9px;
+
+}
+
+.modal-body .gallery .small {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 85%;
+    width: 100%;
+    height: 100px;
+    position: relative;
+    float: left;
+    display: block;
+    overflow: hidden;
+}
+
+.modal-body .gallery .small img {
+    margin: 0 4px 4px 4px;
+    float: left;
+}
+
+#image-preview {
+    position: absolute;
+    background: #333;
+    display: none;
+    color: #fff;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+    border: 1px solid #777777;
+}
+
+/*.prew {*/
+
+/*position: absolute;*/
+/*width: 13px;*/
+/*height: 25px;*/
+/*bottom: 105px;*/
+/*}*/
+
+/*.next {*/
+/*background-image: url(pbb/img/design/arrow.png);*/
+/*position: absolute;*/
+/*width: 13px;*/
+/*height: 25px;*/
+/*bottom: 105px;*/
+/*}*/
+
+/*.prew, {*/
+/*background-image: url(pbb/img/design/arrow.png);*/
+/*position: absolute;*/
+/*width: 13px;*/
+/*height: 25px;*/
+/*bottom: 105px;*/
+/*}*/
+
+/*.prew {*/
+/*left: 15px;*/
+/*background-position: 0 0;*/
+/*}*/
+
+/*.next {*/
+/*left: 480px;*/
+/*background-position: -13px 0;*/
+/*}*/
+
+/*.prew:hover {*/
+/*background-position: 0 -25px;*/
+/*}*/
+
+/*.next:hover {*/
+/*background-position: -13px -25px;*/
+/*}*/
+
+.modal-body .right {
+    width: 440px;
+}
+
+.modal-body .right .text {
+    color: #747474;
+    font-size: 13px;
+}
+
+.modal-body .right .small_title {
+    color: #3e3e3e;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.modal-body .right .middle {
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.modal-body .right .middle ul {
+    list-style-type: none;
+}
+
+.modal-body .book {
+    position: absolute;
+    bottom: -50px;
+    right: -2px;
+}
+
+.head {
+    display: none;
+}
+
+.head.visible {
+    display: block;
+}
+
+.modal-content {
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+}
+
+.modal-dialog {
+    width: 1000px !important;
+    position: absolute;
+    top: 50%;
+    margin-top: -356px;
+    left: 50%;
+    margin-left: -492px;
+}
+
+#ui-datepicker-div {
+    box-shadow: 0 0 9px rgba(204, 204, 204, 0.93);
+    padding: 10px 25px 25px 15px;
+    width: 300px;
+}
+
+.ui-datepicker-calendar thead tr {
+    border-bottom: 1px solid #dfdfdf;
+    border-top: 1px solid #dfdfdf;
+    color: #d2ad68;
+}
+
+.ui-state-default {
+    width: 30px;
+    padding: 4px !important;
+    border: 1px solid #ffffff;
+    text-align: center !important;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+    background: #d2ad68;
+    border: 1px solid #d2ad68;
+    text-align: center;
+    width: 30px;
+    padding: 4px;
+}
+
+.ui-state-hover, .ui-widget-content .ui-state-hover {
+    border: 1px solid #d2ad68;
+    width: 30px;
+    padding: 4px;
+}
+
+.ui-datepicker th {
+    padding: 0.4em 0.3em;
+    font-weight: 600;
+}
+
+.roomTypePhoto {
+    width: 135px;
+    height: 85px;
+}
+
+.clear {
+    clear: both;
+}
+
+.modal-content {
+    background-color: transparent !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 0;
+}
+
+.modal-body {
+    background-color: #fff;
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+    padding: 50px 45px 0 45px;
+}
+
+.modal-footer {
+    border-top: 0;
+    margin-top: 0px;
+    padding: 10px 0;
+}
+
+.facilities {
+    max-width: 250px;
+    padding-left: 0px;
+    padding-right: 20px;
+}
+
+.right .middle ul {
+    float: left;
+    display: block;
+    list-style-type: disc;
+}
+
+.small ul li {
+    margin-left: 5px;
+    float: left;
+}
+
+/* Tiny Carousel */
+#slider1 {
+    height: 1%;
+    overflow: hidden;
+    padding: 0 0 10px;
+}
+
+#slider1 .viewport {
+    float: left;
+    width: 450px;
+    height: 125px;
+    overflow: hidden;
+    position: relative;
+    padding: 19px 0;
+}
+
+#slider1 .buttons {
+    /*background: #C01313;*/
+    display: block;
+    margin: 30px 10px 0 0;
+    float: left;
+    width: 13px;
+    height: 25px;
+    position: relative;
+    color: #ddd;
+    font-weight: 600;
+    font-family: Arial;
+    text-align: center;
+    line-height: 35px;
+    text-decoration: none;
+    font-size: 42px;
+}
+
+#slider1 .next {
+    margin: 46px 0 0 451px;
+    position: absolute;
+}
+
+#slider1 .prev {
+    position: absolute;
+    margin: 46px 0 0 -15px;
+}
+
+/*#slider1 .prev:hover {*/
+/*background-position: 0 -25px;*/
+/*}*/
+
+/*#slider1 .next:hover {*/
+/*background-position: -13px -25px;*/
+/*}*/
+
+/*#slider1 .buttons:hover {*/
+/*color: #C01313;*/
+/*background: #fff;*/
+/*}*/
+
+#slider1 .disable {
+    visibility: hidden;
+}
+
+#slider1 .overview {
+    list-style: none;
+    position: absolute;
+    padding: 0 15px;
+    margin-left: -10px;
+    width: 240px;
+    left: 0 top : 0;
+}
+
+#slider1 .overview li {
+    float: left;
+    margin: 0;
+    padding: 6px;
+}
+
+.img-thumbnail {
+    display: inline-block;
+    max-width: 100%;
+    padding: 0px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: none;
+    border-radius: 0px;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.img-thumbnail-small {
+    display: inline-block;
+    height: 60px;
+    width: 90px;
+    margin: 5px 1px;
+}
+
+.ui-icon-circle-triangle-e {
+
+}
+
+.base-room-block {
+    border-top: 1px solid #e7e7e7;
+}
+
+.base-room-block:first-child {
+    border-top: none;
+}
+
+.ui-state-hover .ui-icon-circle-triangle-e {
+    background: url(pbb/img/design/right-circle-arrow.png) center no-repeat !important;
+}
+
+.ui-icon-circle-triangle-e {
+    background: url(pbb/img/design/right-arrow.gif) center no-repeat !important;
+    margin-top: -20px !important;
+    height: 31px;
+    width: 31px;
+    cursor: pointer;
+}
+
+.ui-state-hover .ui-icon-circle-triangle-w {
+    background: url(pbb/img/design/left-circle-arrow.png) center no-repeat !important;
+}
+
+.ui-icon-circle-triangle-w {
+    background: url(pbb/img/design/left-arrow.gif) center no-repeat !important;
+    margin-top: -20px !important;
+    height: 31px;
+    width: 31px;
+    cursor: pointer;
+}
+
+.ui-widget-header .ui-state-hover {
+    border: none !important;
+    background: #fff;
+}
+
+.ui-datepicker .ui-datepicker-next-hover {
+    right: 2px !important;
+    top: 2px !important;
+}
+
+.ui-datepicker .ui-datepicker-prev-hover {
+    left: 2px !important;
+    top: 3px !important;
+}
+
+.ui-datepicker .ui-datepicker-title {
+    line-height: 20px;
+}
+
+.ui-datepicker table {
+    margin: 6px 0 0 4px;
+}
+
+.ui-widget-header .ui-state-disabled {
+    background: #fff;
+}
+
+.ui-widget-header {
+    font-weight: 600;
+}
+
+select.error {
+    -webkit-box-shadow: 0px 0px 5px 0px #ffbdbd;
+    -moz-box-shadow: 0px 0px 5px 0px #ffbdbd;
+    box-shadow: 0px 0px 5px 0px #ffbdbd;
+    border: 1px solid #ffbdbd !important;
+}
+
+ul.facilities li span {
+    width: 170px;
+    display: inline-table;
+}
+</style>
+
+<div id="booking_button">
+    <div class="top">
+        <div ng-if="model.hotelInfo.logo" class="logo">
+            <img ng-src="{{serverUrl}}{{model.hotel}}/{{model.hotelInfo.logo}}" style="width:197px;height: 84px;"/>
+        </div>
+        <div class="title" bb-color="settings.textColor">
+            {{model.hotelInfo.name}}
+        </div>
+        <div ng-if="model.hotelInfo.webSite">
+            <a ng-href="{{model.hotelInfo.webSite}}" class="back">Вернутся на сайт отеля</a>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="middle" style="margin-bottom: 30px;">
+        <div class="text">
+            <span>Свободные номера с <b>
+                <bb-date date="model.booking.dateStart"/>
+            </b> по <b>
+                <bb-date date="model.booking.dateEnd"/>
+            </b> за <span
+                    decline-nights="{{timeDiff(model.booking.dateStart, model.booking.dateEnd)}}"></span></span>
+            <a href="javascript:;" style="text-decoration: underline;" ng-click="showForm()"
+               bb-color="settings.textColor">Изменить даты</a>
+        </div>
+    </div>
+    <div ng-class="{visible: !isHidden}" class="head">
+        <input type="text" class="field" data-date-format="dd/mm/yy" data-value="model.booking.dateStart" juidatepicker
+               ng-model="model.booking.dateStart"
+               data-min-date="today()" id="dfrom" name="dfrom" required placeholder="Дата заезда"/>
+
+        <input type="text" class="field" data-date-format="dd/mm/yy" data-value="model.booking.dateEnd"
+               ng-model="model.booking.dateEnd"
+               data-min-date="model.booking.dateStart" juidatepicker id="dto" name="dto" required
+               placeholder="Дата выезда"/>
+        <input class="book" ng-click="loadAvailableRooms(model.booking.dateStart, model.booking.dateEnd)"
+               value="Проверить наличие" type="button">
+    </div>
+
+    <table>
+        <tr>
+            <td style="border-top:1px solid #ccc">
+                <span>Тип номера</span>
+            </td>
+            <td class="terms" style="border-top:1px solid #ccc;">
+                <span>Условия<br>проживания</span>
+            </td>
+            <td class="numbers" style="border-top:1px solid #ccc">
+                <span>Число<br>гостей</span>
+            </td>
+            <td class="cost" style="border-top:1px solid #ccc">
+                <span>Цена за<br> <span style="display: inline; padding: 0;"
+                                        decline-nights="{{model.daysDifference}}"></span></span>
+            </td>
+            <td class="quantity" style="border-top:1px solid #ccc">
+                <span>Кол-во<br>номеров</span>
+            </td>
+            <td style="border-top:1px solid #ccc"></td>
+        </tr>
+        <tr ng-repeat="room in model.rooms track by room.roomType.id">
+            <td class="gallery">
+                <div>
+                    <div class="title">
+                        <span>{{room.roomType.name}}</span>
+                    </div>
+
+                    <div class="main-image" ng-if="model.photosByRoomType[room.roomType.id]">
+                        <img ng-src="{{serverUrl}}{{model.hotel}}/{{model.photosByRoomType[room.roomType.id][0].code}}"
+                             data-field="model.photosByRoomType" style="cursor: pointer;" ng-click="open(room)"
+                             class="img-thumbnail" image-expand>
+                        <img ng-if="model.photosByRoomType[room.roomType.id][2]"
+                             ng-src="{{serverUrl}}{{model.hotel}}/{{model.photosByRoomType[room.roomType.id][1].code}}"
+                             data-field="model.photosByRoomType" style="cursor: pointer;" ng-click="open(room)"
+                             class="img-thumbnail-small" image-expand>
+                        <img ng-if="model.photosByRoomType[room.roomType.id][2]"
+                             ng-src="{{serverUrl}}{{model.hotel}}/{{model.photosByRoomType[room.roomType.id][2].code}}"
+                             data-field="model.photosByRoomType" style="cursor: pointer;" ng-click="open(room)"
+                             class="img-thumbnail-small" image-expand>
+                    </div>
+
+                    <div class="description">
+                        <a href="javascript:;" class="open-modal" ng-click="open(room)">
+                            <span style="text-decoration: underline;"
+                                  bb-color="settings.textColor">Описание номера</span>
+                        </a>
+                    </div>
+                </div>
+            </td>
+            <td colspan="5">
+                <table ng-repeat="plan in model.plans track by plan.id" class="base-room-block">
+                    <tr ng-repeat="baseRoom in model.baseRooms[room.roomType.id] track by baseRoom.id"
+                        class="base-room-block">
+                        <td class="terms">
+                            <a class="term" style="text-align: center;">
+                                <span style="font-style: italic;">{{plan.name}}</span>
+                            </a>
+                        </td>
+                        <td class="numbers" style="text-align: center;">
+                            <div style="text-align: center;width: 55px;margin: 0 auto;">
+                                <div ng-if="baseRoom.adults < 4">
+                                    <svg ng-repeat="i in range(baseRoom.adults - 1)" xmlns="http://www.w3.org/2000/svg"
+                                         version="1.1" id="Layer_1" width="15"
+                                         height="35">
+                                        <path fill="{{settings.textColor}}"
+                                              d="M2.7,22.3c-0.2,0-0.5,0-0.7,0c-1.2-0.1-2-1.1-1.9-2.3c0.4-3.2,0.7-6.4,1.1-9.5C1.2,10,1.3,9.6,1.5,9.2    c0.3-0.8,1-1.2,1.8-1.2c2.1,0,4.2,0,6.3,0c1.2,0,1.9,0.8,2.1,1.9c0.4,3.4,0.8,6.7,1.1,10.1c0.2,1.4-0.7,2.3-2.1,2.3    c-0.2,0-0.3,0-0.5,0c-0.1,1-0.2,2-0.4,3c-0.4,3.5-0.8,7-1.2,10.5c-0.1,0.8-0.6,1.3-1.4,1.3c-0.5,0-0.9,0-1.4,0    c-0.8,0-1.3-0.4-1.4-1.3c-0.3-2.3-0.5-4.5-0.8-6.8c-0.2-2.1-0.5-4.2-0.7-6.4C2.8,22.5,2.7,22.4,2.7,22.3z"/>
+                                        <path fill="{{settings.textColor}}"
+                                              d="M6.5,6.9C4.6,6.9,3,5.4,3,3.5c0-1.9,1.5-3.4,3.4-3.4c1.8,0,3.4,1.6,3.4,3.4C9.9,5.4,8.3,7,6.5,6.9z"/>
+                                    </svg>
+                                </div>
+                                <div ng-if="baseRoom.adults >= 4" style="margin-left: 10px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="Layer_1" width="15"
+                                         height="35" style="float:left;">
+                                        <path fill="{{settings.textColor}}"
+                                              d="M2.7,22.3c-0.2,0-0.5,0-0.7,0c-1.2-0.1-2-1.1-1.9-2.3c0.4-3.2,0.7-6.4,1.1-9.5C1.2,10,1.3,9.6,1.5,9.2    c0.3-0.8,1-1.2,1.8-1.2c2.1,0,4.2,0,6.3,0c1.2,0,1.9,0.8,2.1,1.9c0.4,3.4,0.8,6.7,1.1,10.1c0.2,1.4-0.7,2.3-2.1,2.3    c-0.2,0-0.3,0-0.5,0c-0.1,1-0.2,2-0.4,3c-0.4,3.5-0.8,7-1.2,10.5c-0.1,0.8-0.6,1.3-1.4,1.3c-0.5,0-0.9,0-1.4,0    c-0.8,0-1.3-0.4-1.4-1.3c-0.3-2.3-0.5-4.5-0.8-6.8c-0.2-2.1-0.5-4.2-0.7-6.4C2.8,22.5,2.7,22.4,2.7,22.3z"/>
+                                        <path fill="{{settings.textColor}}"
+                                              d="M6.5,6.9C4.6,6.9,3,5.4,3,3.5c0-1.9,1.5-3.4,3.4-3.4c1.8,0,3.4,1.6,3.4,3.4C9.9,5.4,8.3,7,6.5,6.9z"/>
+                                    </svg>
+                                    <span style="display: block; padding: 5px 0;float:left; margin-top: 3px;"> x {{baseRoom.adults}}</span>
+                                </div>
+                                <!--<span ng-repeat="i in [] | range:baseRoom.adults" style="float:left;margin: 0 0px;font-size: 30px;color:{{settings['color3']}};"><i class="fa fa-male"></i></span>-->
+                                <div class="clear"></div>
+                            </div>
+                        </td>
+                        <td class="cost" style="text-align: center;">
+                            <span>
+                                {{(reduceSum(model.prices[plan.id][baseRoom.id]) * model.daysDifference).toFixed(2)}}<br>{{model.hotelInfo.currency}}
+                            </span>
+                        </td>
+                        <td class="quantity">
+                            <span ng-class="{error: model.booking[baseRoom.id][plan.id].isEmpty}" class="hidden-span">
+                            <b></b><!--the small arrow on top-->
+                            Выберите кол-во номеров
+                            </span>
+                            <select data-placeholder="Выберите количество"
+                                    ng-model="model.booking[baseRoom.id][plan.id].quantity"
+                                    ng-class="{error: model.booking[baseRoom.id][plan.id].isEmpty}"
+                                    ng-change="checkForError(model.booking[baseRoom.id][plan.id])"
+                                    style="width: 112px;">
+                                <option ng-repeat="value in range(room.quota)"
+                                        value="{{value}}"
+                                        ng-selected="{{value == 0}}"
+                                        ng-disabled="exceedsQuota(value, model.booking[baseRoom.id][plan.id].quantity, room.roomType.id, room.quota)">
+                                    {{value}} ({{(reduceSum(model.prices[plan.id][baseRoom.id]) *
+                                    value * model.daysDifference).toFixed(2)}}){{model.hotelInfo.currency}}
+                                </option>
+                            </select>
+                        </td>
+                        <td>
+                            <input class="book" value="Забронировать" bb-backgrnd="settings.buttonColor"
+                                   bb-hover="settings.buttonHover"
+                                   bb-color="settings.buttonTextColor" type="button"
+                                   ng-click="addBooking(model.booking[baseRoom.id][plan.id])">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+<script type="text/ng-template" id="myModalContent.html">
+    <div class="modal-header" style="height: 50px">
+        <a class="close" ng-click="cancel()"></a>
+    </div>
+    <div class="modal-body">
+        <div class="row" style="height: 550px">
+            <h3 class="modal-title">{{items.roomType.name}}</h3>
+            <hr style="margin-bottom: 25px"/>
+            <div class="gallery pull-left">
+                <div class="main-image big" ng-if="photos">
+                    <img ng-src="{{serverUrl}}{{hotel}}/{{photos[0].code}}" alt="Placeholder" class="placeholder"
+                         style="width: 430px;height: 287px;">
+                </div>
+
+
+                <div tinycarousel id="slider1" data-field="photos">
+                    <a class="buttons prev" href="javascript:;" slider-color="settings.textColor">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <div class="viewport">
+                        <ul class="overview">
+                            <li ng-repeat="roomTypePhoto in photos">
+                                <a href="{{serverUrl}}{{hotel}}/{{roomTypePhoto.code}}">
+                                    <img ng-src="{{serverUrl}}{{hotel}}/{{roomTypePhoto.code}}"
+                                         class="img-thumbnail no-border roomTypePhoto"/>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="buttons next" href="javascript:;" slider-color="settings.textColor">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="right pull-right">
+                <div class="middle" style="border-top: 0;padding-top: 0;">
+                    <div class="small_title">Услуги и удобства</div>
+                    <ul class="facilities">
+                        <li ng-repeat="roomTypeFacility in facilities[0]">
+                            <i class="fa fa-check" bb-color="settings.textColor">&nbsp&nbsp&nbsp</i><span
+                                class="facility-name">{{labels[roomTypeFacility.name]}}</span>
+                        </li>
+                    </ul>
+                    <ul ng-if="facilities[1].length" class="facilities">
+                        <li ng-repeat="roomTypeFacility in facilities[1]">
+                            <i class="fa fa-check" bb-color="settings.textColor">&nbsp&nbsp&nbsp</i><span
+                                class="facility-name">{{labels[roomTypeFacility.name]}}</span>
+                        </li>
+                    </ul>
+                    <div style="clear: both;"></div>
+                </div>
+
+                <div ng-if="items.roomType.description" style="border-bottom: 1px solid #e6e6e6;padding-bottom: 10px;">
+                    <div class="small_title">Информация о номере</div>
+                    <div class="text">
+                        {{items.roomType.description}}
+                    </div>
+                </div>
+
+                <div style="padding-top: 20px;">
+                    <div ng-if="items.roomType.area">
+                        <b>Площадь номера:</b> {{items.roomType.area}} м²
+                    </div>
+                    <div bed-details="{{details}}">
+                        <b>Тип кроватей:</b>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button bb-backgrnd="settings.buttonColor"
+                bb-hover="settings.buttonHover"
+                bb-color="settings.buttonTextColor" class="booking-button pull-right book" ng-click="cancel()">Свернуть
+        </button>
+    </div>
+</script>

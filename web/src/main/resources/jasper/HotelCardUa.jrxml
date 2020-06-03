@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="HotelBill" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="14cbf7cb-7562-4122-84aa-0b5c9c2686f7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Sans_Bold" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="9" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<paragraph leftIndent="2" rightIndent="2"/>
+	</style>
+	<style name="Sans_Italic" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="9" isBold="false" isItalic="true" isUnderline="false" isStrikeThrough="false">
+		<paragraph leftIndent="2" rightIndent="2"/>
+	</style>
+	<style name="Sans_Small" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="7" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<paragraph leftIndent="2" rightIndent="2"/>
+	</style>
+	<style name="Sans_Small_Under" hAlign="Center" vAlign="Top" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="7" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<paragraph leftIndent="2" rightIndent="2"/>
+	</style>
+	<style name="Sans_Bold_Underlined" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="9" isBold="true" isItalic="false" isUnderline="true" isStrikeThrough="false">
+		<paragraph leftIndent="2" rightIndent="2"/>
+	</style>
+	<style name="Sans_Normal_Frame" isDefault="true" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<pen lineWidth="0.5" lineColor="#000000"/>
+		<box>
+			<pen lineWidth="0.5"/>
+			<topPen lineWidth="0.5"/>
+			<leftPen lineWidth="0.5"/>
+			<bottomPen lineWidth="0.5"/>
+			<rightPen lineWidth="0.5"/>
+		</box>
+		<paragraph leftIndent="2" rightIndent="2"/>
+	</style>
+	<style name="Sans_Normal_Line" isDefault="true" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<pen lineWidth="0.5" lineColor="#000000"/>
+		<box>
+			<pen lineWidth="0.5"/>
+			<topPen lineWidth="0.0"/>
+			<leftPen lineWidth="0.0"/>
+			<bottomPen lineWidth="0.5"/>
+			<rightPen lineWidth="0.0"/>
+		</box>
+		<paragraph leftIndent="2" rightIndent="2"/>
+	</style>
+	<style name="Sans_Normal" isDefault="true" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<paragraph leftIndent="2" rightIndent="2"/>
+	</style>
+	<style name="table">
+		<box>
+			<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.0" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.0" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.0" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Transparent" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD_Blank" mode="Transparent" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.0" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.0" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.0" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+    <parameter name="hotelName" class="java.lang.String"/>
+    <parameter name="hotelAddress" class="java.lang.String"/>
+    <parameter name="hotelPhone" class="java.lang.String"/>
+    <parameter name="hotelCity" class="java.lang.String"/>
+    <parameter name="hotelEdrpou" class="java.lang.String"/>
+    <parameter name="hotelDkud" class="java.lang.String"/>
+    <parameter name="room" class="java.lang.String"/>
+    <parameter name="startDate" class="java.lang.String"/>
+    <parameter name="endDate" class="java.lang.String"/>
+    <parameter name="guestId" class="java.lang.String"/>
+    <parameter name="firstName" class="java.lang.String"/>
+    <parameter name="lastName" class="java.lang.String"/>
+    <parameter name="patronymic" class="java.lang.String"/>
+    <parameter name="dob" class="java.lang.String"/>
+    <parameter name="passport" class="java.lang.String"/>
+    <parameter name="address" class="java.lang.String"/>
+    <parameter name="visaNumber" class="java.lang.String"/>
+    <parameter name="visaValidUntil" class="java.lang.String"/>
+    <parameter name="durationOfStay" class="java.lang.String"/>
+    <parameter name="pov" class="java.lang.String"/>
+    <parameter name="registrationNumber" class="java.lang.String"/>
+    <parameter name="country" class="java.lang.String"/>
+    <parameter name="city" class="java.lang.String"/>
+    <parameter name="imgPath" class="java.lang.String"/>
+    <parameter name="bookingId" class="java.lang.String"/>
+    <parameter name="checkInTime" class="java.lang.String"/>
+    <parameter name="checkOutTime" class="java.lang.String"/>
+	<background>
+		<band height="800">
+			<image>
+				<reportElement x="455" y="773" width="100" height="27" forecolor="#FFFFFF" uuid="795ff253-9f91-4ca0-b863-5109d78b16d9"/>
+				<imageExpression><![CDATA[$P{imgPath}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<detail>
+		<band height="802">
+			<staticText>
+				<reportElement style="Sans_Normal" x="480" y="0" width="75" height="20" uuid="92d48ebe-3045-4a02-bbdb-6a62efd3c6e6"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Форма №3-г]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="Sans_Italic" x="222" y="216" width="100" height="24" uuid="4b3e3b07-e531-4a0a-a47e-09bcdb6560d4"/>
+				<textFieldExpression><![CDATA[$P{endDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Sans_Italic" x="111" y="216" width="100" height="24" uuid="1104678a-c6a3-40e7-ad6e-b6c3ffe9706e"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{startDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Sans_Bold" x="223" y="78" width="108" height="24" uuid="96e525f1-dfbc-402e-9fd8-87371531f0c7"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Візитна картка
+Hotel card]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Normal" x="0" y="148" width="111" height="24" uuid="9595f222-7149-4d92-9354-0fc2220a156c"/>
+				<text><![CDATA[Ім'я
+Name]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="Sans_Italic" x="111" y="148" width="100" height="24" uuid="5abeb929-2bda-4d08-9c36-77f8eba249a6"/>
+				<textFieldExpression><![CDATA[$P{firstName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Sans_Italic" x="111" y="114" width="100" height="24" uuid="14744a87-5f54-4db7-99c3-bf1184ecce0c"/>
+				<textFieldExpression><![CDATA[$P{lastName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Sans_Normal" x="0" y="216" width="111" height="24" uuid="1b125936-79d3-4b68-9e66-4972d22f3543"/>
+				<text><![CDATA[Термін проживання
+Duration of stay]]></text>
+			</staticText>
+			<line>
+				<reportElement x="111" y="287" width="100" height="1" uuid="f590842e-2c3b-460e-8d92-f1c942c7ef19"/>
+			</line>
+			<staticText>
+				<reportElement style="Sans_Normal" x="0" y="263" width="111" height="24" uuid="97412842-0309-4ec0-99dc-910f6ed1399f"/>
+				<text><![CDATA[Адміністратор
+Administrator]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Normal" x="0" y="182" width="111" height="24" uuid="73fb25c2-4d6b-4907-bd04-39de22530017"/>
+				<text><![CDATA[№ кімнати
+Room №]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="Sans_Italic" x="111" y="182" width="100" height="24" uuid="79417811-596a-4492-8b62-721b5c387462"/>
+				<textFieldExpression><![CDATA[$P{room}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Sans_Normal" x="0" y="114" width="111" height="24" uuid="88ea566c-fd7a-4b08-9b26-d0480cad0d4e"/>
+				<text><![CDATA[Прізвище
+Surname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Normal" x="211" y="216" width="11" height="24" uuid="3fde344b-ddae-4db8-8b08-2cfad4e9edc5"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Small" x="407" y="30" width="148" height="30" uuid="7299a8d3-80e7-4462-abf0-9dc68534d14d"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[ЗАТВЕРДЖЕНО
+наказом Держбуду України
+від 13 жовтня 2000 року №230]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement style="Sans_Normal" x="170" y="20" width="100" height="20" uuid="a95ff3b1-0b55-4b2d-81cb-c710c72ffcda"/>
+			</rectangle>
+			<staticText>
+				<reportElement style="Sans_Normal" x="0" y="20" width="170" height="20" uuid="1d8bd21d-da30-404f-9db2-7cfc5c2b1c1b"/>
+				<text><![CDATA[Ідентифікаційний код ЄДРПОУ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement style="Sans_Normal" x="170" y="40" width="100" height="20" uuid="5e57da4e-86c0-4b81-ba6c-5ebf8484bb4b"/>
+			</rectangle>
+			<textField>
+				<reportElement style="Sans_Italic" x="170" y="0" width="100" height="20" uuid="eb5aa609-ea1e-407c-8cfe-e20fa94f9259"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{hotelName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Sans_Italic" x="170" y="20" width="100" height="20" uuid="caf67d09-c18d-420d-ac7f-f64081b72070"/>
+				<textFieldExpression><![CDATA[$P{hotelEdrpou}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Sans_Normal" x="0" y="40" width="170" height="20" uuid="e3b8446b-cbf6-45d9-99c5-279b1c035bdc"/>
+				<text><![CDATA[Код за ДКУД]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Normal" x="0" y="0" width="170" height="20" uuid="1a899486-ae69-498f-b398-9363329fa6f5"/>
+				<text><![CDATA[Готельний комплекс]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

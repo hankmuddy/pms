@@ -1,0 +1,414 @@
+<style>
+#booking_button {
+    width: 626px;
+    margin: 0 auto;
+    font-family: Arial, serif;
+    font-size: 14px;
+}
+
+#booking_button a {
+    color: #747474;
+}
+
+#booking_button a:hover {
+    text-decoration: none
+}
+
+#booking_button .book {
+    background: #ffa800;
+    background: -moz-linear-gradient(top, #ffa800 0%, #ed6400 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffa800), color-stop(100%, #ed6400));
+    background: -webkit-linear-gradient(top, #ffa800 0%, #ed6400 100%);
+    background: -o-linear-gradient(top, #ffa800 0%, #ed6400 100%);
+    background: -ms-linear-gradient(top, #ffa800 0%, #ed6400 100%);
+    background: linear-gradient(to bottom, #ffa800 0%, #ed6400 100%);
+    border: 1px solid #FFFFFF;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    color: #FFFFFF;
+    /*display: block;*/
+    font-size: 18px;
+    padding: 10px 22px;
+    text-indent: -5px !important;
+    text-decoration: none;
+    float: right;
+    display: inline;
+    cursor: pointer;
+}
+
+#booking_button .book:hover {
+    background: #ed6400;
+    background: -moz-linear-gradient(top, #ed6400 0%, #ffa800 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ed6400), color-stop(100%, #ffa800));
+    background: -webkit-linear-gradient(top, #ed6400 0%, #ffa800 100%);
+    background: -o-linear-gradient(top, #ed6400 0%, #ffa800 100%);
+    background: -ms-linear-gradient(top, #ed6400 0%, #ffa800 100%);
+    background: linear-gradient(to bottom, #ed6400 0%, #ffa800 100%);
+}
+
+#booking_button .top {
+    color: #747474;
+
+}
+
+#booking_button .top .title {
+    font-size: 32px;
+    color: #333333;
+}
+
+#booking_button .top span {
+    color: #6f4c95;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#booking_button .top .text {
+    float: left;
+}
+
+#booking_button .top .pen {
+    float: right;
+}
+
+#booking_button .top .pen img {
+    margin-right: 7px;
+}
+
+#booking_button .head, #booking_button .bottom {
+    background: #7f62a4;
+    background: -moz-linear-gradient(top, #7f62a4 0%, #724c98 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7f62a4), color-stop(100%, #724c98));
+    background: -webkit-linear-gradient(top, #7f62a4 0%, #724c98 100%);
+    background: -o-linear-gradient(top, #7f62a4 0%, #724c98 100%);
+    background: -ms-linear-gradient(top, #7f62a4 0%, #724c98 100%);
+    background: linear-gradient(to bottom, #7f62a4 0%, #724c98 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7f62a4', endColorstr='#724c98', GradientType=0);
+    padding: 18px 22px;
+    overflow: hidden;
+}
+
+#booking_button .head {
+    border-radius: 9px 9px 0px 0px;
+    margin-top: 25px;
+}
+
+#booking_button .bottom {
+    border-radius: 0px 0px 9px 9px;
+}
+
+#booking_button .bottom .text {
+    font-size: 18px;
+    color: #fff;
+    max-width: 300px;
+    float: left;
+}
+
+#booking_button .head .title {
+    font-size: 32px;
+    color: #fff;
+    float: left;
+    padding-top: 6px;
+}
+
+#booking_button table tr:first-child {
+    text-align: center;
+}
+
+#booking_button table table tr:first-child {
+    text-align: inherit;
+}
+
+#booking_button table tr:first-child td {
+    border-bottom: 1px solid #cccccc;
+    padding: 15px 0;
+}
+
+#booking_button table table tr:first-child td {
+    padding: 28px 0 45px 0;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+#booking_button table tr:first-child span {
+    display: block;
+    border-left: 1px solid #e7e7e7;
+    padding: 5px;
+}
+
+table {
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-spacing: 0;
+}
+
+table table {
+    border: none;
+}
+
+#booking_button select {
+    border: 1px solid #cccccc;
+    outline: 0;
+    -webkit-appearance: inherit;
+    padding: 7px 29px 7px 9px;
+    background: url(pbb/img/design/arrow.png) no-repeat 85px 13px;
+    font-size: 12px;
+}
+
+#booking_button select:focus {
+    background-position: 85px -16px;
+    border-color: #744c9a;
+}
+
+.gallery {
+    width: 158px;
+    border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    vertical-align: top;
+
+}
+
+.gallery, #booking_button table table td {
+    padding: 28px 0 45px 0;
+}
+
+.gallery div {
+    width: 143px;
+    margin: 0 auto;
+}
+
+.gallery .title {
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.terms {
+    width: 169px;
+}
+
+.term {
+    vertical-align: top;
+    margin-left: 20px;
+}
+
+a.term {
+    display: block;
+    margin-top: 20px;
+}
+
+.numbers {
+    text-align: center;
+    width: 69px;
+}
+
+.cost {
+    width: 74px;
+}
+
+table table .cost {
+    font-weight: bold;
+}
+
+.quantity {
+    width: 126px;
+    padding-right: 7px;
+}
+
+td {
+    border-bottom: 1px solid #e7e7e7;
+}
+
+#booking_button tr:last-child td {
+    border-bottom: 0;
+}
+
+#booking_button .description {
+    text-align: center;
+    padding-top: 10px;
+}
+
+form#searchForm {
+    display: none;
+}
+
+form#searchForm.visible {
+    display: block;
+}
+
+.open-modal {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.quantity {
+    width: 100px;
+    text-align: center;
+    margin-right: 12px;
+}
+
+.roomTypePhoto {
+    width: 90px;
+    height: 90px;
+    margin: 0 3px 3px 3px;
+}
+
+.modal-footer {
+    margin: 0 15px 0 15px;
+}
+
+.room {
+    border-right: 1px solid #cccccc;
+    width: 200px;
+}
+
+.facilities-title {
+    font-weight: bold;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+</style>
+
+<form action="" ng-class="{visible: !isHidden}" style="width:626px;margin:0 auto;" id="searchForm" name="availabilityForm">
+    <h2>Выберите даты</h2>
+    <hr/>
+
+    <div class="row">
+        <div class="col-md-6">
+            <label for="dfrom">Заезд:</label>
+
+            <p class="input-group">
+                <input type="text" class="form-control datepicker" data-date-format="dd/mm/yy" data-value="model.booking.dateStart" juidatepicker
+                       ng-model="model.booking.dateStart" id="dfrom" name="dfrom" required/>
+                <span class="input-group-btn">
+                    <button class="btn btn-default" ng-click=""><i class="fa fa-calendar"></i></button>
+                </span>
+            </p>
+        </div>
+        <div class="col-md-6">
+            <label for="dto">Выезд:</label>
+
+            <p class="input-group">
+                <input type="text" class="form-control datepicker" data-date-format="dd/mm/yy" data-value="model.booking.dateEnd"
+                       ng-model="model.booking.dateEnd" data-min-date="model.booking.dateStart" juidatepicker id="dto" name="dto" required/>
+                <span class="input-group-btn">
+                    <button class="btn btn-default" ng-click=""><i class="fa fa-calendar"></i></button>
+                </span>
+            </p>
+        </div>
+    </div>
+
+    <input type="submit" class="btn btn-success btn-block" style="margin-top: 10px"
+           ng-click="loadAvailableRooms(model.booking.dateStart, model.booking.dateEnd)" value="Поиск"/>
+</form>
+<div style="margin: 10px 0;"></div>
+
+<!--<pre class="alert alert-success" style="width:626px;margin:0 auto;">-->
+<!--Доступные варианты размещения: {{model.booking.dateStart}} по {{model.booking.dateEnd}}-->
+<!--</pre>-->
+
+<div style="margin: 10px 0;"></div>
+
+<div id="booking_button">
+    <div class="top">
+        <div class="title">Наличее мест</div>
+        <div class="text">Свободные номера с <span>пт, 25 апр.</span> по <span>ср, 30 апр.</span> за <span>5 ноч.</span></div>
+        <div class="pen"><img src="pbb/img/design/pencil.png"><a href="javascript:;" ng-click="showForm()">Изменить даты</a></div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="head">
+        <div class="title">Выберите номер</div>
+        <input class="book" value="Забронировать" ng-click="addBooking()" type="button"></div>
+    <table>
+        <tr>
+            <td class="room">Тип номера</td>
+            <td class="terms">Условия проживания</td>
+            <td class="numbers"><span>Число гостей</span></td>
+            <td class="cost"><span>Цена за 3 ночи</span></td>
+            <td class="quantity"><span>Кол-во<br>номеров</span></td>
+        </tr>
+        <tr ng-repeat="room in model.rooms track by room.roomType.id">
+            <td class="gallery">
+                <div>
+                    <div class="title">{{room.roomType.name}}</div>
+                    <div ng-if="model.photosByRoomType[room.roomType.id][0].code" style="margin-bottom: 10px;">
+                        <img ng-src="http://pmsphotos/test1/{{model.photosByRoomType[room.roomType.id][0].code}}" alt="" width="200" height="200"
+                             class="img-thumbnail"/>
+                    </div>
+                    <div class="description">
+                        <a href="javascript:;" class="open-modal" ng-click="open(room)">Описание номера</a>
+                    </div>
+                </div>
+            </td>
+            <td colspan="4">
+                <table ng-repeat="plan in model.plans track by plan.id">
+                    <tr ng-repeat="baseRoom in model.baseRooms[room.roomType.id] track by baseRoom.id">
+                        <td class="terms">
+                            <a class="term" href="#">{{plan.name}}</a>
+                            <!--<a class="term" href="#">Завтрак включен</a>-->
+                            <input type="hidden" ng-value="{{plan.id}}" ng-model="model.plan.id" id="option-{{plan.id}}"/>
+                        </td>
+                        <td class="numbers">
+                            <img ng-src="pbb/img/design/{{baseRoom.adults}}men.png" alt=""/>
+                        </td>
+                        <td class="cost" style="text-align: center;">{{reduceSum(model.prices[plan.id][baseRoom.id])}}<br>UAH</td>
+                        <td class="quantity">
+                            <select class="form-control quantity" data-placeholder="Выберите количество"
+                                    ng-model="model.booking[baseRoom.id][plan.id].quantity">
+                                <option ng-repeat="value in range(room.quota)"
+                                        value="{{value}}"
+                                        ng-selected="{{value == 0}}"
+                                        ng-disabled="exceedsQuota(value, model.booking[baseRoom.id][plan.id].quantity, room.roomType.id, room.quota)">
+                                    {{value}} ({{reduceSum(model.prices[plan.id][baseRoom.id]) * value}})UAH
+                                </option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <div class="bottom">
+        <div class="text">Сумма: {{getAmount()}} UAH</div>
+        <input class="book" value="Забронировать" ng-click="addBooking()" type="button">
+    </div>
+</div>
+
+<script type="text/ng-template" id="myModalContent.html">
+    <div class="modal-header" style="margin: 0 15px 0 15px;">
+        <button type="button" class="close" ng-click="cancel()" aria-hidden="true">&times;</button>
+        <h3 class="modal-title">{{items.roomType.name}}</h3>
+    </div>
+    <div class="modal-body">
+        <div class="pull-left" style="width: 300px;">
+            <div ng-if="photos[0].code" style="margin-bottom: 10px;">
+                <img ng-src="http://pmsphotos/test1/{{photos[0].code}}" alt="" width="300" height="300" class="img-thumbnail"/>
+            </div>
+            <div style="overflow: hidden; width: 300px;">
+                <a ng-repeat="roomTypePhoto in photos"
+                   ng-href="http://pmsphotos/test1/{{roomTypePhoto.code}}" style="display: block; float: left;">
+                    <img ng-src="http://pmsphotos/test1/{{roomTypePhoto.code}}" alt="" class="img-thumbnail no-border roomTypePhoto"/>
+                </a>
+
+                <div ng-if="items.roomType.area != 0">{{items.roomType.area}}</div>
+            </div>
+        </div>
+        <div class="pull-left">
+            <div>
+                {{items.roomType.description}}
+            </div>
+            <div class="facilities-title">Услуги и удобства</div>
+            <ul class="facilities">
+                <li ng-repeat="roomTypeFacility in facilities">
+                    {{labels[roomTypeFacility.name]}}
+                </li>
+            </ul>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="modal-footer">
+        <button class="booking-button pull-right" ng-click="cancel()">Свернуть</button>
+    </div>
+</script>
+<!--<h3 class="pull-left" style="margin-top: 15px;" ng-if="getAmount() > 0">Сумма: {{getAmount()}} UAH</h3>-->

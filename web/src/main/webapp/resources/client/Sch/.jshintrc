@@ -1,0 +1,10 @@
+{
+    "onecase": true,
+    "debug": false,
+    "asi": false,
+    "supernew": false,
+    "expr": true,         // allow fn && fn()
+    "loopfunc": true,
+    "eqnull": true,
+    "boss": true
+}

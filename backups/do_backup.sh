@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo -u postgres pg_dump  --port 5432 --username "postgres" --role "postgres" --no-password  --format tar --section pre-data --section data --section post-data --encoding UTF8 --verbose --file "/var/lib/postgresql/backup/`date +%Y-%m-%d-%H%M`.tar" "pms"

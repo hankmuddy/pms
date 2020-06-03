@@ -1,0 +1,152 @@
+body {
+    background-color: #8c839f;
+    font-family: Arial;
+    background-position: 50% 0%;
+    margin: 0;
+    padding: 0;
+}
+
+#loginWrap {
+    margin: 100px auto 0 auto;
+    width: 300px;
+    height: 100%;
+    display: table;
+    vertical-align: middle;
+}
+
+#login-container {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+#login-container {
+    position: relative;
+    padding: 5px;
+}
+
+.login-form-bg {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 20px auto 0 auto;
+    height: 188px;
+    width: 340px;
+    padding: 4px 4px 0 4px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.login, .password {
+    width: 180px;
+    padding: 5px 15px;
+    border-radius: 3px;
+}
+
+input, textarea {
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+    transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+
+input, textarea, select, .uneditable-input {
+    display: inline-block;
+    width: 210px;
+    height: 18px;
+    padding: 4px;
+    margin-bottom: 9px;
+    font-size: 13px;
+    line-height: 18px;
+    color: #555555;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+#login label {
+    margin-top: 5px;
+    width: 60px;
+}
+
+label {
+    float: left;
+}
+
+label, input, button, select, textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 18px;
+}
+
+.idg-btn:hover {
+    color: #ffffff;
+    text-decoration: none;
+    border: solid 1px #9757bf;
+    background: #9757bf;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+input[type="button"], input[type="reset"], input[type="submit"] {
+    width: auto;
+    height: auto;
+}
+
+.enter {
+    -webkit-box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.5);
+    -ms-box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.5);
+    -o-box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.idg-btn {
+    display: block;
+    padding: 5px 10px 5px;
+    width: 67px;
+    margin-right: 33px;
+    float: right;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #ffffff;
+    text-align: center;
+    background: #fd2929;
+    /*background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fc7200), color-stop(25%, #fc7200), to(#fc5800));*/
+    /*background-image: -webkit-linear-gradient(#fc7200, #fc7200 25%, #fc5800);*/
+    /*background-image: -moz-linear-gradient(top, #fc7200, #fc7200 25%, #fc5800);*/
+    /*background-image: -ms-linear-gradient(#fc7200, #fc7200 25%, #fc5800);*/
+    /*background-image: -o-linear-gradient(#fc7200, #fc7200 25%, #fc5800);*/
+    /*background-image: linear-gradient(#fc7200, #fc7200 25%, #fc5800);*/
+    /*background-repeat: no-repeat;*/
+    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fc7200', endColorstr='#fc5800', GradientType=0);*/
+    /*border: 1px solid #fc5800;*/
+    /*border-bottom-color: #bbb;*/
+    /*-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);*/
+    /*-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);*/
+    /*box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);*/
+    cursor: pointer;
+    /*-webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);*/
+    /*-moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);*/
+    /*box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);*/
+    border-radius: 4px;
+}
+
+.login-form h2 {
+    color: #7e5fa2;
+    font-size: 120%;
+    font-weight: normal;
+    font-family: Arial;
+    /*padding: 20px 0 0 0;*/
+    text-align: center;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fake Booking Signal</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        /*$(function () {
+         $('.fakeBooking').submit(function () {
+         var formData = $('.fakeBooking').serialize(),
+         url = $('.fakeBooking').attr('action');
+
+         for (i = 0; i <= 10; i++) {
+         $.ajax({
+         url: url,
+         method: 'POST',
+         data: formData,
+         success: function (response) {
+         alert("Yes we do it");
+         }
+         });
+         }
+         return false;
+         });
+         });*/
+    </script>
+</head>
+<body>
+<p/>Fake 'New Reservation from Wubook' Signal
+<p/>
+
+<!--<form action="http://88.198.41.177:8081/wubooking/catch" method="post">-->
+<form action="http://localhost:8080/app/wubooking/catch" class="fakeBooking" method="post">
+    <label for="rcode">rcode:</label>
+    <input id="rcode" name="rcode" type="text" value="1391524753"/>
+    <label for="lcode0">lcode:</label>
+    <input id="lcode0" name="lcode" type="text" value="1380878354"/>
+    <!--<input id="lcode" name="lcode" type="text" value="1387194522"/>-->
+    <input type="submit">
+</form>
+<p/>Fake 'New Reservation from Wubook' Signal for Dates
+<p/>
+
+<form action="http://localhost:8080/app/wubooking/importBookingsForDates" method="post">
+    <label for="dfrom">dfrom:</label>
+    <input id="dfrom" name="dfrom" type="text" value="2014-04-28"/>
+    <label for="dto">dto:</label>
+    <input id="dto" name="dto" type="text" value="2014-05-3"/>
+    <label for="lcode">lcode:</label>
+    <input id="lcode" name="lcode" type="text" value="1381479181"/>
+    <input type="submit">
+</form>
+</body>
+</html>

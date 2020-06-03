@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<methodResponse>
+    <params>
+        <param>
+            <value>
+                <struct>
+                    <member>
+                        <name>cc_type</name>
+                        <value>
+                            <int>1</int>
+                        </value>
+                    </member>
+                    <member>
+                        <name>cc_number</name>
+                        <value>
+                            <string>4238********5748</string>
+                        </value>
+                    </member>
+                    <member>
+                        <name>cc_cvv</name>
+                        <value>
+                            <string>****</string>
+                        </value>
+                    </member>
+                    <member>
+                        <name>cc_code</name>
+                        <value>
+                            <nil/>
+                        </value>
+                    </member>
+                    <member>
+                        <name>cc_number</name>
+                        <value>
+                            <string>Volo********vych</string>
+                        </value>
+                    </member>
+                    <member>
+                        <name>cc_expiring</name>
+                        <value>
+                            <string>06/2014</string>
+                        </value>
+                    </member>
+                </struct>
+            </value>
+        </param>
+    </params>
+</methodResponse>

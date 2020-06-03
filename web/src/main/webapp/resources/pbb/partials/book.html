@@ -1,0 +1,466 @@
+<style>
+body {
+    margin: 0;
+    border-top: 5px solid #d4ae69;
+    border-bottom: 5px solid #d4ae69;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 14px;
+    line-height: 1.36;
+    color: #999999;
+}
+
+#booking_button {
+    width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 0 9px rgba(204, 204, 204, 0.93);
+}
+
+a {
+    color: #333333;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.book {
+    border-radius: 2px;
+    color: #5c4211;
+    /*display: block;*/
+    font-size: 14px;
+    padding: 10px 30px;
+    text-indent: -5px !important;
+    text-decoration: none;
+    display: inline;
+    cursor: pointer;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+}
+
+.book {
+    background: #e2bf7e; /* Old browsers */
+    background: -moz-linear-gradient(top, #e2bf7e 0%, #b29052 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e2bf7e), color-stop(100%, #b29052)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #e2bf7e 0%, #b29052 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #e2bf7e 0%, #b29052 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #e2bf7e 0%, #b29052 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #e2bf7e 0%, #b29052 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e2bf7e', endColorstr='#b29052', GradientType=0); /* IE6-9 */
+    border: 1px solid #b29052;
+    float: left;
+}
+
+.book:hover {
+    background: #b29052; /* Old browsers */
+    background: -moz-linear-gradient(top, #b29052 0%, #e2bf7e 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b29052), color-stop(100%, #e2bf7e)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #b29052 0%, #e2bf7e 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #b29052 0%, #e2bf7e 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #b29052 0%, #e2bf7e 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #b29052 0%, #e2bf7e 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b29052', endColorstr='#e2bf7e', GradientType=0); /* IE6-9 */
+}
+
+#booking_button .top {
+    color: #747474;
+    padding: 25px 20px 21px 28px;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+#booking_button .top .logo {
+    float: left;
+    border: 1px solid #e6e6e6;
+    margin-right: 25px;
+}
+
+#booking_button .top .title {
+    font-size: 26px;
+    color: #d4ae69;
+    font-weight: 600;
+    padding-top: 30px;
+}
+
+#booking_button .top span {
+    color: #6f4c95;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#booking_button .top .text {
+    color: #424242;
+    font-weight: 600;
+    clear: both;
+    font-size: 18px;
+    padding-top: 30px;
+}
+
+#booking_button .top .text a {
+    color: #d4ae69;
+}
+
+#booking_button .head {
+    background-color: #5481db;
+    margin-top: 30px;
+    padding: 18px 22px;
+    overflow: hidden;
+    border: 1px solid #426aba;
+    text-align: center;
+    clear: both;
+}
+
+#booking_button .bottom {
+    border-radius: 0px 0px 9px 9px;
+}
+
+#booking_button .bottom .text {
+    font-size: 18px;
+    color: #fff;
+    max-width: 300px;
+    float: left;
+}
+
+#booking_button .head .title {
+    font-size: 32px;
+    color: #fff;
+    float: left;
+    padding-top: 6px;
+}
+
+#booking_button .description {
+    text-align: center;
+    padding-top: 10px;
+}
+
+#booking_button .description a {
+    color: #d5b06a;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.blockWrapper {
+    overflow: hidden;
+    border-bottom: 1px solid #E5E5E5;
+    padding: 46px 120px 52px;
+}
+
+.blockWrapperTop {
+    padding: 46px 120px 52px 93px;
+}
+
+.blockWrapperTop .left p {
+    padding-left: 28px;
+}
+
+.blockWrapperTop .right p {
+    margin-bottom: 5px;
+}
+
+.left {
+    float: left;
+    width: 393px;
+}
+
+.blockWrapper.blockInfo .left {
+    border-right: 1px solid #E5E5E5;
+}
+
+p.blockTitle {
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 0;
+    color: #333333;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.right {
+    float: left;
+    padding: 38px 0 0 60px;
+    width: 305px;
+}
+
+.right p {
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.right .title, .right p {
+    font-size: 16px;
+    color: #333333;
+    font-weight: 600;
+}
+
+.right b {
+    color: #333333;
+    font-weight: 600;
+}
+
+.blockTitle2 {
+    float: left;
+}
+
+.blockText p {
+    margin: 0 0 18px;
+}
+
+.blockText .left {
+    width: 355px;
+    text-align: left;
+}
+
+.blockText .right {
+    width: 355px;
+    text-align: left;
+    padding-top: 0;
+    padding-left: 55px;
+}
+
+.left span {
+    color: #D3AD69;
+    font-weight: 600;
+}
+
+.left .number {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.number span {
+    font-size: 24px;
+    color: #333333;
+    font-weight: 600;
+}
+
+.right a {
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 5px;
+}
+
+.print {
+    display: block;
+    width: 180px;
+}
+
+.right p.change a {
+    background: url(pbb/img/design/change.png) no-repeat left;
+}
+
+.blockWrapperTop .right {
+    padding-left: 136px;
+    padding-top: 0;
+    width: 224px;
+}
+
+/*Info*/
+.blockWrapper.blockInfo {
+    background: #fcfcfc;
+}
+
+.hotelName {
+    font-size: 16px;
+    color: #D3AD69;
+    font-weight: 600;
+}
+
+table tr td {
+    line-height: 1.54;
+}
+
+table tr td:nth-child(2n) {
+    color: #333333;
+    font-weight: 600;
+}
+
+table tr td:nth-child(2n+1) {
+    padding-right: 45px;
+}
+
+table tr:last-child td {
+    padding-top: 28px;
+}
+
+.right table tr:last-child td {
+    border-top: 1px solid #E5E5E5;
+    padding-top: 18px;
+    font-size: 18px;
+    font-weight: 800;
+    padding-right: 0;
+    text-align: right;
+}
+
+.right table tr td.type {
+    padding-bottom: 25px;
+}
+
+/*footer*/
+.footer.blockWrapper {
+    padding: 44px 120px 120px;
+}
+
+.footer.blockWrapper p {
+    margin: 0;
+}
+
+.footer.blockWrapper a {
+    color: #4162BF;
+    text-decoration: none;
+}
+
+.footer.blockWrapper b {
+    font-weight: 600px;
+    color: #333;
+}
+
+.pTitle {
+    color: #101010;
+    font-size: 15px;
+    font-weight: 600;
+}
+</style>
+<script>window.scroll(0,0)</script>
+<div id="booking_button">
+    <div class="top">
+        <div ng-if="model.hotelInfo.logo" class="logo">
+            <!--<img src="" ng-src="http://pmsphotos/test1/{{model.hotelInfo.logo}}" alt="" style="width:197px;height: 84px;"/>-->
+            <img ng-src="{{serverUrl}}{{model.hotel}}/{{model.hotelInfo.logo}}" style="width:197px;height: 84px;"/>
+        </div>
+        <div class="title" bb-color="settings.textColor">{{model.hotelInfo.name}}</div>
+        <div ng-if="model.hotelInfo.webSite">
+            <a ng-href="{{model.hotelInfo.webSite}}" class="back">Вернутся на сайт отеля</a>
+        </div>
+        <div class="text">Подтверждение бронирования</div>
+        <div style="clear: both;"></div>
+    </div>
+
+    <div class="blockWrapper blockWrapperTop">
+        <div class="left">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" style="float:left;">
+                <path fill="{{settings.textColor}}"
+                      d="M16.9,21C11.3,21,5.6,21,0,21C0,14.6,0,8.2,0,1.7c1.2,0,2.3,0,3.5,0c0-0.6,0-1.2,0-1.7c3.3,0,6.6,0,10,0  c0,0.6,0,1.1,0,1.7c1.2,0,2.3,0,3.5,0C16.9,8.2,16.9,14.6,16.9,21z M15.1,19.2c0-5.2,0-10.4,0-15.7c-0.6,0-1.1,0-1.7,0  c0,0.6,0,1.1,0,1.7c-3.3,0-6.6,0-10,0c0-0.6,0-1.1,0-1.7c-0.6,0-1.1,0-1.7,0c0,5.2,0,10.4,0,15.7C6.2,19.2,10.7,19.2,15.1,19.2z   M5.3,3.5c2.1,0,4.2,0,6.3,0c0-0.6,0-1.2,0-1.7c-2.1,0-4.2,0-6.3,0C5.3,2.3,5.3,2.9,5.3,3.5z"/>
+                <path fill="{{settings.textColor}}"
+                      d="M7.7,15.4c-0.9-0.9-1.8-1.8-2.6-2.6c0.4-0.4,0.8-0.8,1.2-1.3c0.4,0.4,0.9,0.9,1.4,1.4  c1.2-1.2,2.4-2.4,3.5-3.5c0.4,0.4,0.8,0.8,1.2,1.3C10.9,12.2,9.3,13.8,7.7,15.4z"/>
+            </svg>
+            <p class="blockTitle">
+                Ваше бронирование прошло успешно
+            </p>
+
+            <p>Письмо с подтверждением<br> было отправлено на <span bb-color="settings.textColor">{{model.booking.group.customer.email}}</span>
+            </p>
+
+            <p class="number">Номер вашего подтверждения: <span>{{model.booking.bookingCode.bookingCode}}</span></p>
+        </div>
+        <div class="right not-print">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" style="float:left; margin-top: 5px;">
+                <path fill="{{settings.textColor}}"
+                      d="M3.8,15.9c0-1.2,0-2.3,0-3.5c-0.1,0-0.2,0-0.3,0c-1,0-2.1,0-3.1,0c-0.3,0-0.5-0.1-0.5-0.4C0,10,0,8.1,0,6.2  C0,6,0.1,5.8,0.2,5.6c0.2-0.5,0.3-0.9,0.5-1.4C0.8,4,0.9,3.8,1.2,3.8c1.1,0,2.3,0,3.5,0c0,0.4,0,0.8,0,1.2c3.1,0,6.2,0,9.3,0  c0-0.4,0-0.8,0-1.2c0.1,0,0.2,0,0.3,0c1,0,2.1,0,3.1,0c0.4,0,0.5,0.1,0.7,0.5c0.2,0.5,0.4,1.1,0.6,1.7c0,0.1,0,0.2,0,0.3  c0,1.9,0,3.8,0,5.7c0,0.4-0.1,0.5-0.5,0.5c-1,0-2,0-3.1,0c-0.1,0-0.2,0-0.3,0c0,1.2,0,2.3,0,3.5C11.1,15.9,7.5,15.9,3.8,15.9z   M14,10.2c-3.1,0-6.2,0-9.3,0c0,1.6,0,3.2,0,4.9c3.1,0,6.2,0,9.3,0C14,13.4,14,11.8,14,10.2z M16.1,8.1c0.4,0,0.8-0.3,0.8-0.8  c0-0.5-0.3-0.8-0.8-0.9c-0.4,0-0.8,0.3-0.8,0.8C15.3,7.7,15.6,8,16.1,8.1z"/>
+                <path fill="{{settings.textColor}}"
+                      d="M5.5,0c2.6,0,5.1,0,7.7,0c0,1.4,0,2.8,0,4.2c-2.6,0-5.1,0-7.7,0C5.5,2.8,5.5,1.4,5.5,0z"/>
+            </svg>
+            <p class="print">
+                <a href="" onclick="window.print();return false;"> Версия для печати</a>
+            </p>
+
+            <!--<p class="change"><a href="">Изменение бронирования</a></p>-->
+        </div>
+    </div>
+
+    <div class="blockWrapper blockInfo">
+        <div class="left">
+            <p class="blockTitle">Информация о бронировании</a></p>
+
+            <p class="hotelName" bb-color="settings.textColor">{{model.hotelInfo.name}}</p>
+            <table class="align-top">
+                <tr>
+                    <td>Дата прибытия:</td>
+                    <!--<td>Суббота, 20 Мая 2014</td>-->
+                    <td>
+                        <bb-date date="model.startDate"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Дата отъезда:</td>
+                    <td>
+                        <bb-date date="model.endDate"/>
+                    </td>
+                    <!--<td>Вторник, 23 Мая 2014</td>-->
+                </tr>
+                <tr>
+                    <td>Кол-во ночей:</td>
+                    <!--<td>3 ночи</td>-->
+                    <td><span style="color: #333333" decline-nights="{{model.daysDifference}}"></span></td>
+                </tr>
+                <!--<tr>-->
+                <!--<td>Кол-во гостей:</td>-->
+                <!--<td>2 взрослых, 0 детей</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                <!--<td>Тип номера:</td>-->
+                <!--<td>Двухместный Делюкс</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                <!--<td>Информация <br>о номере:</td>-->
+                <!--<td>40м2, плазма, сейф<br>фен, wifi, кофе машина</td>-->
+                <!--</tr>-->
+                <tr ng-if="model.booking.roomUses[0]">
+                    <td>
+                        Особые пожелания
+                    </td>
+                    <td>
+                        {{model.booking.roomUses[0].description}}
+                        <!--{{model.booking.group.customer.description}}-->
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="right">
+            <p>Общая стоимость</p>
+            <table>
+                <!--<tr>-->
+                <!--<td>1 номер</td>-->
+                <!--<td><b>UAH 10000.00</b></td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                <!--<td>Ндс в размере (20%)</td>-->
+                <!--<td><b>UAH 10000.00</b></td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                <!--<td class="type">Оплата при заезде</td>-->
+                <!--<td class="type"><b>UAH 10000.00</b></td>-->
+                <!--</tr>-->
+
+                <tr>
+                    <td colspan="2" style="font-size: 22px"><b>{{model.hotelInfo.currency}} {{(model.daysDifference * model.sum).toFixed(2)}}</b></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="blockWrapper">
+        <p class="pTitle" ng-if="model.hotelInfo.description">Информация об отеле</p>
+
+        <p ng-if="model.hotelInfo.description">
+            {{model.hotelInfo.description}}
+        </p>
+
+        <p ng-if="model.hotelInfo.importantInfo" class="pTitle">Важная информация</p>
+
+        <p ng-if="model.hotelInfo.importantInfo">
+            {{model.hotelInfo.importantInfo}}
+        </p>
+
+        <!--<p ng-if="model.hotelInfo.importantInfo" class="pTitle">Порядок проживания в отеле</p>-->
+
+        <!--<p ng-if="model.hotelInfo.importantInfo">-->
+        <!--{{model.hotelInfo.importantInfo}}-->
+        <!--</p>-->
+    </div>
+
+    <div class="footer blockWrapper">
+        <p>По любым вопросам, связанным с объектом размещения, Вы можете связаться <br>с <b>{{model.hotelInfo.name}}</b>
+            напрямую по: номеру <b>{{model.hotelInfo.accountPhone}}</b>
+            или адресу <br>электронной почты <a href="mailto:{{model.hotelInfo.email}}" target="_blank">{{model.hotelInfo.email}}</a>
+        </p>
+    </div>
+
+</div>

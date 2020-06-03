@@ -1,0 +1,155 @@
+passportScan {
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    overflow: hidden;
+    height: 100%;
+}
+
+.x-btn-right {
+    float: right;
+}
+
+.myform-input-left {
+    float: right;
+}
+
+.icon-prev,
+.icon-previous {
+    background: url(../images/gray/icons/calendar/arrow_left.png) no-repeat left center !important;
+}
+
+.icon-next {
+    background: url(../images/gray/icons/calendar/arrow_right.png) no-repeat left center !important;
+}
+
+.icon-calendar {
+    background: url(../images/gray/icons/calendar/calendar.png) no-repeat left center !important;
+}
+
+body {
+    font-family: helvetica, tahoma, verdana, sans-serif;
+    font-size: 13px;
+}
+
+body.bry-examples-framed {
+    padding: 0;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: large;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+pre.code {
+    background: #F8F8F8;
+    border: 1px solid #e8e8e8;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 0px;
+    border-left: 5px solid #e8e8e8;
+    font-size: 12px !important;
+    line-height: 14px !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.sch-event-endsoutside {
+    -moz-border-radius-topright: 0 !important;
+    -moz-border-radius-bottomright: 0 !important;
+    -webkit-border-radius-top-right: 0 !important;
+    -webkit-border-radius-bottom-right: 0 !important;
+}
+
+.sch-event-startsoutside {
+    -moz-border-radius-topleft: 0 !important;
+    -moz-border-radius-bottomleft: 0 !important;
+    -webkit-border-radius-top-left: 0 !important;
+    -webkit-border-radius-bottom-left: 0 !important;
+}
+
+.sch-event {
+    -webkit-box-shadow: 1px 1px 1px rgba(150, 150, 150, 0.3);
+    -moz-box-shadow: 1px 1px 1px rgba(150, 150, 150, 0.3);
+    -ms-box-shadow: 1px 1px 1px rgba(150, 150, 150, 0.3);
+    box-shadow: 1px 1px 1px rgba(150, 150, 150, 0.3);
+    border-radius: 3px;
+    border: 1px solid Turquoise;
+}
+
+.icon-horizontal {
+    background: url(../images/gray/icons/calendar/horizontal.png) no-repeat left center;
+}
+
+.icon-vertical {
+    background: url(../images/gray/icons/calendar/vertical.png) no-repeat left center;
+}
+
+.dayShift div {
+    background: url(../images/gray/icons/calendar/sun.png) no-repeat left center;
+}
+
+.nightShift div {
+    background: url(../images/gray/icons/calendar/bluemoon.png) no-repeat left center;
+}
+
+.zoomIn {
+    background: url(../images/gray/icons/calendar/zoom_in.png) no-repeat left center;
+}
+
+.zoomOut {
+    background: url(../images/gray/icons/calendar/zoom_out.png) no-repeat left center;
+}
+
+.zoomMax {
+    background: url(../images/gray/icons/calendar/magnifier_zoom_in.png) no-repeat left center;
+}
+
+.zoomMin {
+    background: url(../images/gray/icons/calendar/magnifier_zoom_out.png) no-repeat left center;
+}
+
+.sch-event {
+    background-color: #DDDDDD;
+    background-image: -moz-linear-gradient(center top, #EEEEEE, #CCCCCC);
+    border: 1px solid #777777;
+    border-radius: 0.2em 0.2em 0.2em 0.2em;
+    box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.8) inset, 0 1px 0 rgba(0, 0, 0, 0.3);
+    color: #1B1B1B;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+    white-space: nowrap;
+}
+
+.sch-event-inner {
+    margin: 0;
+}
+
+.value {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.1);
+    border-radius: 0.15em 0 0 0.15em;
+    box-shadow: 1px 0 0 rgba(0, 0, 0, 0.5), 2px 0 0 rgba(255, 255, 255, 0.5);
+    float: left;
+    font: 400 13px/18px;
+    height: inherit;
+    padding: 2px 2px 2px 4px;
+    pointer-events: none;
+}

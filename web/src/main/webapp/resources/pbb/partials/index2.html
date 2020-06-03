@@ -1,0 +1,197 @@
+{{model.plans.length}}
+<!--<form action="" name="availabilityForm">-->
+<!--<h2>Выберите даты</h2>-->
+<!--<hr/>-->
+
+<!--<div class="row">-->
+<!--<div class="col-md-6">-->
+<!--<label for="dfrom">Заезд:</label>-->
+
+<!--<p class="input-group">-->
+<!--<input type="text" class="form-control datepicker" data-date-format="dd/mm/yy" data-value="model.booking.dateStart" juidatepicker-->
+<!--ng-model="model.booking.dateStart" id="dfrom" name="dfrom" required/>-->
+<!--<span class="input-group-btn">-->
+<!--<button class="btn btn-default" ng-click=""><i class="fa fa-calendar"></i></button>-->
+<!--</span>-->
+<!--</p>-->
+<!--</div>-->
+<!--<div class="col-md-6">-->
+<!--<label for="dto">Выезд:</label>-->
+
+<!--<p class="input-group">-->
+<!--<input type="text" class="form-control datepicker" data-date-format="dd/mm/yy" data-value="model.booking.dateEnd"-->
+<!--ng-model="model.booking.dateEnd" data-min-date="model.booking.dateStart" juidatepicker id="dto" name="dto" required/>-->
+<!--<span class="input-group-btn">-->
+<!--<button class="btn btn-default" ng-click=""><i class="fa fa-calendar"></i></button>-->
+<!--</span>-->
+<!--</p>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<input type="submit" class="btn btn-success btn-block" style="margin-top: 10px"-->
+<!--ng-click="loadAvailableRooms(model.booking.dateStart, model.booking.dateEnd)"/>-->
+<!--</form>-->
+<!--<div style="margin: 10px 0;"></div>-->
+<!--<pre class="alert alert-success">-->
+<!--Доступные варианты размещения: {{model.booking.dateStart}} по {{model.booking.dateEnd}}-->
+<!--</pre>-->
+<!--<div style="margin: 10px 0;"></div>-->
+
+<div style="margin-bottom: 20px;">
+    <div class="pull-left">
+        <h2>Свободные номера</h2>
+
+        <p>Наличие мест с {{model.booking.dateStart}} по {{model.booking.dateEnd}}<br/><a href=""><i class="icon-pencil"></i>Изменить даты</a></p>
+    </div>
+
+    <div style="clear:both;"></div>
+</div>
+
+<form action="" name="roomsAvailable" class="roomsForm">
+    <div>
+        <div class="header">
+            <h3 class="pull-left" style="color: #fff;margin-top: 15px;">Выберите номер</h3>
+
+            <div class="pull-right" style="margin-top: 10px;">
+                <input type="submit" class="booking-button" value="Забронировать" ng-click="addBooking()">
+            </div>
+        </div>
+
+        <div class="headings" style="border: 1px solid #cccccc;">
+            <div class="pull-left roomType-header">Тип номера</div>
+            <div class="pull-left" style="border-right: 1px solid #cccccc;text-align: center;height:52px;margin-top:5px;width: 155px;padding-top: 5px;">
+                Условия<br>проживания
+            </div>
+            <div class="pull-left" style="text-align: center;width: 78px;border-right: 1px solid #cccccc;height:52px;padding-top: 5px;margin-top: 5px;">
+                Число<br>гостей
+            </div>
+            <div class="pull-left" style="border-right: 1px solid #cccccc;text-align: center;width: 89px;height:52px;margin-top:5px;padding-top: 5px;">Цена
+                за<br>3 ночи
+            </div>
+            <div class="pull-left" style="text-align: center;width: 171px;height:62px;padding-top: 10px;">Количество<br>номеров</div>
+            <div class="" style="clear: both;"></div>
+        </div>
+
+        <div ng-repeat="room in model.rooms track by room.roomType.id" style="border:1px solid #cccccc;border-top: 0;">
+            <div style="width: 234px;" class="pull-left">
+                <h4 style="text-align: center;margin-top: 10px;">{{room.roomType.name}}</h4>
+
+                <div style="margin: 0 auto;width: 200px;">
+                    <div ng-if="model.photosByRoomType[room.roomType.id][0].code" style="margin-bottom: 10px;">
+                        <img ng-src="http://pmsphotos/test1/{{model.photosByRoomType[room.roomType.id][0].code}}" alt="" width="200" height="200"
+                             class="img-thumbnail"/>
+                    </div>
+
+                    <div style="overflow: hidden; width: 200px; border: 0 solid red;">
+                        <a ng-repeat="roomTypePhoto in model.photosByRoomType[room.roomType.id]" data-lightbox="{{roomTypePhoto.code}}"
+                           ng-href="http://pmsphotos/test1/{{roomTypePhoto.code}}" style="display: block; float: left;">
+                            <img ng-src="http://pmsphotos/test1/{{roomTypePhoto.code}}" alt="" class="img-thumbnail no-border"
+                                 style="width:60px; height: 60px;margin:0 3px 3px 3px;" width="60"
+                                 height="60">
+                        </a>
+                    </div>
+                    <a href="javascript:;" style="display: block;margin-top: 10px;text-align: center;" ng-click="open(room)">Описание номера</a>
+                </div>
+
+                <script type="text/ng-template" id="myModalContent.html">
+                    <div class="modal-header" style="margin: 0 15px 0 15px;">
+                        <button type="button" class="close" ng-click="cancel()" aria-hidden="true">&times;</button>
+                        <h3 class="modal-title">{{items.roomType.name}}</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="pull-left" style="width: 300px;">
+                            <div ng-if="photos[0].code" style="margin-bottom: 10px;">
+                                <img ng-src="http://pmsphotos/test1/{{photos[0].code}}" alt="" width="300" height="300"
+                                     class="img-thumbnail"/>
+                            </div>
+                            <div style="overflow: hidden; width: 300px; border: 0 solid red;">
+                                <a ng-repeat="roomTypePhoto in photos"
+                                   ng-href="http://pmsphotos/test1/{{roomTypePhoto.code}}" style="display: block; float: left;">
+                                    <img ng-src="http://pmsphotos/test1/{{roomTypePhoto.code}}" alt="" class="img-thumbnail no-border"
+                                         style="width:90px; height: 90px;margin:0 3px 3px 3px;" width="90"
+                                         height="90">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="pull-left">
+                            <div style="font-weight: bold;margin-left: 20px;margin-bottom: 5px;">Услуги и удобства</div>
+                            <ul class="facilities">
+                                <li ng-repeat="roomTypeFacility in facilities">
+                                    {{labels[roomTypeFacility.name]}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div class="modal-footer" style="margin: 0 15px 0 15px;">
+                        <button class="booking-button pull-right" ng-click="cancel()">Свернуть</button>
+                    </div>
+                </script>
+
+                <!--<button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Фотографии и описание {{isCollapsed}}</button>-->
+
+                <!--<div collapse="!isCollapsed" class="collapse">-->
+                <!--<div class="well well-lg">-->
+                <!--<ul>-->
+                <!--<li ng-repeat="roomTypeFacility in model.facilitiesByRoomType[room.roomType.id]">-->
+                <!--{{labels[roomTypeFacility.name]}}-->
+                <!--</li>-->
+                <!--</ul>-->
+                <!--<div class="roomTypePhoto">-->
+                <!--<a ng-repeat="roomTypePhoto in model.photosByRoomType[room.roomType.id]" data-lightbox="{{roomTypePhoto.code}}"-->
+                <!--ng-href="http://pmsphotos/test1/{{roomTypePhoto.code}}">-->
+                <!--<img ng-src="http://pmsphotos/test1/{{roomTypePhoto.code}}" alt="" class="img-thumbnail" width="100" height="100">-->
+                <!--</a>-->
+                <!--<div class="clearfix"></div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+            </div>
+
+            <div style="vertical-align: top;padding: 0;border-left: 1px solid #cccccc;" class="pull-left">
+                <div ng-repeat="plan in model.plans track by plan.id" style="">
+                    <div ng-repeat="baseRoom in model.baseRooms[room.roomType.id] track by baseRoom.id" style="min-height: 80px;text-align: center;">
+                        <div style="width: 154px; float: left;min-height: 80px;padding-top:15px;">
+                            <p style="text-decoration: underline;color:#747474;">{{plan.name}}</p>
+                            <!--<p>{{labels['boardType.'+plan.board]}}</p>-->
+                            <input type="hidden" ng-value="{{plan.id}}" ng-model="model.plan.id" id="option-{{plan.id}}"/>
+                        </div>
+                        <div style="width: 78px;float: left;min-height: 80px;text-align: center;padding-top:15px;">
+                            <img ng-src="button/img/design/{{baseRoom.adults}}men.png" alt=""/>
+                        </div>
+                        <div style="width: 89px;float: left;min-height: 80px;text-align: center;padding-top:15px;">
+                            <b>
+                                {{reduceSum(model.prices[plan.id][baseRoom.id])}}
+                                <br>
+                                UAH
+                            </b>
+                        </div>
+                        <div style="width: 171px;float: left; padding-top:15px;">
+                            <label>
+                                <select class="form-control" data-placeholder="Выберите количество" ng-model="model.booking[baseRoom.id][plan.id].quantity"
+                                        style="width: 100px;text-align: center;">
+                                    <option ng-repeat="value in range(room.quota)"
+                                            value="{{value}}"
+                                            ng-selected="{{value == 0}}"
+                                            ng-disabled="exceedsQuota(value, model.booking[baseRoom.id][plan.id].quantity, room.roomType.id, room.quota)">
+                                        {{value}} ({{reduceSum(model.prices[plan.id][baseRoom.id]) * value}})UAH
+                                    </option>
+                                </select>
+                            </label>
+                        </div>
+                        <div style="clear: both;"></div>
+                    </div>
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+
+        </div>
+        <div class="footer">
+            <h3 class="pull-left" style="color: #fff;margin-top: 15px;" ng-if="getAmount() > 0">Сумма: {{getAmount()}} UAH</h3>
+
+            <div class="pull-right" style="margin-top: 10px;">
+                <input type="submit" class="booking-button" value="Забронировать" ng-click="addBooking()">
+            </div>
+        </div>
+    </div>
+</form>

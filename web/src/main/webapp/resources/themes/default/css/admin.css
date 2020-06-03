@@ -1,0 +1,6 @@
+.unavailable-grid-row {
+    color: indianred !important;
+}
+.pms-delete-icon-16, .pms-failure-icon-16 {
+    background: transparent url(../../../themes/default/images/icons/16/delete.png) 0 0 no-repeat;
+}

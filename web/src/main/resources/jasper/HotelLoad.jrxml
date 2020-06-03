@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="HotelBill"
+              pageWidth="595" pageHeight="842" columnWidth="500" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20"
+              whenResourceMissingType="Empty" uuid="14cbf7cb-7562-4122-84aa-0b5c9c2686f7">
+    <property name="ireport.zoom" value="1.5"/>
+    <property name="ireport.x" value="0"/>
+    <property name="ireport.y" value="63"/>
+    <style name="Sans_Bold" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="9" isBold="true" isItalic="false" isUnderline="false"
+           isStrikeThrough="false">
+        <paragraph leftIndent="2" rightIndent="2"/>
+    </style>
+    <style name="Sans_Italic" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="9" isBold="false" isItalic="true" isUnderline="false"
+           isStrikeThrough="false">
+        <paragraph leftIndent="2" rightIndent="2"/>
+    </style>
+    <style name="Sans_Small" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="7" isBold="false" isItalic="false" isUnderline="false"
+           isStrikeThrough="false">
+        <paragraph leftIndent="2" rightIndent="2"/>
+    </style>
+    <style name="Sans_Small_Under" hAlign="Center" vAlign="Top" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="7" isBold="false" isItalic="false"
+           isUnderline="false" isStrikeThrough="false">
+        <paragraph leftIndent="2" rightIndent="2"/>
+    </style>
+    <style name="Sans_Bold_Underlined" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="9" isBold="true" isItalic="false"
+           isUnderline="true" isStrikeThrough="false">
+        <paragraph leftIndent="2" rightIndent="2"/>
+    </style>
+    <style name="Sans_Normal_Frame" isDefault="true" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="9" isBold="false" isItalic="false"
+           isUnderline="false" isStrikeThrough="false">
+        <pen lineWidth="0.5" lineColor="#000000"/>
+        <box>
+            <pen lineWidth="0.5"/>
+            <topPen lineWidth="0.5"/>
+            <leftPen lineWidth="0.5"/>
+            <bottomPen lineWidth="0.5"/>
+            <rightPen lineWidth="0.5"/>
+        </box>
+        <paragraph leftIndent="2" rightIndent="2"/>
+    </style>
+    <style name="Sans_Normal_Line" isDefault="true" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="9" isBold="false" isItalic="false"
+           isUnderline="false" isStrikeThrough="false">
+        <pen lineWidth="0.5" lineColor="#000000"/>
+        <box>
+            <pen lineWidth="0.5"/>
+            <topPen lineWidth="0.0"/>
+            <leftPen lineWidth="0.0"/>
+            <bottomPen lineWidth="0.5"/>
+            <rightPen lineWidth="0.0"/>
+        </box>
+        <paragraph leftIndent="2" rightIndent="2"/>
+    </style>
+    <style name="Sans_Normal" isDefault="true" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="9" isBold="false" isItalic="false"
+           isUnderline="false" isStrikeThrough="false">
+        <paragraph leftIndent="2" rightIndent="2"/>
+    </style>
+    <style name="table">
+        <box>
+            <pen lineWidth="0.0" lineColor="#FFFFFF"/>
+            <topPen lineWidth="0.0" lineColor="#FFFFFF"/>
+            <leftPen lineWidth="0.0" lineColor="#FFFFFF"/>
+            <bottomPen lineWidth="0.0" lineColor="#FFFFFF"/>
+            <rightPen lineWidth="0.0" lineColor="#FFFFFF"/>
+        </box>
+    </style>
+    <style name="table_TD" mode="Transparent" backcolor="#FFFFFF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="table_TD_Blank" mode="Transparent" backcolor="#FFFFFF">
+        <box>
+            <pen lineWidth="0.0" lineColor="#FFFFFF"/>
+            <topPen lineWidth="0.0" lineColor="#FFFFFF"/>
+            <leftPen lineWidth="0.0" lineColor="#FFFFFF"/>
+            <bottomPen lineWidth="0.0" lineColor="#FFFFFF"/>
+            <rightPen lineWidth="0.0" lineColor="#FFFFFF"/>
+        </box>
+    </style>
+    <subDataset name="Table Dataset 1" uuid="e459d08c-d442-4815-9c95-27ded5e1e5e5">
+        <field name="room" class="java.lang.String"/>
+        <field name="roomType" class="java.lang.String"/>
+        <field name="firstName" class="java.lang.String"/>
+        <field name="lastName" class="java.lang.String"/>
+        <field name="patronymic" class="java.lang.String"/>
+        <field name="qty" class="java.lang.String"/>
+        <field name="startDate" class="java.lang.String"/>
+        <field name="endDate" class="java.lang.String"/>
+    </subDataset>
+    <subDataset name="Table Dataset 2" uuid="e459d08c-d442-4815-9c95-27ded5e1e5e5">
+        <field name="room" class="java.lang.String"/>
+        <field name="roomType" class="java.lang.String"/>
+        <field name="firstName" class="java.lang.String"/>
+        <field name="lastName" class="java.lang.String"/>
+        <field name="patronymic" class="java.lang.String"/>
+        <field name="qty" class="java.lang.String"/>
+        <field name="startDate" class="java.lang.String"/>
+        <field name="checkOutTime" class="java.lang.String"/>
+        <field name="lateCheckOut" class="java.lang.String"/>
+    </subDataset>
+    <subDataset name="Table Dataset 3" uuid="e459d08c-d442-4815-9c95-27ded5e1e5e5">
+        <field name="room" class="java.lang.String"/>
+        <field name="roomType" class="java.lang.String"/>
+        <field name="firstName" class="java.lang.String"/>
+        <field name="lastName" class="java.lang.String"/>
+        <field name="patronymic" class="java.lang.String"/>
+        <field name="qty" class="java.lang.String"/>
+        <field name="endDate" class="java.lang.String"/>
+        <field name="checkInTime" class="java.lang.String"/>
+        <field name="earlyCheckIn" class="java.lang.String"/>
+    </subDataset>
+    <parameter name="livingCollection" class="java.util.Collection"/>
+    <parameter name="outgoCollection" class="java.util.Collection"/>
+    <parameter name="incomeCollection" class="java.util.Collection"/>
+    <parameter name="reportDate" class="java.lang.String"/>
+    <parameter name="currentDate" class="java.lang.String"/>
+    <parameter name="currentTime" class="java.lang.String"/>
+    <parameter name="totalRooms" class="java.lang.String"/>
+    <parameter name="totalLoad" class="java.lang.String"/>
+    <parameter name="totalLivingGuest" class="java.lang.String"/>
+    <parameter name="totalLivingRoom" class="java.lang.String"/>
+    <parameter name="totalIncomeGuest" class="java.lang.String"/>
+    <parameter name="totalIncomeRoom" class="java.lang.String"/>
+    <parameter name="totalOutgoGuest" class="java.lang.String"/>
+    <parameter name="totalOutgoRoom" class="java.lang.String"/>
+    <parameter name="totalShortTimeGuest" class="java.lang.String"/>
+    <parameter name="totalShortTimeRoom" class="java.lang.String"/>
+    <parameter name="imgPath" class="java.lang.String"/>
+    <background>
+        <band height="800">
+            <image>
+                <reportElement x="455" y="773" width="100" height="27" forecolor="#FFFFFF" uuid="795ff253-9f91-4ca0-b863-5109d78b16d9"/>
+                <imageExpression><![CDATA[$P{imgPath}]]></imageExpression>
+            </image>
+        </band>
+    </background>
+    <columnHeader>
+        <band height="40">
+            <textField>
+                <reportElement style="Sans_Bold" x="156" y="0" width="243" height="20" uuid="a4fb2e25-93c4-47a2-8f28-d97354c5df16"/>
+                <textFieldExpression><![CDATA["Справка по загрузке на " + $P{reportDate}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement style="Sans_Normal" x="455" y="0" width="100" height="20" uuid="c8421546-4306-45e6-8fad-1ebf0f593dc5"/>
+                <textElement textAlignment="Right"/>
+                <textFieldExpression><![CDATA[$P{currentDate}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement style="Sans_Normal" x="455" y="20" width="100" height="20" uuid="6fbd4446-1d37-473d-939a-88b63d7e0c08"/>
+                <textElement textAlignment="Right"/>
+                <textFieldExpression><![CDATA[$P{currentTime}]]></textFieldExpression>
+            </textField>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="87">
+            <staticText>
+                <reportElement style="Sans_Bold" x="0" y="0" width="100" height="20" uuid="4c180d24-b198-470f-acab-3995c854adf0"/>
+                <text><![CDATA[Проживающие]]></text>
+            </staticText>
+            <componentElement>
+                <reportElement style="table" x="0" y="20" width="555" height="65" uuid="feafbfdb-84fd-46b6-b189-2ab5a2644eed"/>
+                <jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components"
+                          xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+                    <datasetRun subDataset="Table Dataset 1" uuid="9cb862ed-f2c0-48e1-bf1c-4117b1ff720c">
+                        <dataSourceExpression>
+                            <![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{livingCollection})]]></dataSourceExpression>
+                    </datasetRun>
+                    <jr:column width="54" uuid="482ca6c3-e92c-4567-8e31-2c076c2b650c">
+                        <jr:columnHeader style="table_TD" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="54" height="30" uuid="6c29a54e-9fcc-4f5c-824c-b580d3b4c2c1"/>
+                                <textElement textAlignment="Center"/>
+                                <text><![CDATA[Номер]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="table_TD" height="20" rowSpan="1">
+                            <textField isBlankWhenNull="true">
+                                <reportElement style="Sans_Normal" x="0" y="0" width="54" height="20" uuid="421a6036-383b-4a00-be8e-d0bd2fe9039f"/>
+                                <textElement textAlignment="Center"/>
+                                <textFieldExpression><![CDATA[$F{room}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="65" uuid="505a258f-31b9-47ab-b156-e29cc8aa1f16">
+                        <jr:columnHeader style="table_TD" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="65" height="30" uuid="3071b3e2-ae41-4fcb-a94a-73e7b48c7cb7"/>
+                                <textElement textAlignment="Center"/>
+                                <text><![CDATA[Категория]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="table_TD" height="20" rowSpan="1">
+                            <textField isBlankWhenNull="true">
+                                <reportElement style="Sans_Normal" x="0" y="0" width="65" height="20" uuid="5c22f41b-999d-48f7-8ae6-40459016a23a"/>
+                                <textElement textAlignment="Center"/>
+                                <textFieldExpression><![CDATA[$F{roomType}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="202" uuid="f133ec0e-14f6-44e0-96de-1427e4594a5c">
+                        <jr:columnHeader style="table_TD" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="202" height="30" uuid="dac228ba-5551-4d4a-82de-386e04a725e7"/>
+                                <textElement textAlignment="Center"/>
+                                <text><![CDATA[ФИО]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="table_TD" height="20" rowSpan="1">
+                            <textField isBlankWhenNull="true">
+                                <reportElement style="Sans_Normal" x="0" y="0" width="202" height="20" uuid="fc8467fe-bfcd-497a-a819-a7b7cecda5ba"/>
+                                <textFieldExpression><![CDATA[$F{lastName} + " " + $F{firstName} + " " + $F{patronymic}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="53" uuid="dbbc126a-697a-4c77-8452-51706d91b96f">
+                        <jr:columnHeader style="table_TD" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="53" height="30" uuid="6b37a4c5-2f9d-4f6c-aa81-8e6410463061"/>
+                                <textElement textAlignment="Center"/>
+                                <text><![CDATA[К-во]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="table_TD" height="20" rowSpan="1">
+                            <textField isBlankWhenNull="true">
+                                <reportElement style="Sans_Normal" x="0" y="0" width="53" height="20" uuid="e821ee9f-e20d-4eff-892a-25b6a4fc1020"/>
+                                <textElement textAlignment="Center"/>
+                                <textFieldExpression><![CDATA[$F{qty}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="90" uuid="17051dd7-68c8-49b6-9f00-482c5e232b2f">
+                        <jr:columnHeader style="table_TD" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="90" height="30" uuid="b10929e7-6357-470c-a56c-7e3cd9e8f06b"/>
+                                <textElement textAlignment="Center"/>
+                                <text><![CDATA[Заезд]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="table_TD" height="20" rowSpan="1">
+                            <textField isBlankWhenNull="true">
+                                <reportElement style="Sans_Normal" x="0" y="0" width="90" height="20" uuid="7edb96cb-1bbd-45cb-89ea-65b2b52ca5ee"/>
+                                <textElement textAlignment="Center"/>
+                                <textFieldExpression><![CDATA[$F{startDate}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="90" uuid="877c4a68-1eab-4a7a-95f8-abbe81f1abbf">
+                        <jr:columnHeader style="table_TD" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="90" height="30" uuid="899a2697-c684-469e-8cb1-24ec4d1020bd"/>
+                                <textElement textAlignment="Center"/>
+                                <text><![CDATA[Выезд]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="table_TD" height="20" rowSpan="1">
+                            <textField isBlankWhenNull="true">
+                                <reportElement style="Sans_Normal" x="0" y="0" width="90" height="20" uuid="2060fb68-2fcd-4fb9-ac67-af685b8231d3"/>
+                                <textElement textAlignment="Center"/>
+                                <textFieldExpression><![CDATA[$F{endDate}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                </jr:table>
+            </componentElement>
+        </band>
+        <band height="87">
+            <staticText>
+                <reportElement style="Sans_Bold" x="0" y="0" width="100" height="20" uuid="eed4ec0f-f209-4052-a51d-17a29f4b8ffd"/>
+                <text><![CDATA[Выезд]]></text>
+            </staticText>
+            <componentElement>
+                <reportElement style="table" x="0" y="20" width="555" height="65" uuid="feafbfdb-84fd-46b6-b189-2ab5a2644eed"/>
+                <jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components"
+                          xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+                    <datasetRun subDataset="Table Dataset 2" uuid="9cb862ed-f2c0-48e1-bf1c-4117b1ff720c">
+                        <dataSourceExpression>
+                            <![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{outgoCollection})]]></dataSourceExpression>
+                    </datasetRun>
+                    <jr:column width="54" uuid="482ca6c3-e92c-4567-8e31-2c076c2b650c">
+                        <jr:columnHeader style="table_TD" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="54" height="30" uuid="6c29a54e-9fcc-4f5c-824c-b580d3b4c2c1"/>
+                                <textElement textAlignment="Center"/>
+                                <text><![CDATA[Номер]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="table_TD" height="20" rowSpan="1">
+                            <textField>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="54" height="20" uuid="421a6036-383b-4a00-be8e-d0bd2fe9039f"/>
+                                <textElement textAlignment="Center"/>
+                                <textFieldExpression><![CDATA[$F{room}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="65" uuid="505a258f-31b9-47ab-b156-e29cc8aa1f16">
+                        <jr:columnHeader style="table_TD" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="65" height="30" uuid="3071b3e2-ae41-4fcb-a94a-73e7b48c7cb7"/>
+                                <textElement textAlignment="Center"/>
+                                <text><![CDATA[Категория]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="table_TD" height="20" rowSpan="1">
+                            <textField>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="65" height="20" uuid="5c22f41b-999d-48f7-8ae6-40459016a23a"/>
+                                <textElement textAlignment="Center"/>
+                                <textFieldExpression><![CDATA[$F{roomType}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="202" uuid="f133ec0e-14f6-44e0-96de-1427e4594a5c">
+                        <jr:columnHeader style="table_TD" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="202" height="30" uuid="dac228ba-5551-4d4a-82de-386e04a725e7"/>
+                                <textElement textAlignment="Center"/>
+                                <text><![CDATA[ФИО]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="table_TD" height="20" rowSpan="1">
+                            <textField>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="202" height="20" uuid="fc8467fe-bfcd-497a-a819-a7b7cecda5ba"/>
+                                <textFieldExpression><![CDATA[$F{lastName} + " " + $F{firstName} + " " + $F{patronymic}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="53" uuid="dbbc126a-697a-4c77-8452-51706d91b96f">
+                        <jr:columnHeader style="table_TD" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="53" height="30" uuid="6b37a4c5-2f9d-4f6c-aa81-8e6410463061"/>
+                                <textElement textAlignment="Center"/>
+                                <text><![CDATA[К-во]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="table_TD" height="20" rowSpan="1">
+                            <textField>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="53" height="20" uuid="e821ee9f-e20d-4eff-892a-25b6a4fc1020"/>
+                                <textElement textAlignment="Center"/>
+                                <textFieldExpression><![CDATA[$F{qty}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="76" uuid="17051dd7-68c8-49b6-9f00-482c5e232b2f">
+                        <jr:columnHeader style="table_TD" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="76" height="30" uuid="b10929e7-6357-470c-a56c-7e3cd9e8f06b"/>
+                                <textElement textAlignment="Center"/>
+                                <text><![CDATA[Заезд]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="table_TD" height="20" rowSpan="1">
+                            <textField>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="76" height="20" uuid="7edb96cb-1bbd-45cb-89ea-65b2b52ca5ee"/>
+                                <textElement textAlignment="Center"/>
+                                <textFieldExpression><![CDATA[$F{startDate}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="52" uuid="877c4a68-1eab-4a7a-95f8-abbe81f1abbf">
+                        <jr:columnHeader style="table_TD" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement style="Sans_Normal" x="1" y="0" width="50" height="30" uuid="899a2697-c684-469e-8cb1-24ec4d1020bd"/>
+                                <textElement textAlignment="Center"/>
+                                <text><![CDATA[Время
+выезда]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="table_TD" height="20" rowSpan="1">
+                            <textField>
+                                <reportElement style="Sans_Normal" x="1" y="0" width="50" height="20" uuid="2060fb68-2fcd-4fb9-ac67-af685b8231d3"/>
+                                <textElement textAlignment="Center"/>
+                                <textFieldExpression><![CDATA[$F{checkOutTime}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="52" uuid="877c4a68-1eab-4a7a-95f8-abbe81f1abbf">
+                        <jr:columnHeader style="table_TD" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement style="Sans_Normal" x="1" y="0" width="50" height="30" uuid="899a2697-c684-469e-8cb1-24ec4d1020bd"/>
+                                <textElement textAlignment="Center"/>
+                                <text><![CDATA[П.
+выезд]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="table_TD" height="20" rowSpan="1">
+                            <textField>
+                                <reportElement style="Sans_Normal" x="1" y="0" width="50" height="20" uuid="2060fb68-2fcd-4fb9-ac67-af685b8231d3"/>
+                                <textElement textAlignment="Center"/>
+                                <textFieldExpression><![CDATA[$F{lateCheckOut}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                </jr:table>
+            </componentElement>
+        </band>
+        <band height="87">
+            <staticText>
+                <reportElement style="Sans_Bold" x="0" y="0" width="100" height="20" uuid="82c9ed62-5c31-4d3d-887c-6926041b119b"/>
+                <text><![CDATA[Заезд]]></text>
+            </staticText>
+            <componentElement>
+                <reportElement style="table" x="0" y="20" width="555" height="65" uuid="feafbfdb-84fd-46b6-b189-2ab5a2644eed"/>
+                <jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components"
+                          xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+                    <datasetRun subDataset="Table Dataset 3" uuid="9cb862ed-f2c0-48e1-bf1c-4117b1ff720c">
+                        <dataSourceExpression>
+                            <![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{incomeCollection})]]></dataSourceExpression>
+                    </datasetRun>
+                    <jr:column width="54" uuid="482ca6c3-e92c-4567-8e31-2c076c2b650c">
+                        <jr:columnHeader style="table_TD" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="54" height="30" uuid="6c29a54e-9fcc-4f5c-824c-b580d3b4c2c1"/>
+                                <textElement textAlignment="Center"/>
+                                <text><![CDATA[Номер]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="table_TD" height="20" rowSpan="1">
+                            <textField>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="54" height="20" uuid="421a6036-383b-4a00-be8e-d0bd2fe9039f"/>
+                                <textElement textAlignment="Center"/>
+                                <textFieldExpression><![CDATA[$F{room}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="65" uuid="505a258f-31b9-47ab-b156-e29cc8aa1f16">
+                        <jr:columnHeader style="table_TD" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="65" height="30" uuid="3071b3e2-ae41-4fcb-a94a-73e7b48c7cb7"/>
+                                <textElement textAlignment="Center"/>
+                                <text><![CDATA[Категория]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="table_TD" height="20" rowSpan="1">
+                            <textField>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="65" height="20" uuid="5c22f41b-999d-48f7-8ae6-40459016a23a"/>
+                                <textElement textAlignment="Center"/>
+                                <textFieldExpression><![CDATA[$F{roomType}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="202" uuid="f133ec0e-14f6-44e0-96de-1427e4594a5c">
+                        <jr:columnHeader style="table_TD" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="202" height="30" uuid="dac228ba-5551-4d4a-82de-386e04a725e7"/>
+                                <textElement textAlignment="Center"/>
+                                <text><![CDATA[ФИО]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="table_TD" height="20" rowSpan="1">
+                            <textField>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="202" height="20" uuid="fc8467fe-bfcd-497a-a819-a7b7cecda5ba"/>
+                                <textFieldExpression><![CDATA[$F{lastName} + " " + $F{firstName} + " " + $F{patronymic}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="53" uuid="dbbc126a-697a-4c77-8452-51706d91b96f">
+                        <jr:columnHeader style="table_TD" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="53" height="30" uuid="6b37a4c5-2f9d-4f6c-aa81-8e6410463061"/>
+                                <textElement textAlignment="Center"/>
+                                <text><![CDATA[К-во]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="table_TD" height="20" rowSpan="1">
+                            <textField>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="53" height="20" uuid="e821ee9f-e20d-4eff-892a-25b6a4fc1020"/>
+                                <textElement textAlignment="Center"/>
+                                <textFieldExpression><![CDATA[$F{qty}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="76" uuid="17051dd7-68c8-49b6-9f00-482c5e232b2f">
+                        <jr:columnHeader style="table_TD" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="76" height="30" uuid="b10929e7-6357-470c-a56c-7e3cd9e8f06b"/>
+                                <textElement textAlignment="Center"/>
+                                <text><![CDATA[Выезд]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="table_TD" height="20" rowSpan="1">
+                            <textField>
+                                <reportElement style="Sans_Normal" x="0" y="0" width="76" height="20" uuid="7edb96cb-1bbd-45cb-89ea-65b2b52ca5ee"/>
+                                <textElement textAlignment="Center"/>
+                                <textFieldExpression><![CDATA[$F{endDate}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="52" uuid="877c4a68-1eab-4a7a-95f8-abbe81f1abbf">
+                        <jr:columnHeader style="table_TD" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement style="Sans_Normal" x="1" y="0" width="50" height="30" uuid="899a2697-c684-469e-8cb1-24ec4d1020bd"/>
+                                <textElement textAlignment="Center"/>
+                                <text><![CDATA[Время
+заезда]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="table_TD" height="20" rowSpan="1">
+                            <textField>
+                                <reportElement style="Sans_Normal" x="1" y="0" width="50" height="20" uuid="2060fb68-2fcd-4fb9-ac67-af685b8231d3"/>
+                                <textElement textAlignment="Center"/>
+                                <textFieldExpression><![CDATA[$F{checkInTime}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="52" uuid="877c4a68-1eab-4a7a-95f8-abbe81f1abbf">
+                        <jr:columnHeader style="table_TD" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement style="Sans_Normal" x="1" y="0" width="50" height="30" uuid="899a2697-c684-469e-8cb1-24ec4d1020bd"/>
+                                <textElement textAlignment="Center"/>
+                                <text><![CDATA[Р.
+заезд]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="table_TD" height="20" rowSpan="1">
+                            <textField>
+                                <reportElement style="Sans_Normal" x="1" y="0" width="50" height="20" uuid="2060fb68-2fcd-4fb9-ac67-af685b8231d3"/>
+                                <textElement textAlignment="Center"/>
+                                <textFieldExpression><![CDATA[$F{earlyCheckIn}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                </jr:table>
+            </componentElement>
+        </band>
+    </detail>
+    <summary>
+        <band height="81">
+            <textField>
+                <reportElement style="Sans_Normal_Frame" x="420" y="0" width="135" height="20" uuid="744b9e67-3dc7-4d77-aab0-3fb4664147d2"/>
+                <textFieldExpression><![CDATA["Загрузка: " + $P{totalLoad} + "%"]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="Sans_Normal_Frame" x="0" y="0" width="156" height="20" uuid="5f260f26-b29d-45d9-a5f6-a21c683d4abc"/>
+                <textElement textAlignment="Center"/>
+                <text><![CDATA[Итого]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="Sans_Normal_Frame" x="156" y="0" width="65" height="20" uuid="9cdfe304-1a66-4a18-9b1d-9df1ed2507fc"/>
+                <textElement textAlignment="Center"/>
+                <text><![CDATA[Люди]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="Sans_Normal_Frame" x="221" y="0" width="65" height="20" uuid="ed4f3bd2-2adc-4112-a9ff-f61cdebcfe83"/>
+                <textElement textAlignment="Center"/>
+                <text><![CDATA[Номера]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="Sans_Normal_Frame" x="0" y="20" width="156" height="20" uuid="1614e5e0-3411-4a00-9be2-83bad87b863d"/>
+                <text><![CDATA[Живет]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="Sans_Normal_Frame" x="0" y="40" width="156" height="20" uuid="1c446a64-fc30-4b12-b091-cc428074183c"/>
+                <text><![CDATA[Выезд]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="Sans_Normal_Frame" x="0" y="60" width="156" height="20" uuid="42b783aa-d996-4d65-83d0-c88d7ad9c42a"/>
+                <text><![CDATA[Заезд]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="Sans_Normal_Frame" x="156" y="20" width="65" height="20" uuid="8206297c-33bf-4a58-abb0-c9ae221c4871"/>
+                <textElement textAlignment="Right"/>
+                <textFieldExpression><![CDATA[$P{totalLivingGuest}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement style="Sans_Normal_Frame" x="221" y="20" width="65" height="20" uuid="ecb17103-58fc-4864-9e3e-0ce89ff84ea2"/>
+                <textElement textAlignment="Right"/>
+                <textFieldExpression><![CDATA[$P{totalLivingRoom}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement style="Sans_Normal_Frame" x="156" y="60" width="65" height="20" uuid="8f5b39bb-0553-4be3-9386-c80c5c8b4e08"/>
+                <textElement textAlignment="Right"/>
+                <textFieldExpression><![CDATA[$P{totalIncomeGuest}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement style="Sans_Normal_Frame" x="221" y="60" width="65" height="20" uuid="941944f1-8f04-4a09-b552-2e38b858ed04"/>
+                <textElement textAlignment="Right"/>
+                <textFieldExpression><![CDATA[$P{totalIncomeRoom}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement style="Sans_Normal_Frame" x="156" y="40" width="65" height="20" uuid="8bc03eeb-5856-4a2e-ab5c-066ef4ab0382"/>
+                <textElement textAlignment="Right"/>
+                <textFieldExpression><![CDATA[$P{totalOutgoGuest}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement style="Sans_Normal_Frame" x="221" y="40" width="65" height="20" uuid="c9afeccc-d492-435a-b993-4f0a4ce2246a"/>
+                <textElement textAlignment="Right"/>
+                <textFieldExpression><![CDATA[$P{totalOutgoRoom}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement style="Sans_Normal_Frame" x="420" y="20" width="135" height="20" uuid="818a2a8e-85ab-4576-9b6d-197b6b5c7929"/>
+                <textFieldExpression><![CDATA["Всего номеров: " + $P{totalRooms}]]></textFieldExpression>
+            </textField>
+        </band>
+    </summary>
+</jasperReport>

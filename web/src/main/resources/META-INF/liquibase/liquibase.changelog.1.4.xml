@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet author="vaka" id="2013-09-04_15:41" runAlways="true" runOnChange="true">
+        <sqlFile path="../documentation/initTenant.sql" encoding="UTF-8" splitStatements="false"/>
+    </changeSet>
+
+    <changeSet author="etypalchuk" id="2014_06_12_12:23">
+        <sql>
+            CREATE TABLE logins.bookingbuttonsettings
+            (
+                id              BIGINT PRIMARY KEY NOT NULL,
+                active          BOOL               NOT NULL,
+                createddate     TIMESTAMP,
+                updateddate     TIMESTAMP,
+                backgroundcolor VARCHAR(255),
+                color           VARCHAR(255),
+                currency        VARCHAR(255),
+                language        VARCHAR(255),
+                name            VARCHAR(255),
+                hotel_id        BIGINT             NOT NULL,
+                FOREIGN KEY (hotel_id) REFERENCES logins.hotel (id)
+            );
+            CREATE TABLE logins.bookingbuttonsettingsvalues
+            (
+                id          BIGINT PRIMARY KEY NOT NULL,
+                active      BOOL               NOT NULL,
+                createddate TIMESTAMP,
+                updateddate TIMESTAMP,
+                key         VARCHAR(255),
+                value       VARCHAR(255),
+                bbs_id      BIGINT             NOT NULL,
+                FOREIGN KEY (bbs_id) REFERENCES logins.bookingbuttonsettings (id)
+            );
+            ALTER TABLE logins.bookingbuttonsettingsvalues ADD FOREIGN KEY (bbs_id) REFERENCES logins.bookingbuttonsettings (id);
+        </sql>
+        <sqlFile path="../documentation/migrations/2014_06_12.sql" encoding="UTF-8" splitStatements="false"/>
+    </changeSet>
+
+    <changeSet author="vomel" id="2014-06-13_11:35" runAlways="true" runOnChange="true">
+        <sqlFile path="../documentation/dropTenant.sql" encoding="UTF-8" splitStatements="false"/>
+    </changeSet>
+
+    <changeSet author="etypalchuk" id="2014_06_15_14:18">
+        <sql>
+            ALTER TABLE logins.bookingbuttonsettings ADD COLUMN cancel BOOL NOT NULL DEFAULT TRUE;
+            ALTER TABLE logins.bookingbuttonsettings RENAME COLUMN color TO textColor;
+            ALTER TABLE logins.bookingbuttonsettings ADD COLUMN width INT;
+            ALTER TABLE logins.bookingbuttonsettings ADD COLUMN height INT;
+        </sql>
+    </changeSet>
+
+    <changeSet author="etypalchuk" id="2014_06_19_14:18">
+        <sql>
+            INSERT INTO logins.facility (type, id, active, createddate, updateddate, name) VALUES
+                ('HOTEL', 117, TRUE, '2014-02-19 10:09:24.0', '2014-02-19 10:09:24.0', 'facility.Miscellaneous.freeHotelInternet'),
+                ('HOTEL', 118, TRUE, '2014-02-19 10:09:24.0', '2014-02-19 10:09:24.0', 'facility.Miscellaneous.freeRoomInternet'),
+                ('HOTEL', 119, TRUE, '2014-02-19 10:09:24.0', '2014-02-19 10:09:24.0', 'facility.Miscellaneous.freeParking'),
+                ('HOTEL', 120, TRUE, '2014-02-19 10:09:24.0', '2014-02-19 10:09:24.0', 'facility.Miscellaneous.paidParking');
+        </sql>
+    </changeSet>
+
+    <changeSet author="vomel" id="2014_06_23_16:49">
+        <sql>
+            ALTER TABLE logins.hotelinfo ADD COLUMN mainPhoto TEXT ;
+        </sql>
+    </changeSet>
+
+
+</databaseChangeLog>

@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="HotelBill" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="14cbf7cb-7562-4122-84aa-0b5c9c2686f7">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Sans_Normal" isDefault="true" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<paragraph leftIndent="2" rightIndent="2"/>
+	</style>
+	<style name="Sans_Bold" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="9" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<paragraph leftIndent="2" rightIndent="2"/>
+	</style>
+	<style name="Sans_Italic" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="9" isBold="false" isItalic="true" isUnderline="false" isStrikeThrough="false">
+		<paragraph leftIndent="2" rightIndent="2"/>
+	</style>
+	<style name="Sans_Small" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="7" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<paragraph leftIndent="2" rightIndent="2"/>
+	</style>
+	<style name="Sans_Bold_Underlined" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="9" isBold="true" isItalic="false" isUnderline="true" isStrikeThrough="false">
+		<paragraph leftIndent="2" rightIndent="2"/>
+	</style>
+	<style name="Sans_Normal_Frame" isDefault="true" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu Sans" fontSize="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<pen lineWidth="0.5" lineColor="#000000"/>
+		<box>
+			<pen lineWidth="0.5"/>
+			<topPen lineWidth="0.5"/>
+			<leftPen lineWidth="0.5"/>
+			<bottomPen lineWidth="0.5"/>
+			<rightPen lineWidth="0.5"/>
+		</box>
+		<paragraph leftIndent="2" rightIndent="2"/>
+	</style>
+	<style name="table">
+		<box>
+			<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.0" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.0" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.0" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Transparent" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD_Blank" mode="Transparent" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.0" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.0" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.0" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<parameter name="paymentDate" class="java.lang.String"/>
+	<parameter name="paymentId" class="java.lang.String"/>
+	<parameter name="paymentIssuer" class="java.lang.String"/>
+	<parameter name="paymentPurpose" class="java.lang.String"/>
+	<parameter name="paymentTotal" class="java.lang.String"/>
+	<parameter name="paymentTotalLiteral" class="java.lang.String"/>
+	<parameter name="hotelName" class="java.lang.String"/>
+	<parameter name="hotelEdrpou" class="java.lang.String"/>
+    <parameter name="imgPath" class="java.lang.String"/>
+    <background>
+        <band height="550">
+            <image>
+                <reportElement x="700" y="523" width="100" height="27" forecolor="#FFFFFF" uuid="795ff253-9f91-4ca0-b863-5109d78b16d9"/>
+                <imageExpression><![CDATA[$P{imgPath}]]></imageExpression>
+            </image>
+        </band>
+    </background>
+	<detail>
+		<band height="460">
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="248" width="500" height="139" uuid="8b91903e-a3be-4e7c-96d6-f68350bc539e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="387" width="500" height="68" uuid="6a45abd2-990c-43e6-b0f9-fe91e4c9136b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="667" y="48" width="135" height="26" uuid="a1d29679-75b2-4b43-aa7a-17303cde29e9"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="151" y="36" width="208" height="38" uuid="631a11fd-f0f4-4750-958a-f2d15f6fa6fb"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="85" width="500" height="88" uuid="49b3ff54-9fde-475a-b29c-10a7b9adb989"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="535" y="87" width="267" height="368" uuid="0d55d25a-03da-46b5-815a-62d7e9ea9103"/>
+			</rectangle>
+			<staticText>
+				<reportElement style="Sans_Small" x="576" y="0" width="226" height="36" uuid="d4f729e9-cb30-4030-9636-a8d4b7e82895"/>
+				<text><![CDATA[Додаток 2
+до положення про введення касових операцiй у
+нацiональнiй валютi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Bold" x="667" y="48" width="135" height="26" uuid="c3f97de2-79cc-465a-927e-e3ab3a2025d3"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Типова форма №КО-1]]></text>
+			</staticText>
+			<line>
+				<reportElement x="135" y="114" width="246" height="1" uuid="a8f1bf73-4fc6-41c5-a0e6-a4411a9101db"/>
+			</line>
+			<staticText>
+				<reportElement style="Sans_Small" x="135" y="114" width="246" height="16" uuid="62659135-400e-407c-b72b-f5069a6cf205"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[(найменування підприємства (установи, організації))]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Bold" x="162" y="38" width="113" height="24" uuid="bdb5d344-5b21-4e69-9b8f-f9d476dc550c"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Ідентифікаційний
+код ЄДРПОУ]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Sans_Small" x="232" y="154" width="83" height="16" uuid="19995b92-5eb1-44fa-a910-6685ce7cfa21"/>
+				<textFieldExpression><![CDATA[$P{paymentDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Sans_Bold" x="135" y="141" width="190" height="13" uuid="eb23bf5a-5868-48db-aa52-f3de32fd0a7e"/>
+				<text><![CDATA[Прибутковий касовий ордер №]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Small" x="211" y="154" width="21" height="16" uuid="34b5a71a-1ff5-412a-8cc0-79eee93872f6"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[від]]></text>
+			</staticText>
+			<line>
+				<reportElement x="248" y="61" width="100" height="1" uuid="593b7f76-f4ef-470c-ba43-fd298bef9777"/>
+			</line>
+			<staticText>
+				<reportElement style="Sans_Normal" x="10" y="258" width="80" height="13" uuid="af946229-34e1-4944-84ca-6ca0513a8e68"/>
+				<text><![CDATA[Прийнято від:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="90" y="270" width="400" height="1" uuid="269b0604-f848-44e9-8456-0f835be5ba39"/>
+			</line>
+			<staticText>
+				<reportElement style="Sans_Normal" x="10" y="280" width="80" height="13" uuid="00bc8e25-beac-4c06-b739-a5a2f9f191c9"/>
+				<text><![CDATA[Підстава:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Normal" x="10" y="302" width="80" height="13" uuid="97075a41-e902-45ec-827d-1ce84e791c41"/>
+				<text><![CDATA[Сума:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Normal" x="10" y="324" width="80" height="13" uuid="e0bc9bbb-92cc-4d83-b46a-bb457aa2453f"/>
+				<text><![CDATA[Додатки:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="91" y="313" width="304" height="2" uuid="96d14e9f-a0ce-4a2e-b984-d7385a530721"/>
+			</line>
+			<line>
+				<reportElement x="90" y="293" width="399" height="1" uuid="1985e5ab-99db-45ba-86a0-2eb908587a35"/>
+			</line>
+			<line>
+				<reportElement x="91" y="336" width="399" height="1" uuid="35e9d38e-cae4-4a10-85c8-e7c3018808f5"/>
+			</line>
+			<line>
+				<reportElement x="10" y="354" width="480" height="1" uuid="e90f97ac-390a-41db-9c83-42615b42577a"/>
+			</line>
+			<staticText>
+				<reportElement style="Sans_Normal" x="461" y="302" width="28" height="14" uuid="c8bea39a-edab-4146-bf60-bcc001260718"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[коп.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Small" x="90" y="313" width="307" height="11" uuid="2761a55e-e872-4e3c-8624-1f5236d62fa0"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[(словами)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Normal" x="10" y="397" width="110" height="14" uuid="26249e5f-9d67-4f24-85c1-36f38e26b700"/>
+				<text><![CDATA[Головний бухгалтер]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Small" x="120" y="410" width="218" height="11" uuid="96973864-0645-4c7e-a469-76bf4b5a841e"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[(підпис, прізвище, ініціали)]]></text>
+			</staticText>
+			<line>
+				<reportElement x="120" y="409" width="218" height="1" uuid="b4c556bd-d74a-45dc-8877-fe49debea174"/>
+			</line>
+			<staticText>
+				<reportElement style="Sans_Normal" x="397" y="303" width="28" height="14" uuid="99b36d31-e5e4-428f-9448-ec7c34797f50"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[грн.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="425" y="315" width="35" height="1" uuid="ffbcb2ea-66e0-4f27-b4d9-76184490c8a8"/>
+			</line>
+			<staticText>
+				<reportElement style="Sans_Small" x="90" y="271" width="399" height="11" uuid="e4753a48-d676-4530-83da-98b8cf4c2ae0"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[(підпис, прізвище, ініціали)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Normal" x="10" y="421" width="110" height="14" uuid="0c96a505-0f82-43b7-95ac-11b9b4c08514"/>
+				<text><![CDATA[Одержав касир]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Small" x="120" y="434" width="218" height="11" uuid="f0b7218f-f7f0-4be6-8ad8-6b6bd082c5e4"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[(підпис, прізвище, ініціали)]]></text>
+			</staticText>
+			<line>
+				<reportElement x="120" y="434" width="218" height="1" uuid="51a91ab8-8262-4001-9af7-8e90fe39b527"/>
+			</line>
+			<staticText>
+				<reportElement style="Sans_Small" x="544" y="114" width="246" height="16" uuid="9a98fbae-9dfa-49c4-a15d-949c39c8fe87"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[(найменування підприємства (установи, організації))]]></text>
+			</staticText>
+			<line>
+				<reportElement x="544" y="113" width="246" height="1" uuid="b5965a5a-deaf-4eaa-9354-1680a0afa29d"/>
+			</line>
+			<staticText>
+				<reportElement style="Sans_Normal" x="544" y="143" width="246" height="50" uuid="aa462399-7681-4411-bfe2-8a2db21c6921"/>
+				<textElement>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[Квитанція
+до прибуткового касового ордера №
+від]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Sans_Normal" x="566" y="173" width="83" height="16" uuid="1064a84e-d381-44e0-8677-83e97838892a"/>
+				<textFieldExpression><![CDATA[$P{paymentDate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Sans_Normal" x="738" y="159" width="52" height="14" uuid="dba3b47a-79f2-4876-a04a-c92d2ebfb724"/>
+				<textFieldExpression><![CDATA[$P{paymentId}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Sans_Normal" x="544" y="231" width="56" height="15" uuid="90ef6db9-7bde-4dfc-b8e2-6a6e58638e47"/>
+				<text><![CDATA[Підстава:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Normal" x="544" y="271" width="43" height="13" uuid="72101809-8da9-4334-8b05-a057ac00431c"/>
+				<text><![CDATA[Сума:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Normal" x="544" y="409" width="61" height="24" uuid="5136d3ab-518a-4899-8373-4deab9075100"/>
+				<text><![CDATA[Одержав
+касир]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Small" x="605" y="433" width="185" height="10" uuid="f8b6b6e4-5275-4e76-b055-c66aaf4eda38"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[(підпис, прізвище, ініціали)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Normal" x="544" y="387" width="61" height="22" uuid="2b1f5754-3907-446b-9968-ad5720835e9a"/>
+				<text><![CDATA[Головний
+бухгалтер]]></text>
+			</staticText>
+			<line>
+				<reportElement x="605" y="433" width="185" height="1" uuid="aa55dc16-c155-436a-bc64-f25f8ef4e56f"/>
+			</line>
+			<line>
+				<reportElement x="605" y="409" width="185" height="1" uuid="6dca6ea6-43ee-4bb3-98dd-7d0d4564a651"/>
+			</line>
+			<staticText>
+				<reportElement style="Sans_Small" x="605" y="409" width="185" height="10" uuid="bae70cec-87b6-4f76-804d-5d3bde641e06"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[(підпис, прізвище, ініціали)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Normal_Frame" x="576" y="337" width="36" height="20" uuid="50b0fece-2e8c-4f77-8ddb-003424ebd798"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[М. П.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Normal" x="767" y="284" width="30" height="14" uuid="ce6da186-6dca-461f-970b-0998d18a8fbf"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[коп.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Normal" x="715" y="284" width="30" height="14" uuid="67c61513-0a2b-4987-89c0-81bb47071e36"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[грн.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="742" y="298" width="25" height="1" uuid="f7878027-394b-44ed-a34b-4bae85f29b8c"/>
+			</line>
+			<line>
+				<reportElement x="544" y="299" width="171" height="1" uuid="799f2310-544f-469a-9375-50566015ff28"/>
+			</line>
+			<staticText>
+				<reportElement style="Sans_Normal" x="544" y="193" width="81" height="16" uuid="d9d4211d-aa90-4f09-a4d0-17077ab5b745"/>
+				<text><![CDATA[Прийнято від]]></text>
+			</staticText>
+			<line>
+				<reportElement x="544" y="222" width="246" height="1" uuid="570715ef-4481-4481-836a-7b458c0f04eb"/>
+			</line>
+			<line>
+				<reportElement x="544" y="257" width="246" height="1" uuid="01701124-75e4-43d5-adbc-3c8d487577bd"/>
+			</line>
+			<staticText>
+				<reportElement style="Sans_Small" x="544" y="222" width="246" height="11" uuid="51215826-6192-4519-a5dd-952a1ff7de9e"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[(підпис, прізвище, ініціали)]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Sans_Normal" x="90" y="280" width="399" height="13" uuid="93d282c8-1fb0-4f60-8a3d-0a64147293e9"/>
+				<textFieldExpression><![CDATA[$P{paymentPurpose}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Sans_Normal" x="90" y="257" width="399" height="14" uuid="1b5d7c0e-2a5d-478c-a683-36245d8e9840"/>
+				<textFieldExpression><![CDATA[$P{paymentIssuer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Sans_Normal" x="544" y="209" width="246" height="14" uuid="39153a66-f011-4d7a-9081-d16100d238a9"/>
+				<textFieldExpression><![CDATA[$P{paymentIssuer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Sans_Normal" x="544" y="245" width="246" height="13" uuid="de665254-4bed-4648-a080-2aa095697820"/>
+				<textFieldExpression><![CDATA[$P{paymentPurpose}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Sans_Normal" x="90" y="300" width="307" height="13" uuid="55f1f8c7-c9fe-43a7-a70f-f90fdd745ac7"/>
+				<textFieldExpression><![CDATA[$P{paymentTotalLiteral}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Sans_Normal" x="544" y="284" width="171" height="15" uuid="60d6c2e5-6457-4dcc-bae7-f1341ab05fdd"/>
+				<textFieldExpression><![CDATA[$P{paymentTotalLiteral}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Sans_Normal" x="249" y="48" width="99" height="13" uuid="259debb2-54fd-4959-b1c4-9457d01a1c9a"/>
+				<textFieldExpression><![CDATA[$P{hotelEdrpou}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Sans_Normal" x="135" y="95" width="246" height="20" uuid="b8acb55c-a2fd-4c07-a0fc-7a5bb9ffc57b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{hotelName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Sans_Normal" x="544" y="93" width="246" height="20" uuid="f98263b6-adb2-4ca2-a352-681cd939634c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{hotelName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Sans_Bold" x="325" y="141" width="76" height="13" uuid="db16fdaf-0a38-49cf-bfb6-59a9b20773b7"/>
+				<textFieldExpression><![CDATA[$P{paymentId}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Sans_Normal_Frame" x="0" y="207" width="122" height="41" uuid="c13fa2bd-8b08-4efd-85c6-013ac9221758"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[702]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Normal_Frame" x="330" y="173" width="93" height="34" uuid="5b5f9bbc-9624-4303-af2b-1c2be79c7c7d"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Код цільового призначення]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Normal_Frame" x="225" y="173" width="105" height="34" uuid="f4289d36-4e09-4a1f-82c9-172bff13645e"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Сума (цифрами)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Normal_Frame" x="122" y="173" width="103" height="34" uuid="3e8b67c9-3c2c-4f22-baa5-5e044976e361"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Код аналітичного рахунка]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Normal_Frame" x="0" y="173" width="122" height="34" uuid="6b8b36ed-2d67-4206-a4f8-d986178b3bcb"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Кореспондуючий рахунок, субрахунок]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="Sans_Normal_Frame" x="225" y="207" width="105" height="41" uuid="99f2bca7-452f-4e29-9cb5-611b5f4bebe4"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{paymentTotal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Sans_Normal_Frame" x="423" y="173" width="77" height="34" uuid="d84284c7-22e3-4dc0-9fef-21059bbca962"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Normal_Frame" x="330" y="207" width="93" height="41" uuid="d9fa810a-7f2c-4603-b5a0-a3b63a4f7b69"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Normal_Frame" x="423" y="207" width="77" height="41" uuid="bb94186f-167a-4376-b7bc-cc0bab3a3ff4"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sans_Normal_Frame" x="122" y="207" width="103" height="41" uuid="65ff4dee-1f34-424d-a9e8-bd952f380d70"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

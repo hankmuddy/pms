@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet author="vaka" id="2013-09-04_15:41" runAlways="true" runOnChange="true">
+        <sqlFile path="../documentation/initTenant.sql" encoding="UTF-8" splitStatements="false"/>
+    </changeSet>
+
+    <changeSet author="vaka" id="2014_06_18_11:06">
+        <sql>
+            ALTER TABLE logins.hotel ADD COLUMN extranet BOOL NOT NULL DEFAULT FALSE;
+        </sql>
+    </changeSet>
+    <changeSet author="vaka" id="2014_06_23_15:03">
+        <sql>
+            ALTER TABLE logins.hotelinfo ADD COLUMN color VARCHAR(255);
+        </sql>
+    </changeSet>
+
+    <changeSet id="2014_06_25_17:53" author="vomel">
+        <sql>INSERT INTO test1.rolepermission (role_id, permission) VALUES (1, 'EXPORT_TO_WUBOOK');</sql>
+    </changeSet>
+
+    <changeSet author="etypalchuk" id="2014-07-01_11:35">
+        <sqlFile path="../documentation/migrations/2014_07_01.sql" encoding="UTF-8" splitStatements="false"/>
+    </changeSet>
+
+</databaseChangeLog>

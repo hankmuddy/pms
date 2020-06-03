@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet author="vaka" id="2013-09-04_15:41" runAlways="true" runOnChange="true">
+        <sqlFile path="../documentation/initTenant.sql" encoding="UTF-8" splitStatements="false"/>
+    </changeSet>
+
+    <changeSet id="2013-09-04_15:44" author="vomel" runOnChange="true" runAlways="false">
+        <comment>it works!!!</comment>
+    </changeSet>
+    <changeSet author="vomel_2014-04-07-1851" id="1396882714097-1" failOnError="false">
+        <sqlFile path="../documentation/migrations/2014_04_04.sql" splitStatements="false" encoding="UTF-8"/>
+    </changeSet>
+    <changeSet author="vaka" id="2013-09-04_15:13" failOnError="false">
+        <sqlFile path="../documentation/migrations/2014_04_09.sql" encoding="UTF-8" splitStatements="false"/>
+    </changeSet>
+    <changeSet author="vaka" id="2014-04-11_10:57" failOnError="false">
+        <sqlFile path="../documentation/migrations/2014_04_11.sql" encoding="UTF-8" splitStatements="false"/>
+    </changeSet>
+    <changeSet author="vaka" id="2014-04-14_13:17" failOnError="false">
+        <sqlFile path="../documentation/migrations/2014_04_14.sql" encoding="UTF-8" splitStatements="false"/>
+    </changeSet>
+    <changeSet author="vaka" id="2014-04-16_15:53" failOnError="false">
+        <sqlFile path="../documentation/migrations/2014_04_16.sql" encoding="UTF-8" splitStatements="false"/>
+    </changeSet>
+    <changeSet author="vaka" id="2014-04-18_11:17" failOnError="false">
+        <sqlFile path="../documentation/migrations/2014_04_18.sql" encoding="UTF-8" splitStatements="false"/>
+    </changeSet>
+    <changeSet author="vaka" id="2014-04-18_1_15:10" failOnError="false">
+        <sqlFile path="../documentation/migrations/2014_04_18_1.sql" encoding="UTF-8" splitStatements="false"/>
+    </changeSet>
+    <changeSet author="vaka" id="2014-04-25_12:35" failOnError="false">
+        <sqlFile path="../documentation/migrations/2014_04_25.sql" encoding="UTF-8" splitStatements="false"/>
+    </changeSet>
+    <changeSet author="vaka" id="2014-05-06_11:34" failOnError="false">
+        <sqlFile path="../documentation/migrations/2014_05_06.sql" encoding="UTF-8" splitStatements="false"/>
+    </changeSet>
+    <changeSet author="vaka" id="2014-05-07_16:05" failOnError="false">
+        <sqlFile path="../documentation/migrations/2014_05_07.sql" encoding="UTF-8" splitStatements="false"/>
+    </changeSet>
+    <changeSet author="vaka" id="2014-05-12_11:26" failOnError="false">
+        <sqlFile path="../documentation/migrations/2014_05_12.sql" encoding="UTF-8" splitStatements="false"/>
+    </changeSet>
+    <changeSet author="vaka" id="2014-05-16_13:38" failOnError="false">
+        <sqlFile path="../documentation/migrations/2014_05_16.sql" encoding="UTF-8" splitStatements="false"/>
+    </changeSet>
+    <changeSet author="vaka" id="2014-05-19_10:47" failOnError="false">
+        <sqlFile path="../documentation/migrations/2014_05_19.sql" encoding="UTF-8" splitStatements="false"/>
+    </changeSet>
+    <changeSet author="vaka" id="2014-05-19_1_14:11" failOnError="false">
+        <sqlFile path="../documentation/migrations/2014_05_19_1.sql" encoding="UTF-8" splitStatements="false"/>
+    </changeSet>
+    <changeSet author="vaka" id="2014-05-20_13:23" failOnError="false">
+        <sqlFile path="../documentation/migrations/2014_05_20.sql" encoding="UTF-8" splitStatements="false"/>
+    </changeSet>
+
+</databaseChangeLog>

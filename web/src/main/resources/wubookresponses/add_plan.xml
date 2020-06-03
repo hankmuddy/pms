@@ -1,0 +1,18 @@
+<methodResponse>
+    <params>
+        <param>
+            <value>
+                <array>
+                    <data>
+                        <value>
+                            <int>0</int>
+                        </value>
+                        <value>
+                            <int>2047</int>
+                        </value>
+                    </data>
+                </array>
+            </value>
+        </param>
+    </params>
+</methodResponse>
